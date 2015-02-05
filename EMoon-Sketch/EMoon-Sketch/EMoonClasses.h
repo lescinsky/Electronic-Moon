@@ -13,8 +13,8 @@
 #include "LocalLibrary.h"
 
 typedef uint32_t eMoonFrame;
-// the minimum length of time a frame can take (1/16 of a second)
-const unsigned long minFrametime = 32;
+
+
 
 //
 class updateFunction {
@@ -26,18 +26,61 @@ public:
     void update(eMoonFrame f, Adafruit_NeoPixel* strip);
 };
 
-//
+
+
+
+//-------Active Primitive Lightshow---------
+class masterLightshow;
+class activePrimitiveLightshow {
+    
+public:
+    // Constructor
+    activePrimitiveLightshow(eMoonFrame duration, Adafruit_NeoPixel* strip);
+    void activate();
+    void update();
+    
+private:
+    eMoonFrame duration;
+    eMoonFrame startFrame;
+    Adafruit_NeoPixel* strip;
+    masterLightshow* parent;
+    
+    
+};
+
+
+//-------APL LIST---------
 class activePrimitiveLightshowList {
     
 public:
     
     // Constructor
     activePrimitiveLightshowList();
+    void addLightshow(activePrimitiveLightshow* lightshow);
+    void updateAll();
     
-    updateFunction* currentUpdateFunction;
+private:
+    activePrimitiveLightshow *lightshowTable[10];
 };
 
-//
+//-------Master Lightshow---------
+class masterLightshow {
+    
+public:
+    // Constructor
+    masterLightshow();
+    void addLightshow(int masterIndex, eMoonFrame duration, Adafruit_NeoPixel* strip);
+    void activatePrimitiveLightshow();
+    void deactivatePrimitiveLightshow();
+    
+private:
+    activePrimitiveLightshow *lightshowTable[10];
+    int indexTicker;
+    
+    
+};
+
+//-------APS LIST---------
 class activePhysicalStripList {
     
 public:

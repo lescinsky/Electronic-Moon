@@ -28,10 +28,15 @@
 #include "Lightshows.h"
 #include "Strips.h"
 
-activePrimitiveLightshowList* APL_list;
-activePhysicalStripList* APS_list;
-eMoonFrame f;
+// the minimum length of time a frame can take (1/32 of a second)
+extern eMoonFrame currentFrame;
+const unsigned long minFrametime = 32;
 unsigned long startTime, endTime;
+
+extern masterLightshow* master;
+extern activePrimitiveLightshowList* APL_list;
+activePhysicalStripList* APS_list;
+
 
 
 
@@ -43,13 +48,15 @@ unsigned long startTime, endTime;
 //
 void setup() {
 
-    // allocate lightshow runtime structures
-    APL_list = new activePrimitiveLightshowList();
-     // allocate pixel strip runtime structures
+    // allocate pixel strip runtime structures
     APS_list = new activePhysicalStripList();
+    // allocate lightshow runtime structures
+    master->addLightshow(0, 400, APS_list->currentStrip);
+    master->addLightshow(1, 200, APS_list->currentStrip);
     // activate master lightshow
+    master->activatePrimitiveLightshow();
     // initialise timekeeping
-    f = 0;
+    currentFrame = 0;
     startTime = millis();
     
 
@@ -62,13 +69,13 @@ void setup() {
 void loop() {
 
     // call the lightshow(s) update functions
-    APL_list->currentUpdateFunction->update(f, APS_list->currentStrip);
+    APL_list->updateAll();
     // show the strip(s)
     APS_list->showAll();
     // wait before next frame, for situations where lightshows play too quickly
     while ((endTime = millis()) - startTime < minFrametime);
     startTime = endTime;
-    ++f;
+    ++currentFrame;
 
 
     

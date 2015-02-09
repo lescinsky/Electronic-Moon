@@ -10,6 +10,23 @@
 #define __EMoon_Sketch__Lightshows__
 
 #include <stdio.h>
-#include "EMoonClasses.h"
+#include "EMoonDesign.h"
+
+
+//---------- FADES and SPREADS ---------------
+
+//class matrixBasis : public updateFunction
+//{
+//public:
+////    void update(eMoonFrame f, Adafruit_NeoPixel* strip);
+//    virtual void basisFunction();
+//    
+//};
+
+void redFade(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip);
+void rainbowSpread(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip);
+
+
 
 #endif /* defined(__EMoon_Sketch__Lightshows__) */
+

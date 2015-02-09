@@ -10,7 +10,7 @@
 #define __EMoon_Sketch__Strips__
 
 #include <stdio.h>
-#include "EMoonClasses.h"
+#include "EMoonDesign.h"
 
 
 

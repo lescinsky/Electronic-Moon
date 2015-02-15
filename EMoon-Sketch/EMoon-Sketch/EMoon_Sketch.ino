@@ -25,6 +25,7 @@
 // Local Library specifies LED hardware libraries such as Adafruit API
 #include "LocalLibrary.h"
 #include "EMoonDesign.h"
+#include "Lightshows.h"
 
 // the minimum length of time a frame can take (1/32 of a second)
 extern eMoonFrame currentFrame;
@@ -50,14 +51,15 @@ const unsigned long minFrametime = 32;  // determines the length of one "frame" 
 //   NEO_RGB     Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)
 
 
-Adafruit_NeoPixel* strip1 = new Adafruit_NeoPixel(32, 9, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel* myStrip = new Adafruit_NeoPixel(32, 9, NEO_GRB + NEO_KHZ800);
 
 // Add the strips to the list of strips.  If you don't do this, they won't light up!
 //    !!! You can currently only add 10.  And please don't add any twice!!!
 
-void setupStrips() {
+void myStrips() {
     
-    APS_list->addStrip(strip1);
+//    APS_list->addStrip(myStrip);
+    setupStrips();
     
 }
 
@@ -96,10 +98,11 @@ void update2(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip) {
 //    strip = a NeoPixel strip.  See the Adafruit library.  Use strips that you have defined above.
 //    update = one of the functions you have defined above.
 
-void setupMasterLightshow() {
+void myMasterLightshow() {
     
-    master->addLightshow(128, strip1, &rainbowSpread);
-    master->addLightshow(256, strip1, &redFade);
+    setupMasterLightshow();
+//    master->addLightshow(64, myStrip, &redFade);
+//    master->addLightshow(128, myStrip, &rainbowSpread);
 
 }
 
@@ -113,10 +116,10 @@ void setupMasterLightshow() {
 void setup() {
 
     // allocate pixel strip runtime structures
-    setupStrips();
+    myStrips();
     
     // allocate lightshow runtime structures
-    setupMasterLightshow();
+    myMasterLightshow();
     
     // initialise timekeeping
     currentFrame = 0;

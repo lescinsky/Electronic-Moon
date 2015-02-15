@@ -1,0 +1,36 @@
+//
+//  Lightshows.cpp
+//  EMoon-Sketch
+//
+//  Created by Gordon Lescinsky on 5/02/2015.
+//  Copyright (c) 2015 Gordon Lescinsky. All rights reserved.
+//
+
+#include "Lightshows.h"
+
+
+
+
+
+
+
+
+//----------------------------------------------
+
+uint32_t ?functionName?C?index?() {return(?colourValue?);}    // ?nextColourName? - ?prevColourName?
+?signature? {
+    ?basisFunction?(f, ?duration?, ?strip?, ?transition?, ?colourArgList?);}
+
+//----------------------------------------------
+
+uint32_t rainbowSpreadCX() {return(0x000070);}  // blue
+uint32_t rainbowSpreadC0() {return(0x6FFF90);}  // red - blue
+uint32_t rainbowSpreadC1() {return(0x007000);}  // yellow - red
+uint32_t rainbowSpreadC2() {return(-0x700000);}  // green - yellow
+uint32_t rainbowSpreadC3() {return(-0x006F90);}  // blue - green
+void rainbowSpread(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip) {
+    spread4(f, duration, strip, 1, &rainbowSpreadCX, &rainbowSpreadC0, &rainbowSpreadC1, &rainbowSpreadC2, &rainbowSpreadC3);}
+
+
+
+

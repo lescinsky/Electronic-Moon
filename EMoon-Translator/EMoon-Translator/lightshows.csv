@@ -1,0 +1,12 @@
+Strip,Name,Type,Min Duration (frames),Transition,C1,C2,C3,C4
+pod1,rainbowSpread,spread4, 64, `,cyan,magenta,black,white
+pod1,redFade,fade2, 128, 64,black,green,,
+pod1,gordon1,spread4, 64, 1,cyan,magenta,green,red
+pod1,blackFade,fade2, 128, 64,green,black,,
+pod1,gordon2,spread4, 64, 1,blue,yellow,blue,yellow
+pod1,redRed,fade2, 128, 64,red,blue,,
+pod1,gordon3,spread4, 64, 1,red,white,white,blue
+pod1,redGreen,fade2, 128, 64,black,blue,,
+pod1,backGreen,fade2, 128, 64,black,green,,
+pod1,greenBlack,fade2, 128, 64,green,black,,
+pod1,greenBlue,fade2, 128, 64,green,blue,,

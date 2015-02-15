@@ -3,10 +3,51 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "generateLightshows(lightshow*, int, strip*, int):main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "stripList[i].count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "parseLightshows(char*, colour*, lightshow*):main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "row.size()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "parseStrips(char*, strip*):main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "stripList[i].pin">
+            </PersistentString>
+            <PersistentString
+               value = "atoi(row[2].c_str())">
+            </PersistentString>
+            <PersistentString
+               value = "stripList[i].count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "baseValue(colour*, char*):main.cpp">
          <PersistentStrings>
             <PersistentString
                value = "clist[i].name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "generateLightshows(lightshow*):main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "headerTemplateName">
+            </PersistentString>
+            <PersistentString
+               value = "buffer.str()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

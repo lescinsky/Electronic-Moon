@@ -25,6 +25,13 @@
 /* Begin PBXFileReference section */
 		F814A7EC1A8B58C8009B67F6 /* EMoon-Translator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "EMoon-Translator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F814A7EF1A8B58C8009B67F6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F82F13321A903879003E3649 /* colours.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = colours.csv; sourceTree = "<group>"; };
+		F82F13331A903879003E3649 /* lightshows.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lightshows.csv; sourceTree = "<group>"; };
+		F82F13341A903879003E3649 /* strips.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = strips.csv; sourceTree = "<group>"; };
+		F8E0E1741A8E2AD300F13FA6 /* Lightshows_header.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Lightshows_header.txt; path = "EMoon-Translator/Lightshows_header.txt"; sourceTree = "<group>"; };
+		F8E0E1751A8E2AD300F13FA6 /* Lightshows_source.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Lightshows_source.txt; path = "EMoon-Translator/Lightshows_source.txt"; sourceTree = "<group>"; };
+		F8E0E1761A8E2AD300F13FA6 /* Strips_header.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Strips_header.txt; path = "EMoon-Translator/Strips_header.txt"; sourceTree = "<group>"; };
+		F8E0E1771A8E2AD300F13FA6 /* Strips_source.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Strips_source.txt; path = "EMoon-Translator/Strips_source.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +48,10 @@
 		F814A7E31A8B58C8009B67F6 = {
 			isa = PBXGroup;
 			children = (
+				F8E0E1741A8E2AD300F13FA6 /* Lightshows_header.txt */,
+				F8E0E1751A8E2AD300F13FA6 /* Lightshows_source.txt */,
+				F8E0E1761A8E2AD300F13FA6 /* Strips_header.txt */,
+				F8E0E1771A8E2AD300F13FA6 /* Strips_source.txt */,
 				F814A7EE1A8B58C8009B67F6 /* EMoon-Translator */,
 				F814A7ED1A8B58C8009B67F6 /* Products */,
 			);
@@ -58,6 +69,9 @@
 			isa = PBXGroup;
 			children = (
 				F814A7EF1A8B58C8009B67F6 /* main.cpp */,
+				F82F13321A903879003E3649 /* colours.csv */,
+				F82F13331A903879003E3649 /* lightshows.csv */,
+				F82F13341A903879003E3649 /* strips.csv */,
 			);
 			path = "EMoon-Translator";
 			sourceTree = "<group>";
@@ -232,6 +246,7 @@
 				F814A7F51A8B58C8009B67F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

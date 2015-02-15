@@ -35,14 +35,6 @@ typedef  Adafruit_NeoPixel* eMoonStrip;
 typedef void (*eMoonUpdateFunction)(eMoonFrame f, eMoonFrame duration, eMoonStrip strip);
 
 
-
-
-//
-//void update(eMoonFrame f, eMoonStrip strip);
-
-
-
-
 //-------Active Primitive Lightshow---------
 class masterLightshow;
 struct activePrimitiveLightshow {
@@ -66,7 +58,7 @@ public:
     void updateAll();
     
 private:
-    activePrimitiveLightshow lightshowTable[10];
+    activePrimitiveLightshow lightshowTable[256];
     void  blankLightshow(activePrimitiveLightshow* lightshow);
 };
 
@@ -80,7 +72,7 @@ public:
     void activateNextLightshow();
     
 private:
-    activePrimitiveLightshow lightshowTable[10];
+    activePrimitiveLightshow lightshowTable[256];
     int indexTicker, numItems;
     
 };
@@ -96,7 +88,7 @@ public:
     void showAll();
     
 private:
-    eMoonStrip stripTable[10];
+    eMoonStrip stripTable[256];
     int numItems;
 };
 

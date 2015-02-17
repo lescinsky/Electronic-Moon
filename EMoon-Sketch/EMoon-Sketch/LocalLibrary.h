@@ -33,18 +33,34 @@ typedef uint32_t eMoonColour;
 typedef uint8_t eMoonSmoothness;
 typedef  Adafruit_NeoPixel* eMoonStrip;
 typedef void (*eMoonUpdateFunction)(eMoonFrame f, eMoonFrame duration, eMoonStrip strip);
+typedef void (*eMoonSchedulerFunction)(eMoonFrame f, eMoonFrame duration, eMoonStrip strip);
 
+
+//-------Active Symbolic Lightshow---------
+
+struct activeSymbolicLightshow {
+    
+    eMoonFrame duration;
+    eMoonFrame startFrame;
+    eMoonStrip strip;
+    int parent;
+    eMoonSchedulerFunction scheduler;
+};
 
 //-------Active Primitive Lightshow---------
-class masterLightshow;
+
 struct activePrimitiveLightshow {
     
     eMoonFrame duration;
     eMoonFrame startFrame;
     eMoonStrip strip;
-    masterLightshow* parent;
+    int parent;
     eMoonUpdateFunction update;
+    activePrimitiveLightshow* prev;
+    activePrimitiveLightshow* next;
 };
+
+
 
 
 //-------APL LIST---------
@@ -54,28 +70,36 @@ public:
     
     // Constructor
     activePrimitiveLightshowList();
-    void addLightshow(eMoonFrame duration, eMoonStrip strip, eMoonUpdateFunction update);
+    void addLightshow(int parentIndex, eMoonFrame duration, eMoonStrip strip, eMoonUpdateFunction update);
+    void removeLightshow(int i);
     void updateAll();
     
 private:
     activePrimitiveLightshow lightshowTable[256];
+    int freeCellStack[256];
+    int firstFree;
+    activePrimitiveLightshow* firstLink;
+    activePrimitiveLightshow* lastLink;
     void  blankLightshow(activePrimitiveLightshow* lightshow);
 };
 
-//-------Master Lightshow---------
-class masterLightshow {
+//-------Mix LIST---------
+class activeSymbolicLightshowList {
     
 public:
+    
     // Constructor
-    masterLightshow();
-    void addLightshow(eMoonFrame duration, eMoonStrip strip, eMoonUpdateFunction update);
-    void activateNextLightshow();
+    activeSymbolicLightshowList();
+    void addLightshow(int parentIndex, eMoonFrame duration, eMoonStrip strip, eMoonSchedulerFunction scheduler);
+    void activateNextLightshow(int i);
+    void removeLightshow(int i);
     
 private:
-    activePrimitiveLightshow lightshowTable[256];
-    int indexTicker, numItems;
-    
+    activeSymbolicLightshow lightshowTable[256];
+    int freeCellStack[256];
+    int firstFree;
 };
+
 
 //-------APS LIST---------
 class activePhysicalStripList {

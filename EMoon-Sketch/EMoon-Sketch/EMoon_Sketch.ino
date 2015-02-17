@@ -30,9 +30,12 @@
 // the minimum length of time a frame can take (1/32 of a second)
 extern eMoonFrame currentFrame;
 
-unsigned long startTime, endTime;
+extern Adafruit_NeoPixel* pod1;
+extern void testmix1(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip);
+void gordon3 (eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip);
 
-extern masterLightshow* master;
+unsigned long startTime, endTime;
+extern activeSymbolicLightshowList* mix_list;
 extern activePrimitiveLightshowList* APL_list;
 extern activePhysicalStripList* APS_list;
 
@@ -108,25 +111,21 @@ void myMasterLightshow() {
 
 
 
-
-
-
-
-
 void setup() {
 
-    // allocate pixel strip runtime structures
-    myStrips();
-    
-    // allocate lightshow runtime structures
-    myMasterLightshow();
-    
     // initialise timekeeping
     currentFrame = 0;
     startTime = millis();
     
-    // activate master lightshow
-    master->activateNextLightshow();
+    // allocate pixel strip runtime structures
+    myStrips();
+    
+//     allocate lightshow runtime structures
+    myMasterLightshow();
+    
+//     activate master lightshow
+    mix_list->activateNextLightshow(0);
+
 
 }
 
@@ -143,6 +142,4 @@ void loop() {
     startTime = endTime;
     ++currentFrame;
 
-
-    
 }

@@ -23,7 +23,7 @@
 
 // the runtime data storage
 activePrimitiveLightshowList* APL_list = new activePrimitiveLightshowList();
-masterLightshow* master = new masterLightshow();
+activeSymbolicLightshowList* mix_list = new activeSymbolicLightshowList();
 activePhysicalStripList* APS_list = new activePhysicalStripList();
 
 
@@ -59,33 +59,121 @@ eMoonFrame currentFrame;
 //must have the following signature:
 //must return a colour value as per the mathematical model
 
+//------- APL List ---------
 
 activePrimitiveLightshowList::activePrimitiveLightshowList() {
     
+    // initialise the freeCellStack
+    //  !!!! the size of arrays should be set by a constant
+    for (int i=0; i < 256; i++) {
+        this->freeCellStack[i] = i;
+    }
+    this->firstLink = NULL;
+    this->lastLink = NULL;
+    this->firstFree = 0;
     
 }
 
-void activePrimitiveLightshowList::addLightshow(eMoonFrame duration, eMoonStrip strip, eMoonUpdateFunction update) {
+void activePrimitiveLightshowList::addLightshow(int parentIndex, eMoonFrame duration, eMoonStrip strip, eMoonUpdateFunction update) {
     
-    //lightshowTable[0] = lightshow;
-    this->lightshowTable[0].startFrame = currentFrame;
-    this->lightshowTable[0].duration = duration;
-    this->lightshowTable[0].strip = strip;
-    this->lightshowTable[0].parent = master;
-    this->lightshowTable[0].update = update;
+    //     this should be changed to a simpler call that guarantees a clean and accurate new record is created
+    activePrimitiveLightshow* lightshow;
+    
+    if (firstFree < 256) {
+        lightshow = &(this->lightshowTable[freeCellStack[firstFree]]);
+        lightshow->startFrame = currentFrame;
+        lightshow->duration = duration;
+        lightshow->strip = strip;
+        lightshow->parent = parentIndex;
+        lightshow->update = update;
+        
+        
+        // lighshow becomes last in the linked list
+        
+        lightshow->next = NULL;
+        if (this->firstLink == NULL ) {
+            lightshow->prev = NULL;
+            this->firstLink = lightshow;
+        }
+        else {
+            lightshow->prev = this->lastLink;
+            this->lastLink->next = lightshow;
+        }
+        this->lastLink = lightshow;
+        firstFree++;
+        
+    }
     
 }
+
+void activePrimitiveLightshowList::removeLightshow(int i) {
+    
+    activePrimitiveLightshow* lightshow;
+    lightshow = &(this->lightshowTable[i]);
+    
+    // Close up the linked list
+    if (lightshow->prev == NULL ) {     // it is the first node
+        this->firstLink = lightshow->next;
+        if (lightshow->next == NULL) {  // it is the first and last node
+            this->lastLink = NULL;
+        }
+        else {                          // it is the first but not the last
+            lightshow->next->prev = NULL;
+        }
+    }
+    else {                              // it is not the first node
+        lightshow->prev->next = lightshow->next;
+        if (lightshow->next == NULL) {  // it is the last but not the first
+            this->lastLink = lightshow->prev;
+        }
+        else {                          // it is neither the first nor last
+            lightshow->next->prev = lightshow->prev;
+        }
+    }
+    if (firstFree > 0) {
+        firstFree--;
+        freeCellStack[firstFree] = i;
+    }
+}
+
+
+    
+
 
 void activePrimitiveLightshowList::updateAll() {
     
-    long int ticker = 0;
-    activePrimitiveLightshow* lightshow = &(this->lightshowTable[ticker]);
-    eMoonFrame f = currentFrame - lightshow->startFrame;  //!!!!!!!
-    (*lightshow->update)(f, lightshow->duration, lightshow->strip);
-    if (f >= lightshow->duration ) {
-        blankLightshow(lightshow);
-        lightshow->parent->activateNextLightshow();
+    activePrimitiveLightshow* lightshow = this->firstLink;
+    eMoonFrame f;
+
+
+    while (lightshow != NULL) {
+    
+
+    f = currentFrame - lightshow->startFrame;
+        
+        if (f < lightshow->duration) {
+            
+            (*lightshow->update)(f, lightshow->duration, lightshow->strip);
+            lightshow = lightshow->next;
+            
+        }
+        else {
+            
+//            blankLightshow(lightshow);   // this needs to be removed for delta algorithms
+            
+            int parentIndex = lightshow->parent;
+            int i = lightshow - this->lightshowTable;
+            lightshow = lightshow->next;
+            
+            this->removeLightshow( i );
+            
+            if (parentIndex >= 0) {
+                mix_list->activateNextLightshow(parentIndex);
+            }
+            
+        }
     }
+    
     
 }
 
@@ -96,64 +184,82 @@ void activePrimitiveLightshowList::blankLightshow(activePrimitiveLightshow* ligh
     }
 }
 
-//void matrixBasis( ) {
-//    int f;
-//    f = currentFrame % timeframe;
-//    int basisValue;
-//    basisValue =
-//    int p, delta = 0;
-//    unit32_t colour;
-//    for(p=0; p < strip.length; p++) {
-//        colour = matrix[p * matrix.width / strip.length][f * matrix.height / timeframe];
-//        delta += basisValue * colour;
-//        if (delta > 0) {
-//            strip.pixel(p) = delta;
-//        }
-//    }
-//}
+//------- ASL List ---------
 
-
-
-
-//-------Master Lightshow---------
-
-
-masterLightshow::masterLightshow() {
-    this->indexTicker = 0;
-    this->numItems = 0;
+activeSymbolicLightshowList::activeSymbolicLightshowList() {
+    
+    // initialise the freeCellStack
+    //  !!!! the size of arrays should be set by a constant
+    for (int i=0; i < 256; i++) {
+        this->freeCellStack[i] = i;
+    }
+    this->firstFree = 0;
+    
 }
 
-void masterLightshow::addLightshow(eMoonFrame duration, eMoonStrip strip, eMoonUpdateFunction update) {
+void activeSymbolicLightshowList::addLightshow(int parentIndex, eMoonFrame duration, eMoonStrip strip, eMoonSchedulerFunction scheduler) {
     
     //lightshowTable[0] = lightshow;
-    this->lightshowTable[this->numItems].startFrame = currentFrame;
-    this->lightshowTable[this->numItems].duration = duration;
-    this->lightshowTable[this->numItems].strip = strip;
-    this->lightshowTable[this->numItems].parent = NULL;
-    this->lightshowTable[this->numItems].update = update;
-    this->numItems++;
+    // this should be changed to a simpler call that guarantees a clean and accurate new record is created
+    if (firstFree < 256) {
+        this->lightshowTable[firstFree].startFrame = currentFrame;
+        this->lightshowTable[firstFree].duration = duration;
+        this->lightshowTable[firstFree].strip = strip;
+        this->lightshowTable[firstFree].parent = parentIndex;
+        this->lightshowTable[firstFree].scheduler = scheduler;
+        firstFree++;
+    }
     
 }
 
-
-void masterLightshow::activateNextLightshow() {
+void activeSymbolicLightshowList::removeLightshow(int i) {
     
-    
-//    if (this->indexTicker == 0) {
-//        APL_list->addLightshow(32, APS_list->currentStrip, &update1);
-//    }
-//    if (this->indexTicker == 1) {
-//        APL_list->addLightshow(32, APS_list->currentStrip, &update2);
-//    }
-    APL_list->addLightshow(this->lightshowTable[indexTicker].duration, this->lightshowTable[indexTicker].strip, this->lightshowTable[indexTicker].update);
-    this->indexTicker++;
-    if (this->indexTicker >= this->numItems) {
-        this->indexTicker = 0; }
+    if (firstFree > 0) {
+        firstFree--;
+        freeCellStack[firstFree] = i;
+    }
     
 }
 
+void activeSymbolicLightshowList::activateNextLightshow(int i) {
+    // Assumptions:
+    //    a child lightshow has just ended
+    //    the lightshow gets a chance to replace the next lightshow(s)
 
+    activeSymbolicLightshow* lightshow = &(this->lightshowTable[i]);
+    eMoonFrame f = currentFrame - lightshow->startFrame;
+    
+    if (f < lightshow->duration ) {
+        // The lightshow is still running.
+        // We allow it to activate the next lightshow(s) by calling its scheduler
+        (*lightshow->scheduler)(f, lightshow->duration, lightshow->strip);
+    }
+    else {
+        // The lightshow has ended
+        if (i == 0) {
+        
+            // the 0 record is the master lightshow, so we loop it
+            lightshow->startFrame = currentFrame;
+            f = 0;
+            (*lightshow->scheduler)(f, lightshow->duration, lightshow->strip);
+            
+        }
+        else {
+            // this is not the master lightshow, so we remove it.
+            // We also let the parent know by calling this same function recursively.
+            // However, not all lightshows are assigned parents.
+            // We assume that parentIndex == -1 means there is no parent.
 
+            int parentIndex = lightshow->parent;
+            this->removeLightshow(i);
+            if ( parentIndex > 0 ) {
+
+                this->activateNextLightshow(parentIndex);
+            }
+        }
+
+    }
+}
 
 
 

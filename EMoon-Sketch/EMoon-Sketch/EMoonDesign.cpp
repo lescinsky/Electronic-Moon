@@ -8,7 +8,40 @@
 
 #include "EMoonDesign.h"
 
+//----------- WIPES --------------------
 
+void wipe4(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip, eMoonSmoothness s, colourFunction CX, colourFunction C0, colourFunction C1, colourFunction C2, colourFunction C3) {
+    
+    int p, refreshRate, ds;
+    int stepSize = duration / 4;
+    int i;
+    int32_t colour;  // i.e. this is set to the neutral colour
+    
+    i = f;
+    if (i < strip->numPixels()) {
+        strip->setPixelColor(i, C0());
+    }
+    if (f / 4 > 0) {
+        i -= stepSize;
+        if (i < strip->numPixels()) {
+            strip->setPixelColor(i, C1());
+        }
+    }
+    if (f / 4 > 1) {
+        i -= stepSize;
+        if (i < strip->numPixels()) {
+            strip->setPixelColor(i, C2());
+        }
+    }
+    if (f / 4 > 2) {
+        i -= stepSize;
+        if (i < strip->numPixels()) {
+            strip->setPixelColor(i, C3());
+        }
+    }
+
+    
+}
 
 //----------- FADES --------------------
 

@@ -15,7 +15,7 @@ uint32_t rainbowSpreadC2() {return(0);}
 uint32_t rainbowSpreadC3() {return(8421504);}
 void rainbowSpread(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
 {
-    spread4(f, duration, strip, 0, &rainbowSpreadCX, &rainbowSpreadC0, &rainbowSpreadC1, &rainbowSpreadC2, &rainbowSpreadC3); }
+    wipe4(f, duration, strip, 0, &rainbowSpreadCX, &rainbowSpreadC0, &rainbowSpreadC1, &rainbowSpreadC2, &rainbowSpreadC3); }
 
 
 
@@ -35,7 +35,7 @@ uint32_t gordon1C2() {return(32768);}
 uint32_t gordon1C3() {return(8388608);}
 void gordon1(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
 {
-    spread4(f, duration, strip, 1, &gordon1CX, &gordon1C0, &gordon1C1, &gordon1C2, &gordon1C3); }
+    wipe4(f, duration, strip, 1, &gordon1CX, &gordon1C0, &gordon1C1, &gordon1C2, &gordon1C3); }
 
 
 
@@ -55,7 +55,7 @@ uint32_t gordon2C2() {return(128);}
 uint32_t gordon2C3() {return(8421376);}
 void gordon2(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
 {
-    spread4(f, duration, strip, 1, &gordon2CX, &gordon2C0, &gordon2C1, &gordon2C2, &gordon2C3); }
+    wipe4(f, duration, strip, 1, &gordon2CX, &gordon2C0, &gordon2C1, &gordon2C2, &gordon2C3); }
 
 
 
@@ -71,11 +71,11 @@ void redRed(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
 uint32_t gordon3CX() {return(8388608);}
 uint32_t gordon3C0() {return(8388608);}
 uint32_t gordon3C1() {return(8421504);}
-uint32_t gordon3C2() {return(8421504);}
+uint32_t gordon3C2() {return(8388608);}
 uint32_t gordon3C3() {return(128);}
 void gordon3(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
 {
-    spread4(f, duration, strip, 1, &gordon3CX, &gordon3C0, &gordon3C1, &gordon3C2, &gordon3C3); }
+    wipe4(f, duration, strip, 1, &gordon3CX, &gordon3C0, &gordon3C1, &gordon3C2, &gordon3C3); }
 
 
 
@@ -122,20 +122,20 @@ uint32_t mardigrasC2() {return(4194432);}
 uint32_t mardigrasC3() {return(4227072);}
 void mardigras (eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
 {
-    
-    uint32_t c1 = 0x700000; // red
-    uint16_t i= f % strip->numPixels();  // advance the wipe one pixel each frame
-    strip->setPixelColor(i, c1);  // wipe
+    wipe4(f, duration, strip, 1, &mardigrasCX, &mardigrasC0, &mardigrasC1, &mardigrasC2, &mardigrasC3); }
 
-}
 
-Adafruit_NeoPixel* pod1 = new Adafruit_NeoPixel(32, 9, NEO_GRB + NEO_KHZ800);
-Adafruit_NeoPixel* pod2 = new Adafruit_NeoPixel(32, 19, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel* pod1 = new Adafruit_NeoPixel(32, 11, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel* pod2 = new Adafruit_NeoPixel(32, 9, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel* pod3 = new Adafruit_NeoPixel(32, 8, NEO_GRB + NEO_KHZ800);
 
 
 void setupStrips() {
    APS_list->addStrip(pod1);
    APS_list->addStrip(pod2);
+   APS_list->addStrip(pod3);
+
+
 
 }
 
@@ -169,21 +169,27 @@ void testmix1(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip) {
     switch ( f / (duration / 4) ) {
         case 0:
             APL_list->addLightshow(0, duration/4, pod2, &gordon2);
-            APL_list->addLightshow(-1, duration/4, pod1, &gordon1);
+            APL_list->addLightshow(-1, duration/2, pod1, &gordon1);
+            APL_list->addLightshow(-1, duration/1, pod3, &gordon3);
             break;
         case 1:
             APL_list->addLightshow(0, duration/4, pod2, &redGreen);
             APL_list->addLightshow(-1, duration/4, pod1, &redFade);
+            APL_list->addLightshow(-1, duration/4, pod3, &mardigras);
 
             break;
         case 2:
             APL_list->addLightshow(0, duration/4, pod2, &blackFade);
             APL_list->addLightshow(-1, duration/4, pod1, &mardigras);
+            APL_list->addLightshow(-1, duration/4, pod3, &gordon2);
+
 
             break;
         case 3:
             APL_list->addLightshow(0, duration/4, pod2, &gordon3);
             APL_list->addLightshow(-1, duration/4, pod1, &greenBlue);
+            APL_list->addLightshow(-1, duration/4, pod3, &gordon1);
+
             break;
 //        case 5:
 //            APL_list->addLightshow(0, duration/8, pod2, &redFade);

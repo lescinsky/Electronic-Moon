@@ -11,10 +11,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "parseLightshows(char*, colour*, lightshow*):main.cpp">
+         contextName = "generateLightshows(lightshow*):main.cpp">
          <PersistentStrings>
             <PersistentString
-               value = "row.size()">
+               value = "headerTemplateName">
+            </PersistentString>
+            <PersistentString
+               value = "buffer.str()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -41,13 +44,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "generateLightshows(lightshow*):main.cpp">
+         contextName = "bodyTemplate::generate():codeTemplates.cpp">
          <PersistentStrings>
             <PersistentString
-               value = "headerTemplateName">
+               value = "this-&gt;lightshow-&gt;updateFunction">
             </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "parseLightshows(char*, colour*, lightshow*):main.cpp">
+         <PersistentStrings>
             <PersistentString
-               value = "buffer.str()">
+               value = "row.size()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

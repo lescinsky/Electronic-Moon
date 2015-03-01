@@ -30,7 +30,7 @@
 // the minimum length of time a frame can take (1/32 of a second)
 extern eMoonFrame currentFrame;
 
-extern Adafruit_NeoPixel* pod1;
+extern Adafruit_NeoPixel* pod1, pod2, pod3, pod4;
 extern void testmix1(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip);
 void gordon3 (eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip);
 
@@ -76,21 +76,24 @@ void myStrips() {
 //      However, the strip->Color(method is also useful).
 
 
-void update1(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip) {
-    
-    uint32_t c1 = 0x700000; // red
-    uint16_t i= f % strip->numPixels();  // advance the wipe one pixel each frame
-    strip->setPixelColor(i, c1);  // wipe
-    
-}
+//void update1(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip) {
+//    
+//    uint32_t c1 = 0x700000; // red
+//    uint16_t i= f % strip->numPixels();  // advance the wipe one pixel each frame
+//    strip->setPixelColor(i, c1);  // wipe
+//    
+//}
+//
+//void update2(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip) {
+//    
+//    uint32_t c1 = 0x007f00;  // green
+//    uint16_t i= f % strip->numPixels();
+//    strip->setPixelColor(i, c1);
+//    
+//}
 
-void update2(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip) {
-    
-    uint32_t c1 = 0x007f00;  // green
-    uint16_t i= f % strip->numPixels();
-    strip->setPixelColor(i, c1);
-    
-}
+
+
 
 
 
@@ -104,8 +107,7 @@ void update2(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip) {
 void myMasterLightshow() {
     
     setupMasterLightshow();
-//    master->addLightshow(64, myStrip, &redFade);
-//    master->addLightshow(128, myStrip, &rainbowSpread);
+
 
 }
 

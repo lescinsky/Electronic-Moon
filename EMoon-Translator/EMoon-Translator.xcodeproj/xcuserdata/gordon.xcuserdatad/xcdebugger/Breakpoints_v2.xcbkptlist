@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
+            timestampString = "446786073.678292"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "435"
-            endingLineNumber = "435">
+            startingLineNumber = "128"
+            endingLineNumber = "128">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,91 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
+            timestampString = "446786073.678292"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
-            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "272"
-            endingLineNumber = "272"
-            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
-            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "354"
-            endingLineNumber = "354"
-            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "374"
-            endingLineNumber = "374"
-            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "465"
-            endingLineNumber = "465"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "main(int argc, char **argv)"
             landmarkType = "7">
          </BreakpointContent>
@@ -120,13 +40,39 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
+            timestampString = "446786073.678292"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "379"
-            endingLineNumber = "379"
-            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
-            landmarkType = "7">
+            startingLineNumber = "67"
+            endingLineNumber = "67">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EMoon-Translator/main.cpp"
+            timestampString = "446786073.678292"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EMoon-Translator/main.cpp"
+            timestampString = "446786073.678292"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -166,12 +112,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
+            timestampString = "446786073.678292"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "322"
-            endingLineNumber = "322"
-            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "main(int argc, char **argv)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -182,12 +128,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
+            timestampString = "446786073.678292"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "347"
-            endingLineNumber = "347"
-            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "main(int argc, char **argv)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -198,12 +144,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
+            timestampString = "446786073.678292"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "349"
-            endingLineNumber = "349"
-            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "main(int argc, char **argv)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -214,12 +160,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
+            timestampString = "446786073.678292"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "350"
-            endingLineNumber = "350"
-            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "main(int argc, char **argv)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -230,12 +176,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
+            timestampString = "446786073.678292"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "351"
-            endingLineNumber = "351"
-            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "main(int argc, char **argv)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -246,12 +192,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
+            timestampString = "446786073.678292"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "352"
-            endingLineNumber = "352"
-            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "main(int argc, char **argv)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -262,45 +208,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
+            timestampString = "446786073.678292"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "371"
-            endingLineNumber = "371"
-            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "304"
-            endingLineNumber = "304"
-            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "397"
-            endingLineNumber = "397"
-            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
-            landmarkType = "7">
+            startingLineNumber = "90"
+            endingLineNumber = "90">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -340,13 +252,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
+            timestampString = "446786073.678292"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "392"
-            endingLineNumber = "392"
-            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
-            landmarkType = "7">
+            startingLineNumber = "85"
+            endingLineNumber = "85">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -356,13 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663251.196599"
+            timestampString = "446786073.678292"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "396"
-            endingLineNumber = "396"
-            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
-            landmarkType = "7">
+            startingLineNumber = "89"
+            endingLineNumber = "89">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -401,14 +309,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445659906.50934"
+            filePath = "EMoon-Translator/codeTemplates.cpp"
+            timestampString = "446826294.367629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "parseStrips(char* stripFilename, strip *stripList)"
-            landmarkType = "7">
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "codeTemplate::addChild(codeTemplate* child, std::string token)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -417,14 +325,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445661561.967325"
+            filePath = "EMoon-Translator/codeTemplates.cpp"
+            timestampString = "446826448.932481"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
-            landmarkName = "parseLightshows(char* lightshowFilename, colour* colourList, lightshow *lightshowList)"
-            landmarkType = "7">
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "sigTemplate::generate()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -433,14 +341,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663374.504268"
+            filePath = "EMoon-Translator/codeTemplates.cpp"
+            timestampString = "446826448.932481"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
-            landmarkName = "parseLightshows(char* lightshowFilename, colour* colourList, lightshow *lightshowList)"
-            landmarkType = "7">
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "sigTemplate::generate()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -449,14 +357,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663376.011817"
+            filePath = "EMoon-Translator/codeTemplates.cpp"
+            timestampString = "446826448.932481"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
-            landmarkName = "parseLightshows(char* lightshowFilename, colour* colourList, lightshow *lightshowList)"
-            landmarkType = "7">
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "codeTemplate::replaceString(std::string token, std::string value)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -465,13 +373,171 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EMoon-Translator/main.cpp"
-            timestampString = "445663376.504053"
+            filePath = "EMoon-Translator/autocode.cpp"
+            timestampString = "446826634.879149"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
-            landmarkName = "parseLightshows(char* lightshowFilename, colour* colourList, lightshow *lightshowList)"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generateLightshows(lightshow*, int, strip*, int)"
+                  moduleName = "EMoon-Translator"
+                  urlString = "file:///Users/gordon/GitHub/Electronic-Moon/EMoon-Translator/EMoon-Translator/autocode.cpp"
+                  timestampString = "446826635.190832"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "9217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generateLightshows(lightshow*, int, strip*, int)"
+                  moduleName = "EMoon-Translator"
+                  urlString = "file:///Users/gordon/GitHub/Electronic-Moon/EMoon-Translator/EMoon-Translator/autocode.cpp"
+                  timestampString = "446826635.191123"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "9229">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EMoon-Translator/codeTemplates.cpp"
+            timestampString = "446826448.932481"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "sigTemplate::generate()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EMoon-Translator/codeTemplates.cpp"
+            timestampString = "446826448.932481"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "codeTemplate::replaceString(std::string token, std::string value)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EMoon-Translator/codeTemplates.cpp"
+            timestampString = "446826448.932481"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "codeTemplate::replaceString(std::string token, std::string value)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EMoon-Translator/codeTemplates.cpp"
+            timestampString = "446826448.932481"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "primitiveLightshowDefinitions::setup()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EMoon-Translator/codeTemplates.cpp"
+            timestampString = "446826448.932481"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "bodyTemplate::setup()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EMoon-Translator/codeTemplates.cpp"
+            timestampString = "446826448.932481"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "primitiveLightshowDefinitions::setup()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EMoon-Translator/codeTemplates.cpp"
+            timestampString = "446826457.69016"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "codeTemplate::addChild(codeTemplate* child, std::string token)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EMoon-Translator/autocode.cpp"
+            timestampString = "446826668.785227"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, int sCount)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

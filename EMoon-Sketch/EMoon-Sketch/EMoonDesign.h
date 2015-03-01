@@ -18,7 +18,7 @@
 
 typedef uint32_t (*colourFunction)();
 
-
+void testmix1(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip);
 
 void fade2(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip, eMoonSmoothness s, colourFunction CX, colourFunction C0, colourFunction C1);
 void spread4(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip, eMoonSmoothness s,

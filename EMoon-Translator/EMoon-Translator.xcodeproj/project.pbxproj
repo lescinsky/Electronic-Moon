@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F814A7F01A8B58C8009B67F6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F814A7EF1A8B58C8009B67F6 /* main.cpp */; };
+		F816138D1AA15D6200D4D271 /* autocode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F816138B1AA15D6200D4D271 /* autocode.cpp */; };
+		F81613901AA16A8E00D4D271 /* codeTemplates.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F816138E1AA16A8E00D4D271 /* codeTemplates.cpp */; };
+		F8F32EF41A95AF6A002E61BE /* parsing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8F32EF21A95AF6A002E61BE /* parsing.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,10 @@
 /* Begin PBXFileReference section */
 		F814A7EC1A8B58C8009B67F6 /* EMoon-Translator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "EMoon-Translator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F814A7EF1A8B58C8009B67F6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F816138B1AA15D6200D4D271 /* autocode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = autocode.cpp; sourceTree = "<group>"; };
+		F816138C1AA15D6200D4D271 /* autocode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autocode.h; sourceTree = "<group>"; };
+		F816138E1AA16A8E00D4D271 /* codeTemplates.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = codeTemplates.cpp; sourceTree = "<group>"; };
+		F816138F1AA16A8E00D4D271 /* codeTemplates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codeTemplates.h; sourceTree = "<group>"; };
 		F82F13321A903879003E3649 /* colours.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = colours.csv; sourceTree = "<group>"; };
 		F82F13331A903879003E3649 /* lightshows.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lightshows.csv; sourceTree = "<group>"; };
 		F82F13341A903879003E3649 /* strips.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = strips.csv; sourceTree = "<group>"; };
@@ -32,6 +39,8 @@
 		F8E0E1751A8E2AD300F13FA6 /* Lightshows_source.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Lightshows_source.txt; path = "EMoon-Translator/Lightshows_source.txt"; sourceTree = "<group>"; };
 		F8E0E1761A8E2AD300F13FA6 /* Strips_header.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Strips_header.txt; path = "EMoon-Translator/Strips_header.txt"; sourceTree = "<group>"; };
 		F8E0E1771A8E2AD300F13FA6 /* Strips_source.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Strips_source.txt; path = "EMoon-Translator/Strips_source.txt"; sourceTree = "<group>"; };
+		F8F32EF21A95AF6A002E61BE /* parsing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = parsing.cpp; sourceTree = "<group>"; };
+		F8F32EF31A95AF6A002E61BE /* parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parsing.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +78,12 @@
 			isa = PBXGroup;
 			children = (
 				F814A7EF1A8B58C8009B67F6 /* main.cpp */,
+				F816138B1AA15D6200D4D271 /* autocode.cpp */,
+				F816138E1AA16A8E00D4D271 /* codeTemplates.cpp */,
+				F816138F1AA16A8E00D4D271 /* codeTemplates.h */,
+				F816138C1AA15D6200D4D271 /* autocode.h */,
+				F8F32EF21A95AF6A002E61BE /* parsing.cpp */,
+				F8F32EF31A95AF6A002E61BE /* parsing.h */,
 				F82F13321A903879003E3649 /* colours.csv */,
 				F82F13331A903879003E3649 /* lightshows.csv */,
 				F82F13341A903879003E3649 /* strips.csv */,
@@ -132,6 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F81613901AA16A8E00D4D271 /* codeTemplates.cpp in Sources */,
+				F816138D1AA15D6200D4D271 /* autocode.cpp in Sources */,
+				F8F32EF41A95AF6A002E61BE /* parsing.cpp in Sources */,
 				F814A7F01A8B58C8009B67F6 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

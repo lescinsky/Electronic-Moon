@@ -7,6 +7,60 @@
 //
 
 #include "EMoonDesign.h"
+#include "LocalLibrary.h"
+
+extern Adafruit_NeoPixel* pod1, pod2, pod3, pod4;
+extern activePrimitiveLightshowList* APL_list;
+
+void testmix1(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip) {
+    eMoonUpdateFunction update;
+    //    APL_list->addLightshow(0, duration/4, pod2, &gordon2);
+    
+//    switch ( f / (duration / 4) ) {
+//        case 0:
+//            APL_list->addLightshow(0, duration/4, pod2, &gordon2);
+//            APL_list->addLightshow(-1, duration/2, pod1, &gordon1);
+//            APL_list->addLightshow(-1, duration/4, pod3, &gordon3);
+//            APL_list->addLightshow(-1, duration/4, pod4, &redFade);
+//            
+//            break;
+//        case 1:
+//            APL_list->addLightshow(0, duration/4, pod2, &redGreen);
+//            //            APL_list->addLightshow(-1, duration/4, pod1, &redFade);
+//            APL_list->addLightshow(-1, duration/2, pod3, &mardigras);
+//            APL_list->addLightshow(-1, duration/4, pod4, &redGreen);
+//            
+//            
+//            break;
+//        case 2:
+//            APL_list->addLightshow(0, duration/4, pod2, &blackFade);
+//            APL_list->addLightshow(-1, duration/4, pod1, &mardigras);
+//            APL_list->addLightshow(-1, duration/2, pod4, &gordon2);
+//            
+//            
+//            break;
+//        case 3:
+//            APL_list->addLightshow(0, duration/4, pod2, &gordon3);
+//            APL_list->addLightshow(-1, duration/4, pod1, &greenBlue);
+//            APL_list->addLightshow(-1, duration/4, pod3, &gordon1);
+//            
+//            break;
+            //        case 5:
+            //            APL_list->addLightshow(0, duration/8, pod2, &redFade);
+            //            //            APL_list->addLightshow(-1, duration/4, pod1, &mardigras);
+            //
+            //            break;
+            //        case 7:
+            //            APL_list->addLightshow(0, duration/8, pod2, &gordon1);
+            //            //            APL_list->addLightshow(-1, duration/4, pod1, &greenBlue);
+            //            break;
+//            
+//        default:
+//            break;
+//    }
+    
+    //    sequential(f, duration, strip, &mardigras, &redFade, &gordon1, &gordon2);
+}
 
 //----------- WIPES --------------------
 

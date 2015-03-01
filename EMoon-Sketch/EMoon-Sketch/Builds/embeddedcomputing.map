@@ -435,6 +435,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 Builds/EMoonDesign.cpp.o
  .data          0x0000000000000000        0x0 Builds/EMoonDesign.cpp.o
  .bss           0x0000000000000000        0x0 Builds/EMoonDesign.cpp.o
+ .text._Z8testmix1mmP17Adafruit_NeoPixel
+                0x0000000000000000        0x2 Builds/EMoonDesign.cpp.o
  .text._Z10deltaFade2mmP17Adafruit_NeoPixelhPFmvES2_S2_
                 0x0000000000000000       0x68 Builds/EMoonDesign.cpp.o
  .text._Z7spread4mmP17Adafruit_NeoPixelhPFmvES2_S2_S2_S2_
@@ -506,10 +508,6 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 Builds/main.cpp.o
  .text._Z8myStripsv
                 0x0000000000000000        0x4 Builds/main.cpp.o
- .text._Z7update1mmP17Adafruit_NeoPixel
-                0x0000000000000000       0x24 Builds/main.cpp.o
- .text._Z7update2mmP17Adafruit_NeoPixel
-                0x0000000000000000       0x24 Builds/main.cpp.o
  .text._Z17myMasterLightshowv
                 0x0000000000000000        0x4 Builds/main.cpp.o
  .text          0x0000000000000000        0x0 Builds/embeddedcomputing.a(RingBuffer.cpp.o)
@@ -1207,7 +1205,7 @@ END GROUP
 LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtend.o
 LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtn.o
 
-.text           0x0000000000080000     0x63d0
+.text           0x0000000000080000     0x6438
                 0x0000000000080000                . = ALIGN (0x4)
                 0x0000000000080000                _sfixed = .
  *(.vectors .vectors.*)
@@ -1481,744 +1479,744 @@ LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-no
  .text._Z9greenBluemmP17Adafruit_NeoPixel
                 0x0000000000080cac       0x28 Builds/Lightshows.cpp.o
                 0x0000000000080cac                greenBlue(unsigned long, unsigned long, Adafruit_NeoPixel*)
- .text._Z8testmix1mmP17Adafruit_NeoPixel
-                0x0000000000080cd4      0x114 Builds/Lightshows.cpp.o
-                0x0000000000080cd4                testmix1(unsigned long, unsigned long, Adafruit_NeoPixel*)
+ .text._Z9masterMixmmP17Adafruit_NeoPixel
+                0x0000000000080cd4      0x158 Builds/Lightshows.cpp.o
+                0x0000000000080cd4                masterMix(unsigned long, unsigned long, Adafruit_NeoPixel*)
  .text._Z11setupStripsv
-                0x0000000000080de8       0x38 Builds/Lightshows.cpp.o
-                0x0000000000080de8                setupStrips()
+                0x0000000000080e2c       0x44 Builds/Lightshows.cpp.o
+                0x0000000000080e2c                setupStrips()
  .text._Z20setupMasterLightshowv
-                0x0000000000080e20       0x2c Builds/Lightshows.cpp.o
-                0x0000000000080e20                setupMasterLightshow()
+                0x0000000000080e70       0x2c Builds/Lightshows.cpp.o
+                0x0000000000080e70                setupMasterLightshow()
  .text.startup._GLOBAL__sub_I__Z15rainbowSpreadCXv
-                0x0000000000080e4c       0x54 Builds/Lightshows.cpp.o
+                0x0000000000080e9c       0x6c Builds/Lightshows.cpp.o
  .text._ZN28activePrimitiveLightshowListC2Ev
-                0x0000000000080ea0       0x2a Builds/LocalLibrary.cpp.o
-                0x0000000000080ea0                activePrimitiveLightshowList::activePrimitiveLightshowList()
-                0x0000000000080ea0                activePrimitiveLightshowList::activePrimitiveLightshowList()
- *fill*         0x0000000000080eca        0x2 
+                0x0000000000080f08       0x2a Builds/LocalLibrary.cpp.o
+                0x0000000000080f08                activePrimitiveLightshowList::activePrimitiveLightshowList()
+                0x0000000000080f08                activePrimitiveLightshowList::activePrimitiveLightshowList()
+ *fill*         0x0000000000080f32        0x2 
  .text._ZN28activePrimitiveLightshowList12addLightshowEimP17Adafruit_NeoPixelPFvmmS1_E
-                0x0000000000080ecc       0x58 Builds/LocalLibrary.cpp.o
-                0x0000000000080ecc                activePrimitiveLightshowList::addLightshow(int, unsigned long, Adafruit_NeoPixel*, void (*)(unsigned long, unsigned long, Adafruit_NeoPixel*))
+                0x0000000000080f34       0x58 Builds/LocalLibrary.cpp.o
+                0x0000000000080f34                activePrimitiveLightshowList::addLightshow(int, unsigned long, Adafruit_NeoPixel*, void (*)(unsigned long, unsigned long, Adafruit_NeoPixel*))
  .text._ZN28activePrimitiveLightshowList15removeLightshowEi
-                0x0000000000080f24       0x46 Builds/LocalLibrary.cpp.o
-                0x0000000000080f24                activePrimitiveLightshowList::removeLightshow(int)
+                0x0000000000080f8c       0x46 Builds/LocalLibrary.cpp.o
+                0x0000000000080f8c                activePrimitiveLightshowList::removeLightshow(int)
  .text._ZN27activeSymbolicLightshowListC2Ev
-                0x0000000000080f6a       0x1e Builds/LocalLibrary.cpp.o
-                0x0000000000080f6a                activeSymbolicLightshowList::activeSymbolicLightshowList()
-                0x0000000000080f6a                activeSymbolicLightshowList::activeSymbolicLightshowList()
+                0x0000000000080fd2       0x1e Builds/LocalLibrary.cpp.o
+                0x0000000000080fd2                activeSymbolicLightshowList::activeSymbolicLightshowList()
+                0x0000000000080fd2                activeSymbolicLightshowList::activeSymbolicLightshowList()
  .text._ZN27activeSymbolicLightshowList12addLightshowEimP17Adafruit_NeoPixelPFvmmS1_E
-                0x0000000000080f88       0x38 Builds/LocalLibrary.cpp.o
-                0x0000000000080f88                activeSymbolicLightshowList::addLightshow(int, unsigned long, Adafruit_NeoPixel*, void (*)(unsigned long, unsigned long, Adafruit_NeoPixel*))
+                0x0000000000080ff0       0x38 Builds/LocalLibrary.cpp.o
+                0x0000000000080ff0                activeSymbolicLightshowList::addLightshow(int, unsigned long, Adafruit_NeoPixel*, void (*)(unsigned long, unsigned long, Adafruit_NeoPixel*))
  .text._ZN27activeSymbolicLightshowList15removeLightshowEi
-                0x0000000000080fc0       0x1a Builds/LocalLibrary.cpp.o
-                0x0000000000080fc0                activeSymbolicLightshowList::removeLightshow(int)
- *fill*         0x0000000000080fda        0x2 
+                0x0000000000081028       0x1a Builds/LocalLibrary.cpp.o
+                0x0000000000081028                activeSymbolicLightshowList::removeLightshow(int)
+ *fill*         0x0000000000081042        0x2 
  .text._ZN27activeSymbolicLightshowList21activateNextLightshowEi
-                0x0000000000080fdc       0x44 Builds/LocalLibrary.cpp.o
-                0x0000000000080fdc                activeSymbolicLightshowList::activateNextLightshow(int)
+                0x0000000000081044       0x44 Builds/LocalLibrary.cpp.o
+                0x0000000000081044                activeSymbolicLightshowList::activateNextLightshow(int)
  .text._ZN28activePrimitiveLightshowList9updateAllEv
-                0x0000000000081020       0x54 Builds/LocalLibrary.cpp.o
-                0x0000000000081020                activePrimitiveLightshowList::updateAll()
+                0x0000000000081088       0x54 Builds/LocalLibrary.cpp.o
+                0x0000000000081088                activePrimitiveLightshowList::updateAll()
  .text._ZN23activePhysicalStripList8addStripEP17Adafruit_NeoPixel
-                0x0000000000081074       0x14 Builds/LocalLibrary.cpp.o
-                0x0000000000081074                activePhysicalStripList::addStrip(Adafruit_NeoPixel*)
+                0x00000000000810dc       0x14 Builds/LocalLibrary.cpp.o
+                0x00000000000810dc                activePhysicalStripList::addStrip(Adafruit_NeoPixel*)
  .text._ZN23activePhysicalStripList7showAllEv
-                0x0000000000081088       0x1c Builds/LocalLibrary.cpp.o
-                0x0000000000081088                activePhysicalStripList::showAll()
+                0x00000000000810f0       0x1c Builds/LocalLibrary.cpp.o
+                0x00000000000810f0                activePhysicalStripList::showAll()
  .text.startup._GLOBAL__sub_I_APL_list
-                0x00000000000810a4       0x48 Builds/LocalLibrary.cpp.o
- .text.setup    0x00000000000810ec       0x34 Builds/main.cpp.o
-                0x00000000000810ec                setup
- .text.loop     0x0000000000081120       0x44 Builds/main.cpp.o
-                0x0000000000081120                loop
+                0x000000000008110c       0x48 Builds/LocalLibrary.cpp.o
+ .text.setup    0x0000000000081154       0x34 Builds/main.cpp.o
+                0x0000000000081154                setup
+ .text.loop     0x0000000000081188       0x44 Builds/main.cpp.o
+                0x0000000000081188                loop
  .text.startup.main
-                0x0000000000081164       0x30 Builds/main.cpp.o
-                0x0000000000081164                main
+                0x00000000000811cc       0x30 Builds/main.cpp.o
+                0x00000000000811cc                main
  .text.startup._GLOBAL__sub_I_main
-                0x0000000000081194       0x20 Builds/main.cpp.o
+                0x00000000000811fc       0x20 Builds/main.cpp.o
  .text._ZN10RingBufferC2Ev
-                0x00000000000811b4       0x16 Builds/embeddedcomputing.a(RingBuffer.cpp.o)
-                0x00000000000811b4                RingBuffer::RingBuffer()
-                0x00000000000811b4                RingBuffer::RingBuffer()
+                0x000000000008121c       0x16 Builds/embeddedcomputing.a(RingBuffer.cpp.o)
+                0x000000000008121c                RingBuffer::RingBuffer()
+                0x000000000008121c                RingBuffer::RingBuffer()
  .text._ZN10RingBuffer10store_charEh
-                0x00000000000811ca       0x16 Builds/embeddedcomputing.a(RingBuffer.cpp.o)
-                0x00000000000811ca                RingBuffer::store_char(unsigned char)
+                0x0000000000081232       0x16 Builds/embeddedcomputing.a(RingBuffer.cpp.o)
+                0x0000000000081232                RingBuffer::store_char(unsigned char)
  .text._ZN9UARTClasscvbEv
-                0x00000000000811e0        0x4 Builds/embeddedcomputing.a(UARTClass.cpp.o)
-                0x00000000000811e0                UARTClass::operator bool()
+                0x0000000000081248        0x4 Builds/embeddedcomputing.a(UARTClass.cpp.o)
+                0x0000000000081248                UARTClass::operator bool()
  .text._ZN9UARTClass9availableEv
-                0x00000000000811e4        0xe Builds/embeddedcomputing.a(UARTClass.cpp.o)
-                0x00000000000811e4                UARTClass::available()
+                0x000000000008124c        0xe Builds/embeddedcomputing.a(UARTClass.cpp.o)
+                0x000000000008124c                UARTClass::available()
  .text._ZN9UARTClass4peekEv
-                0x00000000000811f2       0x12 Builds/embeddedcomputing.a(UARTClass.cpp.o)
-                0x00000000000811f2                UARTClass::peek()
+                0x000000000008125a       0x12 Builds/embeddedcomputing.a(UARTClass.cpp.o)
+                0x000000000008125a                UARTClass::peek()
  .text._ZN9UARTClass4readEv
-                0x0000000000081204       0x1c Builds/embeddedcomputing.a(UARTClass.cpp.o)
-                0x0000000000081204                UARTClass::read()
+                0x000000000008126c       0x1c Builds/embeddedcomputing.a(UARTClass.cpp.o)
+                0x000000000008126c                UARTClass::read()
  .text._ZN9UARTClass5flushEv
-                0x0000000000081220        0xa Builds/embeddedcomputing.a(UARTClass.cpp.o)
-                0x0000000000081220                UARTClass::flush()
+                0x0000000000081288        0xa Builds/embeddedcomputing.a(UARTClass.cpp.o)
+                0x0000000000081288                UARTClass::flush()
  .text._ZN9UARTClass5writeEh
-                0x000000000008122a        0xe Builds/embeddedcomputing.a(UARTClass.cpp.o)
-                0x000000000008122a                UARTClass::write(unsigned char)
+                0x0000000000081292        0xe Builds/embeddedcomputing.a(UARTClass.cpp.o)
+                0x0000000000081292                UARTClass::write(unsigned char)
  .text._ZN9UARTClass5beginEm
-                0x0000000000081238       0x5c Builds/embeddedcomputing.a(UARTClass.cpp.o)
-                0x0000000000081238                UARTClass::begin(unsigned long)
+                0x00000000000812a0       0x5c Builds/embeddedcomputing.a(UARTClass.cpp.o)
+                0x00000000000812a0                UARTClass::begin(unsigned long)
  .text._ZN9UARTClass3endEv
-                0x0000000000081294       0x38 Builds/embeddedcomputing.a(UARTClass.cpp.o)
-                0x0000000000081294                UARTClass::end()
+                0x00000000000812fc       0x38 Builds/embeddedcomputing.a(UARTClass.cpp.o)
+                0x00000000000812fc                UARTClass::end()
  .text._ZN9UARTClassC2EP4Uart4IRQnmP10RingBuffer
-                0x00000000000812cc       0x20 Builds/embeddedcomputing.a(UARTClass.cpp.o)
-                0x00000000000812cc                UARTClass::UARTClass(Uart*, IRQn, unsigned long, RingBuffer*)
-                0x00000000000812cc                UARTClass::UARTClass(Uart*, IRQn, unsigned long, RingBuffer*)
+                0x0000000000081334       0x20 Builds/embeddedcomputing.a(UARTClass.cpp.o)
+                0x0000000000081334                UARTClass::UARTClass(Uart*, IRQn, unsigned long, RingBuffer*)
+                0x0000000000081334                UARTClass::UARTClass(Uart*, IRQn, unsigned long, RingBuffer*)
  .text._ZN9UARTClass10IrqHandlerEv
-                0x00000000000812ec       0x28 Builds/embeddedcomputing.a(UARTClass.cpp.o)
-                0x00000000000812ec                UARTClass::IrqHandler()
+                0x0000000000081354       0x28 Builds/embeddedcomputing.a(UARTClass.cpp.o)
+                0x0000000000081354                UARTClass::IrqHandler()
  .text._ZN10USARTClasscvbEv
-                0x0000000000081314        0x4 Builds/embeddedcomputing.a(USARTClass.cpp.o)
-                0x0000000000081314                USARTClass::operator bool()
+                0x000000000008137c        0x4 Builds/embeddedcomputing.a(USARTClass.cpp.o)
+                0x000000000008137c                USARTClass::operator bool()
  .text._ZN10USARTClass9availableEv
-                0x0000000000081318        0xe Builds/embeddedcomputing.a(USARTClass.cpp.o)
-                0x0000000000081318                USARTClass::available()
+                0x0000000000081380        0xe Builds/embeddedcomputing.a(USARTClass.cpp.o)
+                0x0000000000081380                USARTClass::available()
  .text._ZN10USARTClass4peekEv
-                0x0000000000081326       0x12 Builds/embeddedcomputing.a(USARTClass.cpp.o)
-                0x0000000000081326                USARTClass::peek()
+                0x000000000008138e       0x12 Builds/embeddedcomputing.a(USARTClass.cpp.o)
+                0x000000000008138e                USARTClass::peek()
  .text._ZN10USARTClass4readEv
-                0x0000000000081338       0x1c Builds/embeddedcomputing.a(USARTClass.cpp.o)
-                0x0000000000081338                USARTClass::read()
+                0x00000000000813a0       0x1c Builds/embeddedcomputing.a(USARTClass.cpp.o)
+                0x00000000000813a0                USARTClass::read()
  .text._ZN10USARTClass5flushEv
-                0x0000000000081354        0xa Builds/embeddedcomputing.a(USARTClass.cpp.o)
-                0x0000000000081354                USARTClass::flush()
+                0x00000000000813bc        0xa Builds/embeddedcomputing.a(USARTClass.cpp.o)
+                0x00000000000813bc                USARTClass::flush()
  .text._ZN10USARTClass5writeEh
-                0x000000000008135e        0xe Builds/embeddedcomputing.a(USARTClass.cpp.o)
-                0x000000000008135e                USARTClass::write(unsigned char)
+                0x00000000000813c6        0xe Builds/embeddedcomputing.a(USARTClass.cpp.o)
+                0x00000000000813c6                USARTClass::write(unsigned char)
  .text._ZN10USARTClass3endEv
-                0x000000000008136c       0x38 Builds/embeddedcomputing.a(USARTClass.cpp.o)
-                0x000000000008136c                USARTClass::end()
+                0x00000000000813d4       0x38 Builds/embeddedcomputing.a(USARTClass.cpp.o)
+                0x00000000000813d4                USARTClass::end()
  .text._ZN10USARTClassC2EP5Usart4IRQnmP10RingBuffer
-                0x00000000000813a4       0x20 Builds/embeddedcomputing.a(USARTClass.cpp.o)
-                0x00000000000813a4                USARTClass::USARTClass(Usart*, IRQn, unsigned long, RingBuffer*)
-                0x00000000000813a4                USARTClass::USARTClass(Usart*, IRQn, unsigned long, RingBuffer*)
+                0x000000000008140c       0x20 Builds/embeddedcomputing.a(USARTClass.cpp.o)
+                0x000000000008140c                USARTClass::USARTClass(Usart*, IRQn, unsigned long, RingBuffer*)
+                0x000000000008140c                USARTClass::USARTClass(Usart*, IRQn, unsigned long, RingBuffer*)
  .text._ZN10USARTClass5beginEmm
-                0x00000000000813c4       0x58 Builds/embeddedcomputing.a(USARTClass.cpp.o)
-                0x00000000000813c4                USARTClass::begin(unsigned long, unsigned long)
+                0x000000000008142c       0x58 Builds/embeddedcomputing.a(USARTClass.cpp.o)
+                0x000000000008142c                USARTClass::begin(unsigned long, unsigned long)
  .text._ZN10USARTClass5beginEm
-                0x000000000008141c        0x8 Builds/embeddedcomputing.a(USARTClass.cpp.o)
-                0x000000000008141c                USARTClass::begin(unsigned long)
+                0x0000000000081484        0x8 Builds/embeddedcomputing.a(USARTClass.cpp.o)
+                0x0000000000081484                USARTClass::begin(unsigned long)
  .text._ZN10USARTClass10IrqHandlerEv
-                0x0000000000081424       0x28 Builds/embeddedcomputing.a(USARTClass.cpp.o)
-                0x0000000000081424                USARTClass::IrqHandler()
+                0x000000000008148c       0x28 Builds/embeddedcomputing.a(USARTClass.cpp.o)
+                0x000000000008148c                USARTClass::IrqHandler()
  .text.unlikely._ZL11USB_SendZlpv
-                0x000000000008144c       0x20 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x00000000000814b4       0x20 Builds/embeddedcomputing.a(USBCore.cpp.o)
  .text._Z14USBD_Availablem
-                0x000000000008146c       0x2c Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x000000000008146c                USBD_Available(unsigned long)
+                0x00000000000814d4       0x2c Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x00000000000814d4                USBD_Available(unsigned long)
  .text._Z9USBD_RecvmPvm
-                0x0000000000081498       0x7c Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x0000000000081498                USBD_Recv(unsigned long, void*, unsigned long)
+                0x0000000000081500       0x7c Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x0000000000081500                USBD_Recv(unsigned long, void*, unsigned long)
  .text._Z9USBD_Recvm
-                0x0000000000081514       0x22 Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x0000000000081514                USBD_Recv(unsigned long)
- *fill*         0x0000000000081536        0x2 
+                0x000000000008157c       0x22 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x000000000008157c                USBD_Recv(unsigned long)
+ *fill*         0x000000000008159e        0x2 
  .text._Z9USBD_SendmPKvm
-                0x0000000000081538       0x4c Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x0000000000081538                USBD_Send(unsigned long, void const*, unsigned long)
+                0x00000000000815a0       0x4c Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x00000000000815a0                USBD_Send(unsigned long, void const*, unsigned long)
  .text._Z16USBD_SendControlhPKvm
-                0x0000000000081584       0x40 Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x0000000000081584                USBD_SendControl(unsigned char, void const*, unsigned long)
+                0x00000000000815ec       0x40 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x00000000000815ec                USBD_SendControl(unsigned char, void const*, unsigned long)
  .text.unlikely._ZL24USB_SendStringDescriptorPKhi
-                0x00000000000815c4       0x38 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x000000000008162c       0x38 Builds/embeddedcomputing.a(USBCore.cpp.o)
  .text._Z16USBD_RecvControlPvm
-                0x00000000000815fc       0x1c Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x00000000000815fc                USBD_RecvControl(void*, unsigned long)
+                0x0000000000081664       0x1c Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x0000000000081664                USBD_RecvControl(void*, unsigned long)
  .text._Z26USBD_ClassInterfaceRequestR5Setup
-                0x0000000000081618       0x14 Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x0000000000081618                USBD_ClassInterfaceRequest(Setup&)
+                0x0000000000081680       0x14 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x0000000000081680                USBD_ClassInterfaceRequest(Setup&)
  .text._Z19USBD_SendInterfacesv
-                0x000000000008162c       0x1e Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x000000000008162c                USBD_SendInterfaces()
+                0x0000000000081694       0x1e Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x0000000000081694                USBD_SendInterfaces()
  .text._Z24USBD_SendOtherInterfacesv
-                0x000000000008164a       0x1e Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x000000000008164a                USBD_SendOtherInterfaces()
+                0x00000000000816b2       0x1e Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x00000000000816b2                USBD_SendOtherInterfaces()
  .text._Z10USBD_Flushm
-                0x0000000000081668       0x16 Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x0000000000081668                USBD_Flush(unsigned long)
- *fill*         0x000000000008167e        0x2 
+                0x00000000000816d0       0x16 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x00000000000816d0                USBD_Flush(unsigned long)
+ *fill*         0x00000000000816e6        0x2 
  .text._ZN10USBDevice_C2Ev
-                0x0000000000081680       0x24 Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x0000000000081680                USBDevice_::USBDevice_()
-                0x0000000000081680                USBDevice_::USBDevice_()
+                0x00000000000816e8       0x24 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x00000000000816e8                USBDevice_::USBDevice_()
+                0x00000000000816e8                USBDevice_::USBDevice_()
  .text._ZN10USBDevice_6attachEv
-                0x00000000000816a4       0x20 Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x00000000000816a4                USBDevice_::attach()
+                0x000000000008170c       0x20 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x000000000008170c                USBDevice_::attach()
  .text.startup._GLOBAL__sub_I_TxLEDPulse
-                0x00000000000816c4        0xc Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x000000000008172c        0xc Builds/embeddedcomputing.a(USBCore.cpp.o)
  .text._ZL7USB_ISRv
-                0x00000000000816d0      0x424 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x0000000000081738      0x424 Builds/embeddedcomputing.a(USBCore.cpp.o)
  .text.PIOA_Handler
-                0x0000000000081af4       0x28 Builds/embeddedcomputing.a(WInterrupts.c.o)
-                0x0000000000081af4                PIOA_Handler
+                0x0000000000081b5c       0x28 Builds/embeddedcomputing.a(WInterrupts.c.o)
+                0x0000000000081b5c                PIOA_Handler
  .text.PIOB_Handler
-                0x0000000000081b1c       0x28 Builds/embeddedcomputing.a(WInterrupts.c.o)
-                0x0000000000081b1c                PIOB_Handler
+                0x0000000000081b84       0x28 Builds/embeddedcomputing.a(WInterrupts.c.o)
+                0x0000000000081b84                PIOB_Handler
  .text.PIOC_Handler
-                0x0000000000081b44       0x28 Builds/embeddedcomputing.a(WInterrupts.c.o)
-                0x0000000000081b44                PIOC_Handler
+                0x0000000000081bac       0x28 Builds/embeddedcomputing.a(WInterrupts.c.o)
+                0x0000000000081bac                PIOC_Handler
  .text.PIOD_Handler
-                0x0000000000081b6c       0x28 Builds/embeddedcomputing.a(WInterrupts.c.o)
-                0x0000000000081b6c                PIOD_Handler
- .text.__halt   0x0000000000081b94        0x2 Builds/embeddedcomputing.a(cortex_handlers.c.o)
-                0x0000000000081b94                SPI0_Handler
-                0x0000000000081b94                DebugMon_Handler
-                0x0000000000081b94                DMAC_Handler
-                0x0000000000081b94                TRNG_Handler
-                0x0000000000081b94                HardFault_Handler
-                0x0000000000081b94                TC2_Handler
-                0x0000000000081b94                TWI1_Handler
-                0x0000000000081b94                NMI_Handler
-                0x0000000000081b94                TC7_Handler
-                0x0000000000081b94                ADC_Handler
-                0x0000000000081b94                SMC_Handler
-                0x0000000000081b94                RTT_Handler
-                0x0000000000081b94                EFC1_Handler
-                0x0000000000081b94                RTC_Handler
-                0x0000000000081b94                UsageFault_Handler
-                0x0000000000081b94                TC6_Handler
-                0x0000000000081b94                WDT_Handler
-                0x0000000000081b94                CAN0_Handler
-                0x0000000000081b94                TC4_Handler
-                0x0000000000081b94                TC1_Handler
-                0x0000000000081b94                HSMCI_Handler
-                0x0000000000081b94                TC3_Handler
-                0x0000000000081b94                TWI0_Handler
-                0x0000000000081b94                SSC_Handler
-                0x0000000000081b94                EFC0_Handler
-                0x0000000000081b94                PMC_Handler
-                0x0000000000081b94                PWM_Handler
-                0x0000000000081b94                CAN1_Handler
-                0x0000000000081b94                MemManage_Handler
-                0x0000000000081b94                SUPC_Handler
-                0x0000000000081b94                TC8_Handler
-                0x0000000000081b94                USART2_Handler
-                0x0000000000081b94                EMAC_Handler
-                0x0000000000081b94                BusFault_Handler
-                0x0000000000081b94                RSTC_Handler
-                0x0000000000081b94                TC0_Handler
-                0x0000000000081b94                TC5_Handler
-                0x0000000000081b94                DACC_Handler
+                0x0000000000081bd4       0x28 Builds/embeddedcomputing.a(WInterrupts.c.o)
+                0x0000000000081bd4                PIOD_Handler
+ .text.__halt   0x0000000000081bfc        0x2 Builds/embeddedcomputing.a(cortex_handlers.c.o)
+                0x0000000000081bfc                SPI0_Handler
+                0x0000000000081bfc                DebugMon_Handler
+                0x0000000000081bfc                DMAC_Handler
+                0x0000000000081bfc                TRNG_Handler
+                0x0000000000081bfc                HardFault_Handler
+                0x0000000000081bfc                TC2_Handler
+                0x0000000000081bfc                TWI1_Handler
+                0x0000000000081bfc                NMI_Handler
+                0x0000000000081bfc                TC7_Handler
+                0x0000000000081bfc                ADC_Handler
+                0x0000000000081bfc                SMC_Handler
+                0x0000000000081bfc                RTT_Handler
+                0x0000000000081bfc                EFC1_Handler
+                0x0000000000081bfc                RTC_Handler
+                0x0000000000081bfc                UsageFault_Handler
+                0x0000000000081bfc                TC6_Handler
+                0x0000000000081bfc                WDT_Handler
+                0x0000000000081bfc                CAN0_Handler
+                0x0000000000081bfc                TC4_Handler
+                0x0000000000081bfc                TC1_Handler
+                0x0000000000081bfc                HSMCI_Handler
+                0x0000000000081bfc                TC3_Handler
+                0x0000000000081bfc                TWI0_Handler
+                0x0000000000081bfc                SSC_Handler
+                0x0000000000081bfc                EFC0_Handler
+                0x0000000000081bfc                PMC_Handler
+                0x0000000000081bfc                PWM_Handler
+                0x0000000000081bfc                CAN1_Handler
+                0x0000000000081bfc                MemManage_Handler
+                0x0000000000081bfc                SUPC_Handler
+                0x0000000000081bfc                TC8_Handler
+                0x0000000000081bfc                USART2_Handler
+                0x0000000000081bfc                EMAC_Handler
+                0x0000000000081bfc                BusFault_Handler
+                0x0000000000081bfc                RSTC_Handler
+                0x0000000000081bfc                TC0_Handler
+                0x0000000000081bfc                TC5_Handler
+                0x0000000000081bfc                DACC_Handler
  .text.SVC_Handler
-                0x0000000000081b96        0x4 Builds/embeddedcomputing.a(cortex_handlers.c.o)
-                0x0000000000081b96                SVC_Handler
+                0x0000000000081bfe        0x4 Builds/embeddedcomputing.a(cortex_handlers.c.o)
+                0x0000000000081bfe                SVC_Handler
  .text.PendSV_Handler
-                0x0000000000081b9a        0x4 Builds/embeddedcomputing.a(cortex_handlers.c.o)
-                0x0000000000081b9a                PendSV_Handler
+                0x0000000000081c02        0x4 Builds/embeddedcomputing.a(cortex_handlers.c.o)
+                0x0000000000081c02                PendSV_Handler
  .text.SysTick_Handler
-                0x0000000000081b9e       0x16 Builds/embeddedcomputing.a(cortex_handlers.c.o)
-                0x0000000000081b9e                SysTick_Handler
- .text.__empty  0x0000000000081bb4        0x2 Builds/embeddedcomputing.a(hooks.c.o)
-                0x0000000000081bb4                yield
- .text.__false  0x0000000000081bb6        0x4 Builds/embeddedcomputing.a(hooks.c.o)
-                0x0000000000081bb6                sysTickHook
- .text.__halt   0x0000000000081bba        0x2 Builds/embeddedcomputing.a(hooks.c.o)
-                0x0000000000081bba                pendSVHook
-                0x0000000000081bba                svcHook
- .text._Znwj    0x0000000000081bbc        0x4 Builds/embeddedcomputing.a(new.cpp.o)
-                0x0000000000081bbc                operator new(unsigned int)
- .text.millis   0x0000000000081bc0        0x4 Builds/embeddedcomputing.a(wiring.c.o)
-                0x0000000000081bc0                millis
- .text.micros   0x0000000000081bc4       0x74 Builds/embeddedcomputing.a(wiring.c.o)
-                0x0000000000081bc4                micros
- .text.delay    0x0000000000081c38       0x1c Builds/embeddedcomputing.a(wiring.c.o)
-                0x0000000000081c38                delay
+                0x0000000000081c06       0x16 Builds/embeddedcomputing.a(cortex_handlers.c.o)
+                0x0000000000081c06                SysTick_Handler
+ .text.__empty  0x0000000000081c1c        0x2 Builds/embeddedcomputing.a(hooks.c.o)
+                0x0000000000081c1c                yield
+ .text.__false  0x0000000000081c1e        0x4 Builds/embeddedcomputing.a(hooks.c.o)
+                0x0000000000081c1e                sysTickHook
+ .text.__halt   0x0000000000081c22        0x2 Builds/embeddedcomputing.a(hooks.c.o)
+                0x0000000000081c22                pendSVHook
+                0x0000000000081c22                svcHook
+ .text._Znwj    0x0000000000081c24        0x4 Builds/embeddedcomputing.a(new.cpp.o)
+                0x0000000000081c24                operator new(unsigned int)
+ .text.millis   0x0000000000081c28        0x4 Builds/embeddedcomputing.a(wiring.c.o)
+                0x0000000000081c28                millis
+ .text.micros   0x0000000000081c2c       0x74 Builds/embeddedcomputing.a(wiring.c.o)
+                0x0000000000081c2c                micros
+ .text.delay    0x0000000000081ca0       0x1c Builds/embeddedcomputing.a(wiring.c.o)
+                0x0000000000081ca0                delay
  .text.analogOutputInit
-                0x0000000000081c54       0x14 Builds/embeddedcomputing.a(wiring_analog.c.o)
-                0x0000000000081c54                analogOutputInit
- .text.pinMode  0x0000000000081c68       0x64 Builds/embeddedcomputing.a(wiring_digital.c.o)
-                0x0000000000081c68                pinMode
+                0x0000000000081cbc       0x14 Builds/embeddedcomputing.a(wiring_analog.c.o)
+                0x0000000000081cbc                analogOutputInit
+ .text.pinMode  0x0000000000081cd0       0x64 Builds/embeddedcomputing.a(wiring_digital.c.o)
+                0x0000000000081cd0                pinMode
  .text.digitalWrite
-                0x0000000000081ccc       0x48 Builds/embeddedcomputing.a(wiring_digital.c.o)
-                0x0000000000081ccc                digitalWrite
+                0x0000000000081d34       0x48 Builds/embeddedcomputing.a(wiring_digital.c.o)
+                0x0000000000081d34                digitalWrite
  .text._ZN5Print5writeEPKhj
-                0x0000000000081d14       0x22 Builds/embeddedcomputing.a(Print.cpp.o)
-                0x0000000000081d14                Print::write(unsigned char const*, unsigned int)
- *fill*         0x0000000000081d36        0x2 
+                0x0000000000081d7c       0x22 Builds/embeddedcomputing.a(Print.cpp.o)
+                0x0000000000081d7c                Print::write(unsigned char const*, unsigned int)
+ *fill*         0x0000000000081d9e        0x2 
  .text.initiateReset
-                0x0000000000081d38        0xc Builds/embeddedcomputing.a(Reset.cpp.o)
-                0x0000000000081d38                initiateReset
+                0x0000000000081da0        0xc Builds/embeddedcomputing.a(Reset.cpp.o)
+                0x0000000000081da0                initiateReset
  .text.cancelReset
-                0x0000000000081d44       0x10 Builds/embeddedcomputing.a(Reset.cpp.o)
-                0x0000000000081d44                cancelReset
+                0x0000000000081dac       0x10 Builds/embeddedcomputing.a(Reset.cpp.o)
+                0x0000000000081dac                cancelReset
  .text.tickReset
-                0x0000000000081d54       0x20 Builds/embeddedcomputing.a(Reset.cpp.o)
-                0x0000000000081d54                tickReset
+                0x0000000000081dbc       0x20 Builds/embeddedcomputing.a(Reset.cpp.o)
+                0x0000000000081dbc                tickReset
  .text._ZN7Serial_9availableEv
-                0x0000000000081d74       0x18 Builds/embeddedcomputing.a(CDC.cpp.o)
-                0x0000000000081d74                Serial_::available()
+                0x0000000000081ddc       0x18 Builds/embeddedcomputing.a(CDC.cpp.o)
+                0x0000000000081ddc                Serial_::available()
  .text._ZN7Serial_4peekEv
-                0x0000000000081d8c       0x20 Builds/embeddedcomputing.a(CDC.cpp.o)
-                0x0000000000081d8c                Serial_::peek()
+                0x0000000000081df4       0x20 Builds/embeddedcomputing.a(CDC.cpp.o)
+                0x0000000000081df4                Serial_::peek()
  .text._ZN7Serial_5writeEh
-                0x0000000000081dac       0x16 Builds/embeddedcomputing.a(CDC.cpp.o)
-                0x0000000000081dac                Serial_::write(unsigned char)
- *fill*         0x0000000000081dc2        0x2 
+                0x0000000000081e14       0x16 Builds/embeddedcomputing.a(CDC.cpp.o)
+                0x0000000000081e14                Serial_::write(unsigned char)
+ *fill*         0x0000000000081e2a        0x2 
  .text._ZN7Serial_4readEv
-                0x0000000000081dc4       0x44 Builds/embeddedcomputing.a(CDC.cpp.o)
-                0x0000000000081dc4                Serial_::read()
+                0x0000000000081e2c       0x44 Builds/embeddedcomputing.a(CDC.cpp.o)
+                0x0000000000081e2c                Serial_::read()
  .text._ZN7Serial_5flushEv
-                0x0000000000081e08        0x6 Builds/embeddedcomputing.a(CDC.cpp.o)
-                0x0000000000081e08                Serial_::flush()
- *fill*         0x0000000000081e0e        0x2 
+                0x0000000000081e70        0x6 Builds/embeddedcomputing.a(CDC.cpp.o)
+                0x0000000000081e70                Serial_::flush()
+ *fill*         0x0000000000081e76        0x2 
  .text._ZN7Serial_6acceptEv
-                0x0000000000081e10       0x70 Builds/embeddedcomputing.a(CDC.cpp.o)
-                0x0000000000081e10                Serial_::accept()
+                0x0000000000081e78       0x70 Builds/embeddedcomputing.a(CDC.cpp.o)
+                0x0000000000081e78                Serial_::accept()
  .text._ZN7Serial_5writeEPKhj
-                0x0000000000081e80       0x2c Builds/embeddedcomputing.a(CDC.cpp.o)
-                0x0000000000081e80                Serial_::write(unsigned char const*, unsigned int)
+                0x0000000000081ee8       0x2c Builds/embeddedcomputing.a(CDC.cpp.o)
+                0x0000000000081ee8                Serial_::write(unsigned char const*, unsigned int)
  .text._Z16CDC_GetInterfacePh
-                0x0000000000081eac       0x14 Builds/embeddedcomputing.a(CDC.cpp.o)
-                0x0000000000081eac                CDC_GetInterface(unsigned char*)
+                0x0000000000081f14       0x14 Builds/embeddedcomputing.a(CDC.cpp.o)
+                0x0000000000081f14                CDC_GetInterface(unsigned char*)
  .text._Z21CDC_GetOtherInterfacePh
-                0x0000000000081ec0       0x14 Builds/embeddedcomputing.a(CDC.cpp.o)
-                0x0000000000081ec0                CDC_GetOtherInterface(unsigned char*)
+                0x0000000000081f28       0x14 Builds/embeddedcomputing.a(CDC.cpp.o)
+                0x0000000000081f28                CDC_GetOtherInterface(unsigned char*)
  .text._Z9CDC_SetupR5Setup
-                0x0000000000081ed4       0x64 Builds/embeddedcomputing.a(CDC.cpp.o)
-                0x0000000000081ed4                CDC_Setup(Setup&)
+                0x0000000000081f3c       0x64 Builds/embeddedcomputing.a(CDC.cpp.o)
+                0x0000000000081f3c                CDC_Setup(Setup&)
  .text.startup._GLOBAL__sub_I_cdc_rx_buffer
-                0x0000000000081f38       0x1c Builds/embeddedcomputing.a(CDC.cpp.o)
+                0x0000000000081fa0       0x1c Builds/embeddedcomputing.a(CDC.cpp.o)
  .text._ZN9Keyboard_5writeEh
-                0x0000000000081f54       0x1c Builds/embeddedcomputing.a(HID.cpp.o)
-                0x0000000000081f54                Keyboard_::write(unsigned char)
+                0x0000000000081fbc       0x1c Builds/embeddedcomputing.a(HID.cpp.o)
+                0x0000000000081fbc                Keyboard_::write(unsigned char)
  .text._Z16HID_GetInterfacePh
-                0x0000000000081f70       0x14 Builds/embeddedcomputing.a(HID.cpp.o)
-                0x0000000000081f70                HID_GetInterface(unsigned char*)
+                0x0000000000081fd8       0x14 Builds/embeddedcomputing.a(HID.cpp.o)
+                0x0000000000081fd8                HID_GetInterface(unsigned char*)
  .text._Z17HID_GetDescriptori
-                0x0000000000081f84       0x10 Builds/embeddedcomputing.a(HID.cpp.o)
-                0x0000000000081f84                HID_GetDescriptor(int)
+                0x0000000000081fec       0x10 Builds/embeddedcomputing.a(HID.cpp.o)
+                0x0000000000081fec                HID_GetDescriptor(int)
  .text._Z14HID_SendReporthPKvm
-                0x0000000000081f94       0x2e Builds/embeddedcomputing.a(HID.cpp.o)
-                0x0000000000081f94                HID_SendReport(unsigned char, void const*, unsigned long)
- *fill*         0x0000000000081fc2        0x2 
+                0x0000000000081ffc       0x2e Builds/embeddedcomputing.a(HID.cpp.o)
+                0x0000000000081ffc                HID_SendReport(unsigned char, void const*, unsigned long)
+ *fill*         0x000000000008202a        0x2 
  .text._Z9HID_SetupR5Setup
-                0x0000000000081fc4       0x40 Builds/embeddedcomputing.a(HID.cpp.o)
-                0x0000000000081fc4                HID_Setup(Setup&)
+                0x000000000008202c       0x40 Builds/embeddedcomputing.a(HID.cpp.o)
+                0x000000000008202c                HID_Setup(Setup&)
  .text._ZN9Keyboard_10sendReportEP9KeyReport
-                0x0000000000082004        0xc Builds/embeddedcomputing.a(HID.cpp.o)
-                0x0000000000082004                Keyboard_::sendReport(KeyReport*)
+                0x000000000008206c        0xc Builds/embeddedcomputing.a(HID.cpp.o)
+                0x000000000008206c                Keyboard_::sendReport(KeyReport*)
  .text._ZN9Keyboard_5pressEh
-                0x0000000000082010       0x88 Builds/embeddedcomputing.a(HID.cpp.o)
-                0x0000000000082010                Keyboard_::press(unsigned char)
+                0x0000000000082078       0x88 Builds/embeddedcomputing.a(HID.cpp.o)
+                0x0000000000082078                Keyboard_::press(unsigned char)
  .text._ZN9Keyboard_7releaseEh
-                0x0000000000082098       0x64 Builds/embeddedcomputing.a(HID.cpp.o)
-                0x0000000000082098                Keyboard_::release(unsigned char)
+                0x0000000000082100       0x64 Builds/embeddedcomputing.a(HID.cpp.o)
+                0x0000000000082100                Keyboard_::release(unsigned char)
  .text._ZN9Keyboard_10releaseAllEv
-                0x00000000000820fc       0x18 Builds/embeddedcomputing.a(HID.cpp.o)
-                0x00000000000820fc                Keyboard_::releaseAll()
+                0x0000000000082164       0x18 Builds/embeddedcomputing.a(HID.cpp.o)
+                0x0000000000082164                Keyboard_::releaseAll()
  .text.startup._GLOBAL__sub_I_Mouse
-                0x0000000000082114       0x1c Builds/embeddedcomputing.a(HID.cpp.o)
+                0x000000000008217c       0x1c Builds/embeddedcomputing.a(HID.cpp.o)
  .text.TC_Configure
-                0x0000000000082130       0x38 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
-                0x0000000000082130                TC_Configure
+                0x0000000000082198       0x38 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
+                0x0000000000082198                TC_Configure
  .text.TC_Start
-                0x0000000000082168       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
-                0x0000000000082168                TC_Start
- .text.TC_Stop  0x0000000000082194       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
-                0x0000000000082194                TC_Stop
+                0x00000000000821d0       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
+                0x00000000000821d0                TC_Start
+ .text.TC_Stop  0x00000000000821fc       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
+                0x00000000000821fc                TC_Stop
  .text.TimeTick_Increment
-                0x00000000000821c0       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(timetick.o)
-                0x00000000000821c0                TimeTick_Increment
+                0x0000000000082228       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(timetick.o)
+                0x0000000000082228                TimeTick_Increment
  .text.GetTickCount
-                0x00000000000821d0        0xc /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(timetick.o)
-                0x00000000000821d0                GetTickCount
+                0x0000000000082238        0xc /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(timetick.o)
+                0x0000000000082238                GetTickCount
  .text.UDD_SetStack
-                0x00000000000821dc        0xc /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00000000000821dc                UDD_SetStack
+                0x0000000000082244        0xc /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x0000000000082244                UDD_SetStack
  .text.UDD_Init
-                0x00000000000821e8       0xd0 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00000000000821e8                UDD_Init
+                0x0000000000082250       0xd0 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x0000000000082250                UDD_Init
  .text.UDD_Attach
-                0x00000000000822b8       0x4c /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00000000000822b8                UDD_Attach
+                0x0000000000082320       0x4c /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x0000000000082320                UDD_Attach
  .text.UDD_InitEP
-                0x0000000000082304       0x30 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x0000000000082304                UDD_InitEP
+                0x000000000008236c       0x30 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x000000000008236c                UDD_InitEP
  .text.UDD_InitEndpoints
-                0x0000000000082334       0x3c /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x0000000000082334                UDD_InitEndpoints
+                0x000000000008239c       0x3c /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x000000000008239c                UDD_InitEndpoints
  .text.UDD_WaitIN
-                0x0000000000082370       0x14 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x0000000000082370                UDD_WaitIN
+                0x00000000000823d8       0x14 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x00000000000823d8                UDD_WaitIN
  .text.UDD_WaitOUT
-                0x0000000000082384       0x14 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x0000000000082384                UDD_WaitOUT
+                0x00000000000823ec       0x14 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x00000000000823ec                UDD_WaitOUT
  .text.UDD_ClearIN
-                0x0000000000082398       0x18 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x0000000000082398                UDD_ClearIN
+                0x0000000000082400       0x18 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x0000000000082400                UDD_ClearIN
  .text.UDD_ClearOUT
-                0x00000000000823b0       0x18 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00000000000823b0                UDD_ClearOUT
+                0x0000000000082418       0x18 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x0000000000082418                UDD_ClearOUT
  .text.UDD_ReceivedSetupInt
-                0x00000000000823c8       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00000000000823c8                UDD_ReceivedSetupInt
+                0x0000000000082430       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x0000000000082430                UDD_ReceivedSetupInt
  .text.UDD_ClearSetupInt
-                0x00000000000823d8       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00000000000823d8                UDD_ClearSetupInt
+                0x0000000000082440       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x0000000000082440                UDD_ClearSetupInt
  .text.UDD_Send
-                0x00000000000823e8       0x90 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00000000000823e8                UDD_Send
+                0x0000000000082450       0x90 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x0000000000082450                UDD_Send
  .text.UDD_Send8
-                0x0000000000082478       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x0000000000082478                UDD_Send8
+                0x00000000000824e0       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x00000000000824e0                UDD_Send8
  .text.UDD_Recv8
-                0x00000000000824a0       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00000000000824a0                UDD_Recv8
+                0x0000000000082508       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x0000000000082508                UDD_Recv8
  .text.UDD_Recv
-                0x00000000000824c8       0x34 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00000000000824c8                UDD_Recv
+                0x0000000000082530       0x34 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x0000000000082530                UDD_Recv
  .text.UDD_Stall
-                0x00000000000824fc       0x14 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00000000000824fc                UDD_Stall
+                0x0000000000082564       0x14 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x0000000000082564                UDD_Stall
  .text.UDD_FifoByteCount
-                0x0000000000082510       0x1c /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x0000000000082510                UDD_FifoByteCount
+                0x0000000000082578       0x1c /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x0000000000082578                UDD_FifoByteCount
  .text.UDD_ReleaseRX
-                0x000000000008252c       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x000000000008252c                UDD_ReleaseRX
+                0x0000000000082594       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x0000000000082594                UDD_ReleaseRX
  .text.UDD_ReleaseTX
-                0x0000000000082558       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x0000000000082558                UDD_ReleaseTX
+                0x00000000000825c0       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x00000000000825c0                UDD_ReleaseTX
  .text.UDD_SetAddress
-                0x0000000000082584       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x0000000000082584                UDD_SetAddress
+                0x00000000000825ec       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x00000000000825ec                UDD_SetAddress
  .text.__assert_func
-                0x00000000000825a4       0x3c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-assert.o)
-                0x00000000000825a4                __assert_func
+                0x000000000008260c       0x3c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-assert.o)
+                0x000000000008260c                __assert_func
  .text.fiprintf
-                0x00000000000825e0       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fiprintf.o)
-                0x00000000000825e0                fiprintf
+                0x0000000000082648       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fiprintf.o)
+                0x0000000000082648                fiprintf
  .text.__libc_init_array
-                0x0000000000082608       0x50 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
-                0x0000000000082608                __libc_init_array
- .text.iprintf  0x0000000000082658       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-iprintf.o)
-                0x0000000000082658                iprintf
- .text.malloc   0x0000000000082680       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-malloc.o)
-                0x0000000000082680                malloc
+                0x0000000000082670       0x50 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
+                0x0000000000082670                __libc_init_array
+ .text.iprintf  0x00000000000826c0       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-iprintf.o)
+                0x00000000000826c0                iprintf
+ .text.malloc   0x00000000000826e8       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-malloc.o)
+                0x00000000000826e8                malloc
  .text._malloc_r
-                0x0000000000082690      0x538 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-mallocr.o)
-                0x0000000000082690                _malloc_r
- .text.memset   0x0000000000082bc8       0x94 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memset.o)
-                0x0000000000082bc8                memset
+                0x00000000000826f8      0x538 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-mallocr.o)
+                0x00000000000826f8                _malloc_r
+ .text.memset   0x0000000000082c30       0x94 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memset.o)
+                0x0000000000082c30                memset
  .text.__malloc_lock
-                0x0000000000082c5c        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-mlock.o)
-                0x0000000000082c5c                __malloc_lock
+                0x0000000000082cc4        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-mlock.o)
+                0x0000000000082cc4                __malloc_lock
  .text.__malloc_unlock
-                0x0000000000082c60        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-mlock.o)
-                0x0000000000082c60                __malloc_unlock
- .text._sbrk_r  0x0000000000082c64       0x24 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-sbrkr.o)
-                0x0000000000082c64                _sbrk_r
- .text.strlen   0x0000000000082c88       0x60 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
-                0x0000000000082c88                strlen
+                0x0000000000082cc8        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-mlock.o)
+                0x0000000000082cc8                __malloc_unlock
+ .text._sbrk_r  0x0000000000082ccc       0x24 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-sbrkr.o)
+                0x0000000000082ccc                _sbrk_r
+ .text.strlen   0x0000000000082cf0       0x60 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
+                0x0000000000082cf0                strlen
  .text.__sprint_r.part.0
-                0x0000000000082ce8       0x78 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-vfiprintf.o)
+                0x0000000000082d50       0x78 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-vfiprintf.o)
  .text._vfiprintf_r
-                0x0000000000082d60      0xc54 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-vfiprintf.o)
-                0x0000000000082d60                _vfiprintf_r
+                0x0000000000082dc8      0xc54 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-vfiprintf.o)
+                0x0000000000082dc8                _vfiprintf_r
  .text.__sbprintf
-                0x00000000000839b4       0x7c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-vfiprintf.o)
+                0x0000000000083a1c       0x7c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-vfiprintf.o)
  .text.__swsetup_r
-                0x0000000000083a30       0xc4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-wsetup.o)
-                0x0000000000083a30                __swsetup_r
+                0x0000000000083a98       0xc4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-wsetup.o)
+                0x0000000000083a98                __swsetup_r
  .text.startup.register_fini
-                0x0000000000083af4       0x14 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
- .text.abort    0x0000000000083b08       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-abort.o)
-                0x0000000000083b08                abort
- .text.atexit   0x0000000000083b18        0xc /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
-                0x0000000000083b18                atexit
+                0x0000000000083b5c       0x14 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+ .text.abort    0x0000000000083b70       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-abort.o)
+                0x0000000000083b70                abort
+ .text.atexit   0x0000000000083b80        0xc /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
+                0x0000000000083b80                atexit
  .text.__sflush_r
-                0x0000000000083b24      0x148 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fflush.o)
-                0x0000000000083b24                __sflush_r
+                0x0000000000083b8c      0x148 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fflush.o)
+                0x0000000000083b8c                __sflush_r
  .text._fflush_r
-                0x0000000000083c6c       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fflush.o)
-                0x0000000000083c6c                _fflush_r
+                0x0000000000083cd4       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fflush.o)
+                0x0000000000083cd4                _fflush_r
  .text._cleanup_r
-                0x0000000000083c98        0xc /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-findfp.o)
-                0x0000000000083c98                _cleanup_r
- .text.__sinit  0x0000000000083ca4       0xf4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-findfp.o)
-                0x0000000000083ca4                __sinit
+                0x0000000000083d00        0xc /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-findfp.o)
+                0x0000000000083d00                _cleanup_r
+ .text.__sinit  0x0000000000083d0c       0xf4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-findfp.o)
+                0x0000000000083d0c                __sinit
  .text.__sfp_lock_acquire
-                0x0000000000083d98        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-findfp.o)
-                0x0000000000083d98                __sfp_lock_acquire
+                0x0000000000083e00        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-findfp.o)
+                0x0000000000083e00                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x0000000000083d9c        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-findfp.o)
-                0x0000000000083d9c                __sfp_lock_release
+                0x0000000000083e04        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-findfp.o)
+                0x0000000000083e04                __sfp_lock_release
  .text.__libc_fini_array
-                0x0000000000083da0       0x30 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
-                0x0000000000083da0                __libc_fini_array
+                0x0000000000083e08       0x30 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
+                0x0000000000083e08                __libc_fini_array
  .text._fputwc_r
-                0x0000000000083dd0       0xc0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fputwc.o)
-                0x0000000000083dd0                _fputwc_r
+                0x0000000000083e38       0xc0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fputwc.o)
+                0x0000000000083e38                _fputwc_r
  .text._malloc_trim_r
-                0x0000000000083e90       0x9c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-freer.o)
-                0x0000000000083e90                _malloc_trim_r
- .text._free_r  0x0000000000083f2c      0x198 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-freer.o)
-                0x0000000000083f2c                _free_r
+                0x0000000000083ef8       0x9c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-freer.o)
+                0x0000000000083ef8                _malloc_trim_r
+ .text._free_r  0x0000000000083f94      0x198 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-freer.o)
+                0x0000000000083f94                _free_r
  .text.__sfvwrite_r
-                0x00000000000840c4      0x314 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fvwrite.o)
-                0x00000000000840c4                __sfvwrite_r
- .text._fwalk   0x00000000000843d8       0x48 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fwalk.o)
-                0x00000000000843d8                _fwalk
+                0x000000000008412c      0x314 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fvwrite.o)
+                0x000000000008412c                __sfvwrite_r
+ .text._fwalk   0x0000000000084440       0x48 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fwalk.o)
+                0x0000000000084440                _fwalk
  .text.__locale_charset
-                0x0000000000084420        0x8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-locale.o)
-                0x0000000000084420                __locale_charset
+                0x0000000000084488        0x8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-locale.o)
+                0x0000000000084488                __locale_charset
  .text.__locale_mb_cur_max
-                0x0000000000084428        0xc /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-locale.o)
-                0x0000000000084428                __locale_mb_cur_max
+                0x0000000000084490        0xc /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-locale.o)
+                0x0000000000084490                __locale_mb_cur_max
  .text.__smakebuf_r
-                0x0000000000084434       0xe0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-makebuf.o)
-                0x0000000000084434                __smakebuf_r
- .text.memchr   0x0000000000084514       0x94 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memchr-stub.o)
-                0x0000000000084514                memchr
- .text          0x00000000000845a8       0xec /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memcpy.o)
-                0x00000000000845a8                memcpy
- .text.memmove  0x0000000000084694       0xcc /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memmove.o)
-                0x0000000000084694                memmove
+                0x000000000008449c       0xe0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-makebuf.o)
+                0x000000000008449c                __smakebuf_r
+ .text.memchr   0x000000000008457c       0x94 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memchr-stub.o)
+                0x000000000008457c                memchr
+ .text          0x0000000000084610       0xec /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memcpy.o)
+                0x0000000000084610                memcpy
+ .text.memmove  0x00000000000846fc       0xcc /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memmove.o)
+                0x00000000000846fc                memmove
  .text._realloc_r
-                0x0000000000084760      0x3c0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-reallocr.o)
-                0x0000000000084760                _realloc_r
+                0x00000000000847c8      0x3c0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-reallocr.o)
+                0x00000000000847c8                _realloc_r
  .text._raise_r
-                0x0000000000084b20       0x58 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-signal.o)
-                0x0000000000084b20                _raise_r
- .text.raise    0x0000000000084b78       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-signal.o)
-                0x0000000000084b78                raise
- .text._kill_r  0x0000000000084b88       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-signalr.o)
-                0x0000000000084b88                _kill_r
+                0x0000000000084b88       0x58 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-signal.o)
+                0x0000000000084b88                _raise_r
+ .text.raise    0x0000000000084be0       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-signal.o)
+                0x0000000000084be0                raise
+ .text._kill_r  0x0000000000084bf0       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-signalr.o)
+                0x0000000000084bf0                _kill_r
  .text._getpid_r
-                0x0000000000084bb0        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-signalr.o)
-                0x0000000000084bb0                _getpid_r
- .text.__sread  0x0000000000084bb4       0x24 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-stdio.o)
-                0x0000000000084bb4                __sread
+                0x0000000000084c18        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-signalr.o)
+                0x0000000000084c18                _getpid_r
+ .text.__sread  0x0000000000084c1c       0x24 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-stdio.o)
+                0x0000000000084c1c                __sread
  .text.__swrite
-                0x0000000000084bd8       0x38 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-stdio.o)
-                0x0000000000084bd8                __swrite
- .text.__sseek  0x0000000000084c10       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-stdio.o)
-                0x0000000000084c10                __sseek
+                0x0000000000084c40       0x38 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-stdio.o)
+                0x0000000000084c40                __swrite
+ .text.__sseek  0x0000000000084c78       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-stdio.o)
+                0x0000000000084c78                __sseek
  .text.__sclose
-                0x0000000000084c30        0x8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-stdio.o)
-                0x0000000000084c30                __sclose
+                0x0000000000084c98        0x8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-stdio.o)
+                0x0000000000084c98                __sclose
  .text.__swbuf_r
-                0x0000000000084c38       0xa8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-wbuf.o)
-                0x0000000000084c38                __swbuf_r
+                0x0000000000084ca0       0xa8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-wbuf.o)
+                0x0000000000084ca0                __swbuf_r
  .text._wcrtomb_r
-                0x0000000000084ce0       0x50 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-wcrtomb.o)
-                0x0000000000084ce0                _wcrtomb_r
+                0x0000000000084d48       0x50 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-wcrtomb.o)
+                0x0000000000084d48                _wcrtomb_r
  .text.__ascii_wctomb
-                0x0000000000084d30       0x1c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-wctomb_r.o)
-                0x0000000000084d30                __ascii_wctomb
+                0x0000000000084d98       0x1c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-wctomb_r.o)
+                0x0000000000084d98                __ascii_wctomb
  .text._write_r
-                0x0000000000084d4c       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-writer.o)
-                0x0000000000084d4c                _write_r
+                0x0000000000084db4       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-writer.o)
+                0x0000000000084db4                _write_r
  .text.__register_exitproc
-                0x0000000000084d74       0xa8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
-                0x0000000000084d74                __register_exitproc
+                0x0000000000084ddc       0xa8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
+                0x0000000000084ddc                __register_exitproc
  .text._close_r
-                0x0000000000084e1c       0x24 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-closer.o)
-                0x0000000000084e1c                _close_r
+                0x0000000000084e84       0x24 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-closer.o)
+                0x0000000000084e84                _close_r
  .text._fclose_r
-                0x0000000000084e40       0x80 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fclose.o)
-                0x0000000000084e40                _fclose_r
- .text.fclose   0x0000000000084ec0       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fclose.o)
-                0x0000000000084ec0                fclose
+                0x0000000000084ea8       0x80 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fclose.o)
+                0x0000000000084ea8                _fclose_r
+ .text.fclose   0x0000000000084f28       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fclose.o)
+                0x0000000000084f28                fclose
  .text._fstat_r
-                0x0000000000084ed0       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fstatr.o)
-                0x0000000000084ed0                _fstat_r
+                0x0000000000084f38       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fstatr.o)
+                0x0000000000084f38                _fstat_r
  .text._isatty_r
-                0x0000000000084ef8       0x24 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-isattyr.o)
-                0x0000000000084ef8                _isatty_r
+                0x0000000000084f60       0x24 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-isattyr.o)
+                0x0000000000084f60                _isatty_r
  .text._lseek_r
-                0x0000000000084f1c       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-lseekr.o)
-                0x0000000000084f1c                _lseek_r
- .text._read_r  0x0000000000084f44       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-readr.o)
-                0x0000000000084f44                _read_r
- .text          0x0000000000084f6c       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(_aeabi_uldivmod.o)
-                0x0000000000084f6c                __aeabi_uldivmod
- .text          0x0000000000084f98       0x60 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(bpabi.o)
-                0x0000000000084f98                __gnu_ldivmod_helper
-                0x0000000000084fc8                __gnu_uldivmod_helper
- .text          0x0000000000084ff8        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(_dvmd_tls.o)
-                0x0000000000084ff8                __aeabi_ldiv0
-                0x0000000000084ff8                __aeabi_idiv0
- .text          0x0000000000084ffc      0x2a0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(_divdi3.o)
-                0x0000000000084ffc                __divdi3
- .text          0x000000000008529c      0x290 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(_udivdi3.o)
-                0x000000000008529c                __udivdi3
+                0x0000000000084f84       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-lseekr.o)
+                0x0000000000084f84                _lseek_r
+ .text._read_r  0x0000000000084fac       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-readr.o)
+                0x0000000000084fac                _read_r
+ .text          0x0000000000084fd4       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(_aeabi_uldivmod.o)
+                0x0000000000084fd4                __aeabi_uldivmod
+ .text          0x0000000000085000       0x60 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(bpabi.o)
+                0x0000000000085000                __gnu_ldivmod_helper
+                0x0000000000085030                __gnu_uldivmod_helper
+ .text          0x0000000000085060        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(_dvmd_tls.o)
+                0x0000000000085060                __aeabi_ldiv0
+                0x0000000000085060                __aeabi_idiv0
+ .text          0x0000000000085064      0x2a0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(_divdi3.o)
+                0x0000000000085064                __divdi3
+ .text          0x0000000000085304      0x290 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(_udivdi3.o)
+                0x0000000000085304                __udivdi3
  *(.glue_7t)
  .glue_7t       0x0000000000000000        0x0 linker stubs
  *(.glue_7)
  .glue_7        0x0000000000000000        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
  .rodata.g_APinDescription
-                0x000000000008552c      0xa2c Builds/variant.cpp.o
-                0x000000000008552c                g_APinDescription
+                0x0000000000085594      0xa2c Builds/variant.cpp.o
+                0x0000000000085594                g_APinDescription
  .rodata.str1.1
-                0x0000000000085f58       0x19 Builds/syscalls_sam3.c.o
- *fill*         0x0000000000085f71        0x3 
+                0x0000000000085fc0       0x19 Builds/syscalls_sam3.c.o
+ *fill*         0x0000000000085fd9        0x3 
  .rodata.C.0.8146
-                0x0000000000085f74       0x40 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(adc.o)
- *fill*         0x0000000000085fb4        0x4 
+                0x0000000000085fdc       0x40 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(adc.o)
+ *fill*         0x000000000008601c        0x4 
  .rodata._ZTV9UARTClass
-                0x0000000000085fb8       0x30 Builds/embeddedcomputing.a(UARTClass.cpp.o)
-                0x0000000000085fb8                vtable for UARTClass
+                0x0000000000086020       0x30 Builds/embeddedcomputing.a(UARTClass.cpp.o)
+                0x0000000000086020                vtable for UARTClass
  .rodata._ZTV10USARTClass
-                0x0000000000085fe8       0x30 Builds/embeddedcomputing.a(USARTClass.cpp.o)
-                0x0000000000085fe8                vtable for USARTClass
+                0x0000000000086050       0x30 Builds/embeddedcomputing.a(USARTClass.cpp.o)
+                0x0000000000086050                vtable for USARTClass
  .rodata.STRING_PRODUCT
-                0x0000000000086018        0xc Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x0000000000086018                STRING_PRODUCT
+                0x0000000000086080        0xc Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x0000000000086080                STRING_PRODUCT
  .rodata.USB_DeviceDescriptor
-                0x0000000000086024       0x12 Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x0000000000086024                USB_DeviceDescriptor
- *fill*         0x0000000000086036        0x2 
+                0x000000000008608c       0x12 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x000000000008608c                USB_DeviceDescriptor
+ *fill*         0x000000000008609e        0x2 
  .rodata._ZL9EndPoints
-                0x0000000000086038       0x14 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x00000000000860a0       0x14 Builds/embeddedcomputing.a(USBCore.cpp.o)
  .rodata.STRING_LANGUAGE
-                0x000000000008604c        0x4 Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x000000000008604c                STRING_LANGUAGE
+                0x00000000000860b4        0x4 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x00000000000860b4                STRING_LANGUAGE
  .rodata._ZL18test_packet_buffer
-                0x0000000000086050       0x35 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x00000000000860b8       0x35 Builds/embeddedcomputing.a(USBCore.cpp.o)
  .rodata.STRING_MANUFACTURER
-                0x0000000000086085        0xc Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x0000000000086085                STRING_MANUFACTURER
+                0x00000000000860ed        0xc Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x00000000000860ed                STRING_MANUFACTURER
  .rodata.USB_DeviceDescriptorA
-                0x0000000000086091       0x12 Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x0000000000086091                USB_DeviceDescriptorA
+                0x00000000000860f9       0x12 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x00000000000860f9                USB_DeviceDescriptorA
  .rodata._ZL19USB_DeviceQualifier
-                0x00000000000860a3       0x12 Builds/embeddedcomputing.a(USBCore.cpp.o)
- *fill*         0x00000000000860b5        0x3 
+                0x000000000008610b       0x12 Builds/embeddedcomputing.a(USBCore.cpp.o)
+ *fill*         0x000000000008611d        0x3 
  .rodata._ZTV7Serial_
-                0x00000000000860b8       0x28 Builds/embeddedcomputing.a(CDC.cpp.o)
-                0x00000000000860b8                vtable for Serial_
+                0x0000000000086120       0x28 Builds/embeddedcomputing.a(CDC.cpp.o)
+                0x0000000000086120                vtable for Serial_
  .rodata._ZL18_cdcOtherInterface
-                0x00000000000860e0       0x42 Builds/embeddedcomputing.a(CDC.cpp.o)
+                0x0000000000086148       0x42 Builds/embeddedcomputing.a(CDC.cpp.o)
  .rodata._ZL13_cdcInterface
-                0x0000000000086122       0x42 Builds/embeddedcomputing.a(CDC.cpp.o)
- *fill*         0x0000000000086164        0x4 
+                0x000000000008618a       0x42 Builds/embeddedcomputing.a(CDC.cpp.o)
+ *fill*         0x00000000000861cc        0x4 
  .rodata._ZTV9Keyboard_
-                0x0000000000086168       0x20 Builds/embeddedcomputing.a(HID.cpp.o)
-                0x0000000000086168                vtable for Keyboard_
+                0x00000000000861d0       0x20 Builds/embeddedcomputing.a(HID.cpp.o)
+                0x00000000000861d0                vtable for Keyboard_
  .rodata._asciimap
-                0x0000000000086188       0x80 Builds/embeddedcomputing.a(HID.cpp.o)
-                0x0000000000086188                _asciimap
+                0x00000000000861f0       0x80 Builds/embeddedcomputing.a(HID.cpp.o)
+                0x00000000000861f0                _asciimap
  .rodata._hidInterface
-                0x0000000000086208       0x19 Builds/embeddedcomputing.a(HID.cpp.o)
-                0x0000000000086208                _hidInterface
+                0x0000000000086270       0x19 Builds/embeddedcomputing.a(HID.cpp.o)
+                0x0000000000086270                _hidInterface
  .rodata._hidReportDescriptor
-                0x0000000000086221       0x65 Builds/embeddedcomputing.a(HID.cpp.o)
-                0x0000000000086221                _hidReportDescriptor
+                0x0000000000086289       0x65 Builds/embeddedcomputing.a(HID.cpp.o)
+                0x0000000000086289                _hidReportDescriptor
  .rodata.str1.1
-                0x0000000000086286       0x54 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
+                0x00000000000862ee       0x54 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
  .rodata.__func__.6634
-                0x00000000000862da        0xd /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
+                0x0000000000086342        0xd /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
  .rodata.__func__.6640
-                0x00000000000862e7        0x9 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
+                0x000000000008634f        0x9 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
  .rodata.__func__.6646
-                0x00000000000862f0        0x8 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
+                0x0000000000086358        0x8 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
  .rodata.str1.4
-                0x00000000000862f8       0x3f /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-assert.o)
+                0x0000000000086360       0x3f /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-assert.o)
                                          0x44 (size before relaxing)
- *fill*         0x0000000000086337        0x1 
+ *fill*         0x000000000008639f        0x1 
  .rodata.str1.4
-                0x0000000000086338        0x2 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
+                0x00000000000863a0        0x2 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
                                           0x4 (size before relaxing)
- *fill*         0x000000000008633a        0x2 
+ *fill*         0x00000000000863a2        0x2 
  .rodata._global_impure_ptr
-                0x000000000008633c        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
-                0x000000000008633c                _global_impure_ptr
+                0x00000000000863a4        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
+                0x00000000000863a4                _global_impure_ptr
  .rodata.blanks.6717
-                0x0000000000086340       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-vfiprintf.o)
+                0x00000000000863a8       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-vfiprintf.o)
  .rodata.str1.4
-                0x0000000000086350       0x30 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-vfiprintf.o)
+                0x00000000000863b8       0x30 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-vfiprintf.o)
  .rodata.zeroes.6718
-                0x0000000000086380       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-vfiprintf.o)
+                0x00000000000863e8       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-vfiprintf.o)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000000086390                . = ALIGN (0x4)
+                0x00000000000863f8                . = ALIGN (0x4)
  *(.init)
- .init          0x0000000000086390        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crti.o
-                0x0000000000086390                _init
- .init          0x0000000000086394        0x8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtn.o
-                0x000000000008639c                . = ALIGN (0x4)
-                0x000000000008639c                __preinit_array_start = .
+ .init          0x00000000000863f8        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crti.o
+                0x00000000000863f8                _init
+ .init          0x00000000000863fc        0x8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtn.o
+                0x0000000000086404                . = ALIGN (0x4)
+                0x0000000000086404                __preinit_array_start = .
  *(.preinit_array)
-                0x000000000008639c                __preinit_array_end = .
-                0x000000000008639c                . = ALIGN (0x4)
-                0x000000000008639c                __init_array_start = .
+                0x0000000000086404                __preinit_array_end = .
+                0x0000000000086404                . = ALIGN (0x4)
+                0x0000000000086404                __init_array_start = .
  *(SORT(.init_array.*))
  .init_array.00000
-                0x000000000008639c        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+                0x0000000000086404        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
  *(.init_array)
- .init_array    0x00000000000863a0        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
- .init_array    0x00000000000863a4        0x4 Builds/variant.cpp.o
- .init_array    0x00000000000863a8        0x4 Builds/Lightshows.cpp.o
- .init_array    0x00000000000863ac        0x4 Builds/LocalLibrary.cpp.o
- .init_array    0x00000000000863b0        0x4 Builds/main.cpp.o
- .init_array    0x00000000000863b4        0x4 Builds/embeddedcomputing.a(USBCore.cpp.o)
- .init_array    0x00000000000863b8        0x4 Builds/embeddedcomputing.a(CDC.cpp.o)
- .init_array    0x00000000000863bc        0x4 Builds/embeddedcomputing.a(HID.cpp.o)
-                0x00000000000863c0                __init_array_end = .
-                0x00000000000863c0                . = ALIGN (0x4)
+ .init_array    0x0000000000086408        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
+ .init_array    0x000000000008640c        0x4 Builds/variant.cpp.o
+ .init_array    0x0000000000086410        0x4 Builds/Lightshows.cpp.o
+ .init_array    0x0000000000086414        0x4 Builds/LocalLibrary.cpp.o
+ .init_array    0x0000000000086418        0x4 Builds/main.cpp.o
+ .init_array    0x000000000008641c        0x4 Builds/embeddedcomputing.a(USBCore.cpp.o)
+ .init_array    0x0000000000086420        0x4 Builds/embeddedcomputing.a(CDC.cpp.o)
+ .init_array    0x0000000000086424        0x4 Builds/embeddedcomputing.a(HID.cpp.o)
+                0x0000000000086428                __init_array_end = .
+                0x0000000000086428                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x00000000000863c0                . = ALIGN (0x4)
+                0x0000000000086428                . = ALIGN (0x4)
  *(.fini)
- .fini          0x00000000000863c0        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crti.o
-                0x00000000000863c0                _fini
- .fini          0x00000000000863c4        0x8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtn.o
-                0x00000000000863cc                . = ALIGN (0x4)
-                0x00000000000863cc                __fini_array_start = .
+ .fini          0x0000000000086428        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crti.o
+                0x0000000000086428                _fini
+ .fini          0x000000000008642c        0x8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtn.o
+                0x0000000000086434                . = ALIGN (0x4)
+                0x0000000000086434                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x00000000000863cc        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
+ .fini_array    0x0000000000086434        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x00000000000863d0                __fini_array_end = .
+                0x0000000000086438                __fini_array_end = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x00000000000863d0                . = ALIGN (0x4)
-                0x00000000000863d0                _efixed = .
-                0x00000000000863d0                PROVIDE (__exidx_start, .)
+                0x0000000000086438                . = ALIGN (0x4)
+                0x0000000000086438                _efixed = .
+                0x0000000000086438                PROVIDE (__exidx_start, .)
 
-.vfp11_veneer   0x00000000000863d0        0x0
+.vfp11_veneer   0x0000000000086438        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x00000000000863d0        0x0
+.v4_bx          0x0000000000086438        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x00000000000863d0        0x0
+.iplt           0x0000000000086438        0x0
  .iplt          0x0000000000000000        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
 
-.ARM.exidx      0x00000000000863d0        0x8
+.ARM.exidx      0x0000000000086438        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x00000000000863d0        0x8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(_divdi3.o)
- .ARM.exidx     0x00000000000863d8        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(_udivdi3.o)
+ .ARM.exidx     0x0000000000086438        0x8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(_divdi3.o)
+ .ARM.exidx     0x0000000000086440        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(_udivdi3.o)
                                           0x8 (size before relaxing)
-                0x00000000000863d8                PROVIDE (__exidx_end, .)
+                0x0000000000086440                PROVIDE (__exidx_end, .)
 
-.eh_frame       0x00000000000863d8        0x0
- .eh_frame      0x00000000000863d8        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
+.eh_frame       0x0000000000086440        0x0
+ .eh_frame      0x0000000000086440        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
 
-.rel.dyn        0x00000000000863d8        0x0
+.rel.dyn        0x0000000000086440        0x0
  .rel.iplt      0x0000000000000000        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
 
-.jcr            0x00000000000863d8        0x0
- .jcr           0x00000000000863d8        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
+.jcr            0x0000000000086440        0x0
+ .jcr           0x0000000000086440        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
 
-.igot.plt       0x00000000000863d8        0x0
+.igot.plt       0x0000000000086440        0x0
  .igot.plt      0x0000000000000000        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
-                0x00000000000863d8                . = ALIGN (0x4)
-                0x00000000000863d8                _etext = .
+                0x0000000000086440                . = ALIGN (0x4)
+                0x0000000000086440                _etext = .
 
-.relocate       0x0000000020070000      0x8ac load address 0x00000000000863d8
+.relocate       0x0000000020070000      0x8ac load address 0x0000000000086440
                 0x0000000020070000                . = ALIGN (0x4)
                 0x0000000020070000                _srelocate = .
  *(.ramfunc .ramfunc.*)
@@ -2268,7 +2266,7 @@ LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-no
                 0x00000000200708ac                . = ALIGN (0x4)
                 0x00000000200708ac                _erelocate = .
 
-.bss            0x00000000200708ac      0x720 load address 0x0000000000086c84
+.bss            0x00000000200708ac      0x724 load address 0x0000000000086cec
                 0x00000000200708ac                . = ALIGN (0x4)
                 0x00000000200708ac                _sbss = .
                 0x00000000200708ac                _szero = .
@@ -2304,100 +2302,102 @@ LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-no
                 0x0000000020070a74                pod2
  .bss.pod3      0x0000000020070a78        0x4 Builds/Lightshows.cpp.o
                 0x0000000020070a78                pod3
- .bss.mix_list  0x0000000020070a7c        0x4 Builds/LocalLibrary.cpp.o
-                0x0000000020070a7c                mix_list
- .bss.APS_list  0x0000000020070a80        0x4 Builds/LocalLibrary.cpp.o
-                0x0000000020070a80                APS_list
+ .bss.pod4      0x0000000020070a7c        0x4 Builds/Lightshows.cpp.o
+                0x0000000020070a7c                pod4
+ .bss.mix_list  0x0000000020070a80        0x4 Builds/LocalLibrary.cpp.o
+                0x0000000020070a80                mix_list
+ .bss.APS_list  0x0000000020070a84        0x4 Builds/LocalLibrary.cpp.o
+                0x0000000020070a84                APS_list
  .bss.currentFrame
-                0x0000000020070a84        0x4 Builds/LocalLibrary.cpp.o
-                0x0000000020070a84                currentFrame
- .bss.APL_list  0x0000000020070a88        0x4 Builds/LocalLibrary.cpp.o
-                0x0000000020070a88                APL_list
- .bss.endTime   0x0000000020070a8c        0x4 Builds/main.cpp.o
-                0x0000000020070a8c                endTime
- .bss.myStrip   0x0000000020070a90        0x4 Builds/main.cpp.o
-                0x0000000020070a90                myStrip
+                0x0000000020070a88        0x4 Builds/LocalLibrary.cpp.o
+                0x0000000020070a88                currentFrame
+ .bss.APL_list  0x0000000020070a8c        0x4 Builds/LocalLibrary.cpp.o
+                0x0000000020070a8c                APL_list
+ .bss.endTime   0x0000000020070a90        0x4 Builds/main.cpp.o
+                0x0000000020070a90                endTime
+ .bss.myStrip   0x0000000020070a94        0x4 Builds/main.cpp.o
+                0x0000000020070a94                myStrip
  .bss.startTime
-                0x0000000020070a94        0x4 Builds/main.cpp.o
-                0x0000000020070a94                startTime
+                0x0000000020070a98        0x4 Builds/main.cpp.o
+                0x0000000020070a98                startTime
  .bss._ZL14isEndpointHalt
-                0x0000000020070a98        0x1 Builds/embeddedcomputing.a(USBCore.cpp.o)
- *fill*         0x0000000020070a99        0x3 
- .bss._cmark    0x0000000020070a9c        0x4 Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x0000000020070a9c                _cmark
- .bss._cend     0x0000000020070aa0        0x4 Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x0000000020070aa0                _cend
+                0x0000000020070a9c        0x1 Builds/embeddedcomputing.a(USBCore.cpp.o)
+ *fill*         0x0000000020070a9d        0x3 
+ .bss._cmark    0x0000000020070aa0        0x4 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x0000000020070aa0                _cmark
+ .bss._cend     0x0000000020070aa4        0x4 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x0000000020070aa4                _cend
  .bss._cdcComposite
-                0x0000000020070aa4        0x4 Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x0000000020070aa4                _cdcComposite
+                0x0000000020070aa8        0x4 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x0000000020070aa8                _cdcComposite
  .bss._ZL21isRemoteWakeUpEnabled
-                0x0000000020070aa8        0x1 Builds/embeddedcomputing.a(USBCore.cpp.o)
- *fill*         0x0000000020070aa9        0x3 
+                0x0000000020070aac        0x1 Builds/embeddedcomputing.a(USBCore.cpp.o)
+ *fill*         0x0000000020070aad        0x3 
  .bss._usbInitialized
-                0x0000000020070aac        0x4 Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x0000000020070aac                _usbInitialized
+                0x0000000020070ab0        0x4 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x0000000020070ab0                _usbInitialized
  .bss.USBDevice
-                0x0000000020070ab0        0x1 Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x0000000020070ab0                USBDevice
- *fill*         0x0000000020070ab1        0x3 
+                0x0000000020070ab4        0x1 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x0000000020070ab4                USBDevice
+ *fill*         0x0000000020070ab5        0x3 
  .bss._usbSetInterface
-                0x0000000020070ab4        0x4 Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x0000000020070ab4                _usbSetInterface
- .bss._usbConfiguration
                 0x0000000020070ab8        0x4 Builds/embeddedcomputing.a(USBCore.cpp.o)
-                0x0000000020070ab8                _usbConfiguration
+                0x0000000020070ab8                _usbSetInterface
+ .bss._usbConfiguration
+                0x0000000020070abc        0x4 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x0000000020070abc                _usbConfiguration
  .bss.callbacksPioA
-                0x0000000020070abc       0x80 Builds/embeddedcomputing.a(WInterrupts.c.o)
+                0x0000000020070ac0       0x80 Builds/embeddedcomputing.a(WInterrupts.c.o)
  .bss.callbacksPioB
-                0x0000000020070b3c       0x80 Builds/embeddedcomputing.a(WInterrupts.c.o)
+                0x0000000020070b40       0x80 Builds/embeddedcomputing.a(WInterrupts.c.o)
  .bss.callbacksPioC
-                0x0000000020070bbc       0x80 Builds/embeddedcomputing.a(WInterrupts.c.o)
+                0x0000000020070bc0       0x80 Builds/embeddedcomputing.a(WInterrupts.c.o)
  .bss.callbacksPioD
-                0x0000000020070c3c       0x80 Builds/embeddedcomputing.a(WInterrupts.c.o)
+                0x0000000020070c40       0x80 Builds/embeddedcomputing.a(WInterrupts.c.o)
  .bss.pinEnabled
-                0x0000000020070cbc       0x4f Builds/embeddedcomputing.a(wiring_analog.c.o)
- *fill*         0x0000000020070d0b        0x1 
+                0x0000000020070cc0       0x4f Builds/embeddedcomputing.a(wiring_analog.c.o)
+ *fill*         0x0000000020070d0f        0x1 
  .bss.cdc_rx_buffer
-                0x0000000020070d0c      0x208 Builds/embeddedcomputing.a(CDC.cpp.o)
-                0x0000000020070d0c                cdc_rx_buffer
+                0x0000000020070d10      0x208 Builds/embeddedcomputing.a(CDC.cpp.o)
+                0x0000000020070d10                cdc_rx_buffer
  .bss._ZZN7Serial_6acceptEvE5guard
-                0x0000000020070f14        0x4 Builds/embeddedcomputing.a(CDC.cpp.o)
+                0x0000000020070f18        0x4 Builds/embeddedcomputing.a(CDC.cpp.o)
  .bss.SerialUSB
-                0x0000000020070f18       0x14 Builds/embeddedcomputing.a(CDC.cpp.o)
-                0x0000000020070f18                SerialUSB
- .bss.Mouse     0x0000000020070f2c        0x1 Builds/embeddedcomputing.a(HID.cpp.o)
-                0x0000000020070f2c                Mouse
- *fill*         0x0000000020070f2d        0x3 
- .bss.Keyboard  0x0000000020070f30       0x10 Builds/embeddedcomputing.a(HID.cpp.o)
-                0x0000000020070f30                Keyboard
+                0x0000000020070f1c       0x14 Builds/embeddedcomputing.a(CDC.cpp.o)
+                0x0000000020070f1c                SerialUSB
+ .bss.Mouse     0x0000000020070f30        0x1 Builds/embeddedcomputing.a(HID.cpp.o)
+                0x0000000020070f30                Mouse
+ *fill*         0x0000000020070f31        0x3 
+ .bss.Keyboard  0x0000000020070f34       0x10 Builds/embeddedcomputing.a(HID.cpp.o)
+                0x0000000020070f34                Keyboard
  .bss._dwTickCount
-                0x0000000020070f40        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(timetick.o)
+                0x0000000020070f44        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(timetick.o)
  .bss.ul_recv_fifo_ptr
-                0x0000000020070f44       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x0000000020070f48       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
  .bss.ul_send_fifo_ptr
-                0x0000000020070f6c       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x0000000020070f70       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
  .bss.__malloc_max_total_mem
-                0x0000000020070f94        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-mallocr.o)
-                0x0000000020070f94                __malloc_max_total_mem
- .bss.__malloc_max_sbrked_mem
                 0x0000000020070f98        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-mallocr.o)
-                0x0000000020070f98                __malloc_max_sbrked_mem
- .bss.__malloc_top_pad
+                0x0000000020070f98                __malloc_max_total_mem
+ .bss.__malloc_max_sbrked_mem
                 0x0000000020070f9c        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-mallocr.o)
-                0x0000000020070f9c                __malloc_top_pad
+                0x0000000020070f9c                __malloc_max_sbrked_mem
+ .bss.__malloc_top_pad
+                0x0000000020070fa0        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-mallocr.o)
+                0x0000000020070fa0                __malloc_top_pad
  .bss.__malloc_current_mallinfo
-                0x0000000020070fa0       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-mallocr.o)
-                0x0000000020070fa0                __malloc_current_mallinfo
+                0x0000000020070fa4       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-mallocr.o)
+                0x0000000020070fa4                __malloc_current_mallinfo
  *(COMMON)
- COMMON         0x0000000020070fc8        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-reent.o)
-                0x0000000020070fc8                errno
-                0x0000000020070fcc                . = ALIGN (0x4)
-                0x0000000020070fcc                _ebss = .
-                0x0000000020070fcc                _ezero = .
-                0x0000000020070fcc                . = ALIGN (0x4)
-                0x0000000020070fcc                _end = .
+ COMMON         0x0000000020070fcc        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-reent.o)
+                0x0000000020070fcc                errno
+                0x0000000020070fd0                . = ALIGN (0x4)
+                0x0000000020070fd0                _ebss = .
+                0x0000000020070fd0                _ezero = .
+                0x0000000020070fd0                . = ALIGN (0x4)
+                0x0000000020070fd0                _end = .
 
-.stack_dummy    0x0000000020070fcc        0x0
+.stack_dummy    0x0000000020070fd0        0x0
  *(.stack*)
                 0x0000000020088000                __StackTop = (ORIGIN (ram) + 0x18000)
                 0x0000000020088000                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
@@ -2615,76 +2615,75 @@ OUTPUT(Builds/embeddedcomputing.elf elf32-littlearm)
  .comment       0x0000000000000000       0x2b /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(interrupt_sam_nvic.o)
  .comment       0x0000000000000000       0x2b /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
 
-.debug_info     0x0000000000000000    0x16d09
+.debug_info     0x0000000000000000    0x16ce1
  .debug_info    0x0000000000000000     0x19d0 Builds/variant.cpp.o
  .debug_info    0x00000000000019d0      0x624 Builds/syscalls_sam3.c.o
  .debug_info    0x0000000000001ff4     0x148e Builds/Adafruit_NeoPixel.cpp.o
- .debug_info    0x0000000000003482      0xb3d Builds/EMoonDesign.cpp.o
- .debug_info    0x0000000000003fbf     0x17cb Builds/Lightshows.cpp.o
- .debug_info    0x000000000000578a      0xda0 Builds/LocalLibrary.cpp.o
- .debug_info    0x000000000000652a      0xc6a Builds/main.cpp.o
- .debug_info    0x0000000000007194      0x1dc Builds/embeddedcomputing.a(RingBuffer.cpp.o)
- .debug_info    0x0000000000007370     0x1c25 Builds/embeddedcomputing.a(UARTClass.cpp.o)
- .debug_info    0x0000000000008f95     0x1d76 Builds/embeddedcomputing.a(USARTClass.cpp.o)
- .debug_info    0x000000000000ad0b     0x1cf6 Builds/embeddedcomputing.a(USBCore.cpp.o)
- .debug_info    0x000000000000ca01     0x10b0 Builds/embeddedcomputing.a(WInterrupts.c.o)
- .debug_info    0x000000000000dab1      0x2aa Builds/embeddedcomputing.a(cortex_handlers.c.o)
- .debug_info    0x000000000000dd5b       0x60 Builds/embeddedcomputing.a(hooks.c.o)
- .debug_info    0x000000000000ddbb      0x195 Builds/embeddedcomputing.a(new.cpp.o)
- .debug_info    0x000000000000df50      0x4ff Builds/embeddedcomputing.a(wiring.c.o)
- .debug_info    0x000000000000e44f     0x1d1e Builds/embeddedcomputing.a(wiring_analog.c.o)
- .debug_info    0x000000000001016d      0xa30 Builds/embeddedcomputing.a(wiring_digital.c.o)
- .debug_info    0x0000000000010b9d     0x24bb Builds/embeddedcomputing.a(Print.cpp.o)
- .debug_info    0x0000000000013058      0x38b Builds/embeddedcomputing.a(Reset.cpp.o)
- .debug_info    0x00000000000133e3     0x287a Builds/embeddedcomputing.a(CDC.cpp.o)
- .debug_info    0x0000000000015c5d     0x10ac Builds/embeddedcomputing.a(HID.cpp.o)
+ .debug_info    0x0000000000003482      0xb7c Builds/EMoonDesign.cpp.o
+ .debug_info    0x0000000000003ffe     0x1886 Builds/Lightshows.cpp.o
+ .debug_info    0x0000000000005884      0xda0 Builds/LocalLibrary.cpp.o
+ .debug_info    0x0000000000006624      0xb48 Builds/main.cpp.o
+ .debug_info    0x000000000000716c      0x1dc Builds/embeddedcomputing.a(RingBuffer.cpp.o)
+ .debug_info    0x0000000000007348     0x1c25 Builds/embeddedcomputing.a(UARTClass.cpp.o)
+ .debug_info    0x0000000000008f6d     0x1d76 Builds/embeddedcomputing.a(USARTClass.cpp.o)
+ .debug_info    0x000000000000ace3     0x1cf6 Builds/embeddedcomputing.a(USBCore.cpp.o)
+ .debug_info    0x000000000000c9d9     0x10b0 Builds/embeddedcomputing.a(WInterrupts.c.o)
+ .debug_info    0x000000000000da89      0x2aa Builds/embeddedcomputing.a(cortex_handlers.c.o)
+ .debug_info    0x000000000000dd33       0x60 Builds/embeddedcomputing.a(hooks.c.o)
+ .debug_info    0x000000000000dd93      0x195 Builds/embeddedcomputing.a(new.cpp.o)
+ .debug_info    0x000000000000df28      0x4ff Builds/embeddedcomputing.a(wiring.c.o)
+ .debug_info    0x000000000000e427     0x1d1e Builds/embeddedcomputing.a(wiring_analog.c.o)
+ .debug_info    0x0000000000010145      0xa30 Builds/embeddedcomputing.a(wiring_digital.c.o)
+ .debug_info    0x0000000000010b75     0x24bb Builds/embeddedcomputing.a(Print.cpp.o)
+ .debug_info    0x0000000000013030      0x38b Builds/embeddedcomputing.a(Reset.cpp.o)
+ .debug_info    0x00000000000133bb     0x287a Builds/embeddedcomputing.a(CDC.cpp.o)
+ .debug_info    0x0000000000015c35     0x10ac Builds/embeddedcomputing.a(HID.cpp.o)
 
-.debug_abbrev   0x0000000000000000     0x41f2
+.debug_abbrev   0x0000000000000000     0x41ab
  .debug_abbrev  0x0000000000000000      0x3ec Builds/variant.cpp.o
  .debug_abbrev  0x00000000000003ec      0x19c Builds/syscalls_sam3.c.o
  .debug_abbrev  0x0000000000000588      0x3a6 Builds/Adafruit_NeoPixel.cpp.o
- .debug_abbrev  0x000000000000092e      0x212 Builds/EMoonDesign.cpp.o
- .debug_abbrev  0x0000000000000b40      0x314 Builds/Lightshows.cpp.o
- .debug_abbrev  0x0000000000000e54      0x3d0 Builds/LocalLibrary.cpp.o
- .debug_abbrev  0x0000000000001224      0x383 Builds/main.cpp.o
- .debug_abbrev  0x00000000000015a7      0x165 Builds/embeddedcomputing.a(RingBuffer.cpp.o)
- .debug_abbrev  0x000000000000170c      0x488 Builds/embeddedcomputing.a(UARTClass.cpp.o)
- .debug_abbrev  0x0000000000001b94      0x496 Builds/embeddedcomputing.a(USARTClass.cpp.o)
- .debug_abbrev  0x000000000000202a      0x615 Builds/embeddedcomputing.a(USBCore.cpp.o)
- .debug_abbrev  0x000000000000263f      0x2b2 Builds/embeddedcomputing.a(WInterrupts.c.o)
- .debug_abbrev  0x00000000000028f1      0x106 Builds/embeddedcomputing.a(cortex_handlers.c.o)
- .debug_abbrev  0x00000000000029f7       0x47 Builds/embeddedcomputing.a(hooks.c.o)
- .debug_abbrev  0x0000000000002a3e       0xd3 Builds/embeddedcomputing.a(new.cpp.o)
- .debug_abbrev  0x0000000000002b11      0x160 Builds/embeddedcomputing.a(wiring.c.o)
- .debug_abbrev  0x0000000000002c71      0x2f2 Builds/embeddedcomputing.a(wiring_analog.c.o)
- .debug_abbrev  0x0000000000002f63      0x1d5 Builds/embeddedcomputing.a(wiring_digital.c.o)
- .debug_abbrev  0x0000000000003138      0x43a Builds/embeddedcomputing.a(Print.cpp.o)
- .debug_abbrev  0x0000000000003572      0x12d Builds/embeddedcomputing.a(Reset.cpp.o)
- .debug_abbrev  0x000000000000369f      0x619 Builds/embeddedcomputing.a(CDC.cpp.o)
- .debug_abbrev  0x0000000000003cb8      0x53a Builds/embeddedcomputing.a(HID.cpp.o)
+ .debug_abbrev  0x000000000000092e      0x23b Builds/EMoonDesign.cpp.o
+ .debug_abbrev  0x0000000000000b69      0x310 Builds/Lightshows.cpp.o
+ .debug_abbrev  0x0000000000000e79      0x3d0 Builds/LocalLibrary.cpp.o
+ .debug_abbrev  0x0000000000001249      0x317 Builds/main.cpp.o
+ .debug_abbrev  0x0000000000001560      0x165 Builds/embeddedcomputing.a(RingBuffer.cpp.o)
+ .debug_abbrev  0x00000000000016c5      0x488 Builds/embeddedcomputing.a(UARTClass.cpp.o)
+ .debug_abbrev  0x0000000000001b4d      0x496 Builds/embeddedcomputing.a(USARTClass.cpp.o)
+ .debug_abbrev  0x0000000000001fe3      0x615 Builds/embeddedcomputing.a(USBCore.cpp.o)
+ .debug_abbrev  0x00000000000025f8      0x2b2 Builds/embeddedcomputing.a(WInterrupts.c.o)
+ .debug_abbrev  0x00000000000028aa      0x106 Builds/embeddedcomputing.a(cortex_handlers.c.o)
+ .debug_abbrev  0x00000000000029b0       0x47 Builds/embeddedcomputing.a(hooks.c.o)
+ .debug_abbrev  0x00000000000029f7       0xd3 Builds/embeddedcomputing.a(new.cpp.o)
+ .debug_abbrev  0x0000000000002aca      0x160 Builds/embeddedcomputing.a(wiring.c.o)
+ .debug_abbrev  0x0000000000002c2a      0x2f2 Builds/embeddedcomputing.a(wiring_analog.c.o)
+ .debug_abbrev  0x0000000000002f1c      0x1d5 Builds/embeddedcomputing.a(wiring_digital.c.o)
+ .debug_abbrev  0x00000000000030f1      0x43a Builds/embeddedcomputing.a(Print.cpp.o)
+ .debug_abbrev  0x000000000000352b      0x12d Builds/embeddedcomputing.a(Reset.cpp.o)
+ .debug_abbrev  0x0000000000003658      0x619 Builds/embeddedcomputing.a(CDC.cpp.o)
+ .debug_abbrev  0x0000000000003c71      0x53a Builds/embeddedcomputing.a(HID.cpp.o)
 
-.debug_loc      0x0000000000000000     0x55c5
+.debug_loc      0x0000000000000000     0x54bc
  .debug_loc     0x0000000000000000       0x8a Builds/variant.cpp.o
  .debug_loc     0x000000000000008a      0x176 Builds/syscalls_sam3.c.o
  .debug_loc     0x0000000000000200      0x706 Builds/Adafruit_NeoPixel.cpp.o
  .debug_loc     0x0000000000000906      0x718 Builds/EMoonDesign.cpp.o
- .debug_loc     0x000000000000101e      0x6e3 Builds/Lightshows.cpp.o
- .debug_loc     0x0000000000001701      0x3f1 Builds/LocalLibrary.cpp.o
- .debug_loc     0x0000000000001af2      0x140 Builds/main.cpp.o
- .debug_loc     0x0000000000001c32       0x1e Builds/embeddedcomputing.a(RingBuffer.cpp.o)
- .debug_loc     0x0000000000001c50      0x1ea Builds/embeddedcomputing.a(UARTClass.cpp.o)
- .debug_loc     0x0000000000001e3a      0x258 Builds/embeddedcomputing.a(USARTClass.cpp.o)
- .debug_loc     0x0000000000002092      0xa9b Builds/embeddedcomputing.a(USBCore.cpp.o)
- .debug_loc     0x0000000000002b2d      0x2e0 Builds/embeddedcomputing.a(WInterrupts.c.o)
- .debug_loc     0x0000000000002e0d       0x84 Builds/embeddedcomputing.a(new.cpp.o)
- .debug_loc     0x0000000000002e91       0xfc Builds/embeddedcomputing.a(wiring.c.o)
- .debug_loc     0x0000000000002f8d      0x799 Builds/embeddedcomputing.a(wiring_analog.c.o)
- .debug_loc     0x0000000000003726      0x138 Builds/embeddedcomputing.a(wiring_digital.c.o)
- .debug_loc     0x000000000000385e     0x11e3 Builds/embeddedcomputing.a(Print.cpp.o)
- .debug_loc     0x0000000000004a41      0x4ca Builds/embeddedcomputing.a(CDC.cpp.o)
- .debug_loc     0x0000000000004f0b      0x6ba Builds/embeddedcomputing.a(HID.cpp.o)
+ .debug_loc     0x000000000000101e      0x71a Builds/Lightshows.cpp.o
+ .debug_loc     0x0000000000001738      0x3f1 Builds/LocalLibrary.cpp.o
+ .debug_loc     0x0000000000001b29       0x1e Builds/embeddedcomputing.a(RingBuffer.cpp.o)
+ .debug_loc     0x0000000000001b47      0x1ea Builds/embeddedcomputing.a(UARTClass.cpp.o)
+ .debug_loc     0x0000000000001d31      0x258 Builds/embeddedcomputing.a(USARTClass.cpp.o)
+ .debug_loc     0x0000000000001f89      0xa9b Builds/embeddedcomputing.a(USBCore.cpp.o)
+ .debug_loc     0x0000000000002a24      0x2e0 Builds/embeddedcomputing.a(WInterrupts.c.o)
+ .debug_loc     0x0000000000002d04       0x84 Builds/embeddedcomputing.a(new.cpp.o)
+ .debug_loc     0x0000000000002d88       0xfc Builds/embeddedcomputing.a(wiring.c.o)
+ .debug_loc     0x0000000000002e84      0x799 Builds/embeddedcomputing.a(wiring_analog.c.o)
+ .debug_loc     0x000000000000361d      0x138 Builds/embeddedcomputing.a(wiring_digital.c.o)
+ .debug_loc     0x0000000000003755     0x11e3 Builds/embeddedcomputing.a(Print.cpp.o)
+ .debug_loc     0x0000000000004938      0x4ca Builds/embeddedcomputing.a(CDC.cpp.o)
+ .debug_loc     0x0000000000004e02      0x6ba Builds/embeddedcomputing.a(HID.cpp.o)
 
-.debug_aranges  0x0000000000000000      0xa68
+.debug_aranges  0x0000000000000000      0xa60
  .debug_aranges
                 0x0000000000000000       0x70 Builds/variant.cpp.o
  .debug_aranges
@@ -2692,206 +2691,206 @@ OUTPUT(Builds/embeddedcomputing.elf elf32-littlearm)
  .debug_aranges
                 0x00000000000000e0       0x88 Builds/Adafruit_NeoPixel.cpp.o
  .debug_aranges
-                0x0000000000000168       0x40 Builds/EMoonDesign.cpp.o
+                0x0000000000000168       0x48 Builds/EMoonDesign.cpp.o
  .debug_aranges
-                0x00000000000001a8      0x210 Builds/Lightshows.cpp.o
+                0x00000000000001b0      0x210 Builds/Lightshows.cpp.o
  .debug_aranges
-                0x00000000000003b8       0x80 Builds/LocalLibrary.cpp.o
+                0x00000000000003c0       0x80 Builds/LocalLibrary.cpp.o
  .debug_aranges
-                0x0000000000000438       0x58 Builds/main.cpp.o
+                0x0000000000000440       0x48 Builds/main.cpp.o
  .debug_aranges
-                0x0000000000000490       0x28 Builds/embeddedcomputing.a(RingBuffer.cpp.o)
+                0x0000000000000488       0x28 Builds/embeddedcomputing.a(RingBuffer.cpp.o)
  .debug_aranges
-                0x00000000000004b8       0x68 Builds/embeddedcomputing.a(UARTClass.cpp.o)
+                0x00000000000004b0       0x68 Builds/embeddedcomputing.a(UARTClass.cpp.o)
  .debug_aranges
-                0x0000000000000520       0x70 Builds/embeddedcomputing.a(USARTClass.cpp.o)
+                0x0000000000000518       0x70 Builds/embeddedcomputing.a(USARTClass.cpp.o)
  .debug_aranges
-                0x0000000000000590       0xc0 Builds/embeddedcomputing.a(USBCore.cpp.o)
+                0x0000000000000588       0xc0 Builds/embeddedcomputing.a(USBCore.cpp.o)
  .debug_aranges
-                0x0000000000000650       0x48 Builds/embeddedcomputing.a(WInterrupts.c.o)
+                0x0000000000000648       0x48 Builds/embeddedcomputing.a(WInterrupts.c.o)
  .debug_aranges
-                0x0000000000000698       0x38 Builds/embeddedcomputing.a(cortex_handlers.c.o)
+                0x0000000000000690       0x38 Builds/embeddedcomputing.a(cortex_handlers.c.o)
  .debug_aranges
-                0x00000000000006d0       0x30 Builds/embeddedcomputing.a(hooks.c.o)
+                0x00000000000006c8       0x30 Builds/embeddedcomputing.a(hooks.c.o)
  .debug_aranges
-                0x0000000000000700       0x38 Builds/embeddedcomputing.a(new.cpp.o)
+                0x00000000000006f8       0x38 Builds/embeddedcomputing.a(new.cpp.o)
  .debug_aranges
-                0x0000000000000738       0x30 Builds/embeddedcomputing.a(wiring.c.o)
+                0x0000000000000730       0x30 Builds/embeddedcomputing.a(wiring.c.o)
  .debug_aranges
-                0x0000000000000768       0x50 Builds/embeddedcomputing.a(wiring_analog.c.o)
+                0x0000000000000760       0x50 Builds/embeddedcomputing.a(wiring_analog.c.o)
  .debug_aranges
-                0x00000000000007b8       0x30 Builds/embeddedcomputing.a(wiring_digital.c.o)
+                0x00000000000007b0       0x30 Builds/embeddedcomputing.a(wiring_digital.c.o)
  .debug_aranges
-                0x00000000000007e8       0xf0 Builds/embeddedcomputing.a(Print.cpp.o)
+                0x00000000000007e0       0xf0 Builds/embeddedcomputing.a(Print.cpp.o)
  .debug_aranges
-                0x00000000000008d8       0x38 Builds/embeddedcomputing.a(Reset.cpp.o)
+                0x00000000000008d0       0x38 Builds/embeddedcomputing.a(Reset.cpp.o)
  .debug_aranges
-                0x0000000000000910       0x90 Builds/embeddedcomputing.a(CDC.cpp.o)
+                0x0000000000000908       0x90 Builds/embeddedcomputing.a(CDC.cpp.o)
  .debug_aranges
-                0x00000000000009a0       0xc8 Builds/embeddedcomputing.a(HID.cpp.o)
+                0x0000000000000998       0xc8 Builds/embeddedcomputing.a(HID.cpp.o)
 
-.debug_ranges   0x0000000000000000      0xe50
+.debug_ranges   0x0000000000000000      0xdf0
  .debug_ranges  0x0000000000000000       0x98 Builds/variant.cpp.o
  .debug_ranges  0x0000000000000098       0x60 Builds/syscalls_sam3.c.o
  .debug_ranges  0x00000000000000f8       0xc0 Builds/Adafruit_NeoPixel.cpp.o
- .debug_ranges  0x00000000000001b8       0xc8 Builds/EMoonDesign.cpp.o
- .debug_ranges  0x0000000000000280      0x238 Builds/Lightshows.cpp.o
- .debug_ranges  0x00000000000004b8       0x90 Builds/LocalLibrary.cpp.o
- .debug_ranges  0x0000000000000548       0x88 Builds/main.cpp.o
- .debug_ranges  0x00000000000005d0       0x30 Builds/embeddedcomputing.a(RingBuffer.cpp.o)
- .debug_ranges  0x0000000000000600       0x88 Builds/embeddedcomputing.a(UARTClass.cpp.o)
- .debug_ranges  0x0000000000000688       0x90 Builds/embeddedcomputing.a(USARTClass.cpp.o)
- .debug_ranges  0x0000000000000718      0x228 Builds/embeddedcomputing.a(USBCore.cpp.o)
- .debug_ranges  0x0000000000000940       0x50 Builds/embeddedcomputing.a(WInterrupts.c.o)
- .debug_ranges  0x0000000000000990       0x28 Builds/embeddedcomputing.a(cortex_handlers.c.o)
- .debug_ranges  0x00000000000009b8       0x20 Builds/embeddedcomputing.a(hooks.c.o)
- .debug_ranges  0x00000000000009d8       0x28 Builds/embeddedcomputing.a(new.cpp.o)
- .debug_ranges  0x0000000000000a00       0x20 Builds/embeddedcomputing.a(wiring.c.o)
- .debug_ranges  0x0000000000000a20       0x88 Builds/embeddedcomputing.a(wiring_analog.c.o)
- .debug_ranges  0x0000000000000aa8       0x20 Builds/embeddedcomputing.a(wiring_digital.c.o)
- .debug_ranges  0x0000000000000ac8      0x1c0 Builds/embeddedcomputing.a(Print.cpp.o)
- .debug_ranges  0x0000000000000c88       0x28 Builds/embeddedcomputing.a(Reset.cpp.o)
- .debug_ranges  0x0000000000000cb0       0x98 Builds/embeddedcomputing.a(CDC.cpp.o)
- .debug_ranges  0x0000000000000d48      0x108 Builds/embeddedcomputing.a(HID.cpp.o)
+ .debug_ranges  0x00000000000001b8       0xd0 Builds/EMoonDesign.cpp.o
+ .debug_ranges  0x0000000000000288      0x220 Builds/Lightshows.cpp.o
+ .debug_ranges  0x00000000000004a8       0x90 Builds/LocalLibrary.cpp.o
+ .debug_ranges  0x0000000000000538       0x38 Builds/main.cpp.o
+ .debug_ranges  0x0000000000000570       0x30 Builds/embeddedcomputing.a(RingBuffer.cpp.o)
+ .debug_ranges  0x00000000000005a0       0x88 Builds/embeddedcomputing.a(UARTClass.cpp.o)
+ .debug_ranges  0x0000000000000628       0x90 Builds/embeddedcomputing.a(USARTClass.cpp.o)
+ .debug_ranges  0x00000000000006b8      0x228 Builds/embeddedcomputing.a(USBCore.cpp.o)
+ .debug_ranges  0x00000000000008e0       0x50 Builds/embeddedcomputing.a(WInterrupts.c.o)
+ .debug_ranges  0x0000000000000930       0x28 Builds/embeddedcomputing.a(cortex_handlers.c.o)
+ .debug_ranges  0x0000000000000958       0x20 Builds/embeddedcomputing.a(hooks.c.o)
+ .debug_ranges  0x0000000000000978       0x28 Builds/embeddedcomputing.a(new.cpp.o)
+ .debug_ranges  0x00000000000009a0       0x20 Builds/embeddedcomputing.a(wiring.c.o)
+ .debug_ranges  0x00000000000009c0       0x88 Builds/embeddedcomputing.a(wiring_analog.c.o)
+ .debug_ranges  0x0000000000000a48       0x20 Builds/embeddedcomputing.a(wiring_digital.c.o)
+ .debug_ranges  0x0000000000000a68      0x1c0 Builds/embeddedcomputing.a(Print.cpp.o)
+ .debug_ranges  0x0000000000000c28       0x28 Builds/embeddedcomputing.a(Reset.cpp.o)
+ .debug_ranges  0x0000000000000c50       0x98 Builds/embeddedcomputing.a(CDC.cpp.o)
+ .debug_ranges  0x0000000000000ce8      0x108 Builds/embeddedcomputing.a(HID.cpp.o)
 
-.debug_line     0x0000000000000000     0x6c53
+.debug_line     0x0000000000000000     0x6c3f
  .debug_line    0x0000000000000000      0x637 Builds/variant.cpp.o
  .debug_line    0x0000000000000637      0x489 Builds/syscalls_sam3.c.o
  .debug_line    0x0000000000000ac0      0x6f0 Builds/Adafruit_NeoPixel.cpp.o
- .debug_line    0x00000000000011b0      0x3d5 Builds/EMoonDesign.cpp.o
- .debug_line    0x0000000000001585      0x711 Builds/Lightshows.cpp.o
- .debug_line    0x0000000000001c96      0x44e Builds/LocalLibrary.cpp.o
- .debug_line    0x00000000000020e4      0x47e Builds/main.cpp.o
- .debug_line    0x0000000000002562      0x1d6 Builds/embeddedcomputing.a(RingBuffer.cpp.o)
- .debug_line    0x0000000000002738      0x5be Builds/embeddedcomputing.a(UARTClass.cpp.o)
- .debug_line    0x0000000000002cf6      0x5d5 Builds/embeddedcomputing.a(USARTClass.cpp.o)
- .debug_line    0x00000000000032cb      0x829 Builds/embeddedcomputing.a(USBCore.cpp.o)
- .debug_line    0x0000000000003af4      0x53f Builds/embeddedcomputing.a(WInterrupts.c.o)
- .debug_line    0x0000000000004033      0x346 Builds/embeddedcomputing.a(cortex_handlers.c.o)
- .debug_line    0x0000000000004379       0xab Builds/embeddedcomputing.a(hooks.c.o)
- .debug_line    0x0000000000004424      0x1cf Builds/embeddedcomputing.a(new.cpp.o)
- .debug_line    0x00000000000045f3      0x34a Builds/embeddedcomputing.a(wiring.c.o)
- .debug_line    0x000000000000493d      0x5da Builds/embeddedcomputing.a(wiring_analog.c.o)
- .debug_line    0x0000000000004f17      0x469 Builds/embeddedcomputing.a(wiring_digital.c.o)
- .debug_line    0x0000000000005380      0x6fc Builds/embeddedcomputing.a(Print.cpp.o)
- .debug_line    0x0000000000005a7c      0x46f Builds/embeddedcomputing.a(Reset.cpp.o)
- .debug_line    0x0000000000005eeb      0x71a Builds/embeddedcomputing.a(CDC.cpp.o)
- .debug_line    0x0000000000006605      0x64e Builds/embeddedcomputing.a(HID.cpp.o)
+ .debug_line    0x00000000000011b0      0x3e7 Builds/EMoonDesign.cpp.o
+ .debug_line    0x0000000000001597      0x719 Builds/Lightshows.cpp.o
+ .debug_line    0x0000000000001cb0      0x44e Builds/LocalLibrary.cpp.o
+ .debug_line    0x00000000000020fe      0x450 Builds/main.cpp.o
+ .debug_line    0x000000000000254e      0x1d6 Builds/embeddedcomputing.a(RingBuffer.cpp.o)
+ .debug_line    0x0000000000002724      0x5be Builds/embeddedcomputing.a(UARTClass.cpp.o)
+ .debug_line    0x0000000000002ce2      0x5d5 Builds/embeddedcomputing.a(USARTClass.cpp.o)
+ .debug_line    0x00000000000032b7      0x829 Builds/embeddedcomputing.a(USBCore.cpp.o)
+ .debug_line    0x0000000000003ae0      0x53f Builds/embeddedcomputing.a(WInterrupts.c.o)
+ .debug_line    0x000000000000401f      0x346 Builds/embeddedcomputing.a(cortex_handlers.c.o)
+ .debug_line    0x0000000000004365       0xab Builds/embeddedcomputing.a(hooks.c.o)
+ .debug_line    0x0000000000004410      0x1cf Builds/embeddedcomputing.a(new.cpp.o)
+ .debug_line    0x00000000000045df      0x34a Builds/embeddedcomputing.a(wiring.c.o)
+ .debug_line    0x0000000000004929      0x5da Builds/embeddedcomputing.a(wiring_analog.c.o)
+ .debug_line    0x0000000000004f03      0x469 Builds/embeddedcomputing.a(wiring_digital.c.o)
+ .debug_line    0x000000000000536c      0x6fc Builds/embeddedcomputing.a(Print.cpp.o)
+ .debug_line    0x0000000000005a68      0x46f Builds/embeddedcomputing.a(Reset.cpp.o)
+ .debug_line    0x0000000000005ed7      0x71a Builds/embeddedcomputing.a(CDC.cpp.o)
+ .debug_line    0x00000000000065f1      0x64e Builds/embeddedcomputing.a(HID.cpp.o)
 
-.debug_str      0x0000000000000000     0x5946
+.debug_str      0x0000000000000000     0x592b
  .debug_str     0x0000000000000000     0x10ad Builds/variant.cpp.o
                                        0x11a7 (size before relaxing)
  .debug_str     0x00000000000010ad      0x2b2 Builds/syscalls_sam3.c.o
                                         0x4bb (size before relaxing)
  .debug_str     0x000000000000135f      0x474 Builds/Adafruit_NeoPixel.cpp.o
                                         0xdfb (size before relaxing)
- .debug_str     0x00000000000017d3      0x195 Builds/EMoonDesign.cpp.o
-                                        0x6a4 (size before relaxing)
- .debug_str     0x0000000000001968      0xba1 Builds/Lightshows.cpp.o
-                                       0x11c6 (size before relaxing)
- .debug_str     0x0000000000002509       0xbf Builds/LocalLibrary.cpp.o
+ .debug_str     0x00000000000017d3      0x1c0 Builds/EMoonDesign.cpp.o
+                                        0x6cf (size before relaxing)
+ .debug_str     0x0000000000001993      0xbb6 Builds/Lightshows.cpp.o
+                                       0x11db (size before relaxing)
+ .debug_str     0x0000000000002549       0xbf Builds/LocalLibrary.cpp.o
                                         0xa09 (size before relaxing)
- .debug_str     0x00000000000025c8      0x17f Builds/main.cpp.o
-                                        0xb4a (size before relaxing)
- .debug_str     0x0000000000002747       0x78 Builds/embeddedcomputing.a(RingBuffer.cpp.o)
+ .debug_str     0x0000000000002608      0x12d Builds/main.cpp.o
+                                        0xaf8 (size before relaxing)
+ .debug_str     0x0000000000002735       0x78 Builds/embeddedcomputing.a(RingBuffer.cpp.o)
                                         0x255 (size before relaxing)
- .debug_str     0x00000000000027bf      0xd2b Builds/embeddedcomputing.a(UARTClass.cpp.o)
+ .debug_str     0x00000000000027ad      0xd2b Builds/embeddedcomputing.a(UARTClass.cpp.o)
                                        0x13fa (size before relaxing)
- .debug_str     0x00000000000034ea      0x153 Builds/embeddedcomputing.a(USARTClass.cpp.o)
+ .debug_str     0x00000000000034d8      0x153 Builds/embeddedcomputing.a(USARTClass.cpp.o)
                                        0x147c (size before relaxing)
- .debug_str     0x000000000000363d      0xbb4 Builds/embeddedcomputing.a(USBCore.cpp.o)
+ .debug_str     0x000000000000362b      0xbb4 Builds/embeddedcomputing.a(USBCore.cpp.o)
                                        0x102e (size before relaxing)
- .debug_str     0x00000000000041f1      0x126 Builds/embeddedcomputing.a(WInterrupts.c.o)
+ .debug_str     0x00000000000041df      0x126 Builds/embeddedcomputing.a(WInterrupts.c.o)
                                         0xb5f (size before relaxing)
- .debug_str     0x0000000000004317       0xd5 Builds/embeddedcomputing.a(cortex_handlers.c.o)
+ .debug_str     0x0000000000004305       0xd5 Builds/embeddedcomputing.a(cortex_handlers.c.o)
                                         0x2ec (size before relaxing)
- .debug_str     0x00000000000043ec       0x6d Builds/embeddedcomputing.a(hooks.c.o)
+ .debug_str     0x00000000000043da       0x6d Builds/embeddedcomputing.a(hooks.c.o)
                                         0x12e (size before relaxing)
- .debug_str     0x0000000000004459       0xa4 Builds/embeddedcomputing.a(new.cpp.o)
+ .debug_str     0x0000000000004447       0xa4 Builds/embeddedcomputing.a(new.cpp.o)
                                         0x22d (size before relaxing)
- .debug_str     0x00000000000044fd       0x8a Builds/embeddedcomputing.a(wiring.c.o)
+ .debug_str     0x00000000000044eb       0x8a Builds/embeddedcomputing.a(wiring.c.o)
                                         0x356 (size before relaxing)
- .debug_str     0x0000000000004587      0x731 Builds/embeddedcomputing.a(wiring_analog.c.o)
+ .debug_str     0x0000000000004575      0x731 Builds/embeddedcomputing.a(wiring_analog.c.o)
                                        0x1031 (size before relaxing)
- .debug_str     0x0000000000004cb8       0xb1 Builds/embeddedcomputing.a(wiring_digital.c.o)
+ .debug_str     0x0000000000004ca6       0xb1 Builds/embeddedcomputing.a(wiring_digital.c.o)
                                         0x7f5 (size before relaxing)
- .debug_str     0x0000000000004d69      0x402 Builds/embeddedcomputing.a(Print.cpp.o)
+ .debug_str     0x0000000000004d57      0x402 Builds/embeddedcomputing.a(Print.cpp.o)
                                         0xefe (size before relaxing)
- .debug_str     0x000000000000516b       0xef Builds/embeddedcomputing.a(Reset.cpp.o)
+ .debug_str     0x0000000000005159       0xef Builds/embeddedcomputing.a(Reset.cpp.o)
                                         0x366 (size before relaxing)
- .debug_str     0x000000000000525a      0x3bc Builds/embeddedcomputing.a(CDC.cpp.o)
+ .debug_str     0x0000000000005248      0x3b3 Builds/embeddedcomputing.a(CDC.cpp.o)
                                        0x1a08 (size before relaxing)
- .debug_str     0x0000000000005616      0x330 Builds/embeddedcomputing.a(HID.cpp.o)
+ .debug_str     0x00000000000055fb      0x330 Builds/embeddedcomputing.a(HID.cpp.o)
                                         0x854 (size before relaxing)
 
-.debug_frame    0x0000000000000000     0x24d4
+.debug_frame    0x0000000000000000     0x24ac
  .debug_frame   0x0000000000000000       0xe8 Builds/variant.cpp.o
  .debug_frame   0x00000000000000e8       0xd0 Builds/syscalls_sam3.c.o
  .debug_frame   0x00000000000001b8      0x15c Builds/Adafruit_NeoPixel.cpp.o
- .debug_frame   0x0000000000000314       0xc8 Builds/EMoonDesign.cpp.o
- .debug_frame   0x00000000000003dc      0x510 Builds/Lightshows.cpp.o
- .debug_frame   0x00000000000008ec      0x148 Builds/LocalLibrary.cpp.o
- .debug_frame   0x0000000000000a34       0xc8 Builds/main.cpp.o
- .debug_frame   0x0000000000000afc       0x40 Builds/embeddedcomputing.a(RingBuffer.cpp.o)
- .debug_frame   0x0000000000000b3c       0xdc Builds/embeddedcomputing.a(UARTClass.cpp.o)
- .debug_frame   0x0000000000000c18       0xec Builds/embeddedcomputing.a(USARTClass.cpp.o)
- .debug_frame   0x0000000000000d04      0x220 Builds/embeddedcomputing.a(USBCore.cpp.o)
- .debug_frame   0x0000000000000f24       0xb4 Builds/embeddedcomputing.a(WInterrupts.c.o)
- .debug_frame   0x0000000000000fd8       0x58 Builds/embeddedcomputing.a(cortex_handlers.c.o)
- .debug_frame   0x0000000000001030       0x40 Builds/embeddedcomputing.a(hooks.c.o)
- .debug_frame   0x0000000000001070       0x50 Builds/embeddedcomputing.a(new.cpp.o)
- .debug_frame   0x00000000000010c0       0x5c Builds/embeddedcomputing.a(wiring.c.o)
- .debug_frame   0x000000000000111c       0xa4 Builds/embeddedcomputing.a(wiring_analog.c.o)
- .debug_frame   0x00000000000011c0       0x64 Builds/embeddedcomputing.a(wiring_digital.c.o)
- .debug_frame   0x0000000000001224      0x2d0 Builds/embeddedcomputing.a(Print.cpp.o)
- .debug_frame   0x00000000000014f4       0x58 Builds/embeddedcomputing.a(Reset.cpp.o)
- .debug_frame   0x000000000000154c      0x140 Builds/embeddedcomputing.a(CDC.cpp.o)
- .debug_frame   0x000000000000168c      0x1b0 Builds/embeddedcomputing.a(HID.cpp.o)
- .debug_frame   0x000000000000183c       0x40 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-assert.o)
- .debug_frame   0x000000000000187c       0x5c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fiprintf.o)
- .debug_frame   0x00000000000018d8       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
- .debug_frame   0x0000000000001904       0x5c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-iprintf.o)
- .debug_frame   0x0000000000001960       0x30 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-malloc.o)
- .debug_frame   0x0000000000001990       0x38 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-mallocr.o)
- .debug_frame   0x00000000000019c8       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memset.o)
- .debug_frame   0x00000000000019f4       0x30 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-mlock.o)
- .debug_frame   0x0000000000001a24       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-sbrkr.o)
- .debug_frame   0x0000000000001a50       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
- .debug_frame   0x0000000000001a70       0xb8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-vfiprintf.o)
- .debug_frame   0x0000000000001b28       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-wsetup.o)
- .debug_frame   0x0000000000001b54       0x48 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
- .debug_frame   0x0000000000001b9c       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-abort.o)
- .debug_frame   0x0000000000001bc4       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
- .debug_frame   0x0000000000001be4       0x5c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fflush.o)
- .debug_frame   0x0000000000001c40      0x110 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-findfp.o)
- .debug_frame   0x0000000000001d50       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
- .debug_frame   0x0000000000001d7c       0x50 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fputwc.o)
- .debug_frame   0x0000000000001dcc       0x50 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-freer.o)
- .debug_frame   0x0000000000001e1c       0x38 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fvwrite.o)
- .debug_frame   0x0000000000001e54       0x54 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fwalk.o)
- .debug_frame   0x0000000000001ea8       0x98 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-locale.o)
- .debug_frame   0x0000000000001f40       0x30 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-makebuf.o)
- .debug_frame   0x0000000000001f70       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memchr-stub.o)
- .debug_frame   0x0000000000001f9c       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memmove.o)
- .debug_frame   0x0000000000001fc8       0x38 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-reallocr.o)
- .debug_frame   0x0000000000002000       0x48 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-reent.o)
- .debug_frame   0x0000000000002048       0xc0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-signal.o)
- .debug_frame   0x0000000000002108       0x3c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-signalr.o)
- .debug_frame   0x0000000000002144       0x80 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-stdio.o)
- .debug_frame   0x00000000000021c4       0x40 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-wbuf.o)
- .debug_frame   0x0000000000002204       0x58 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-wcrtomb.o)
- .debug_frame   0x000000000000225c       0x44 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-wctomb_r.o)
- .debug_frame   0x00000000000022a0       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-writer.o)
- .debug_frame   0x00000000000022cc       0x30 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
- .debug_frame   0x00000000000022fc       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-closer.o)
- .debug_frame   0x0000000000002328       0x3c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fclose.o)
- .debug_frame   0x0000000000002364       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fstatr.o)
- .debug_frame   0x0000000000002390       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-isattyr.o)
- .debug_frame   0x00000000000023bc       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-lseekr.o)
- .debug_frame   0x00000000000023e8       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-readr.o)
- .debug_frame   0x0000000000002414       0x58 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(bpabi.o)
- .debug_frame   0x000000000000246c       0x34 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(_divdi3.o)
- .debug_frame   0x00000000000024a0       0x34 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(_udivdi3.o)
+ .debug_frame   0x0000000000000314       0xd8 Builds/EMoonDesign.cpp.o
+ .debug_frame   0x00000000000003ec      0x510 Builds/Lightshows.cpp.o
+ .debug_frame   0x00000000000008fc      0x148 Builds/LocalLibrary.cpp.o
+ .debug_frame   0x0000000000000a44       0x90 Builds/main.cpp.o
+ .debug_frame   0x0000000000000ad4       0x40 Builds/embeddedcomputing.a(RingBuffer.cpp.o)
+ .debug_frame   0x0000000000000b14       0xdc Builds/embeddedcomputing.a(UARTClass.cpp.o)
+ .debug_frame   0x0000000000000bf0       0xec Builds/embeddedcomputing.a(USARTClass.cpp.o)
+ .debug_frame   0x0000000000000cdc      0x220 Builds/embeddedcomputing.a(USBCore.cpp.o)
+ .debug_frame   0x0000000000000efc       0xb4 Builds/embeddedcomputing.a(WInterrupts.c.o)
+ .debug_frame   0x0000000000000fb0       0x58 Builds/embeddedcomputing.a(cortex_handlers.c.o)
+ .debug_frame   0x0000000000001008       0x40 Builds/embeddedcomputing.a(hooks.c.o)
+ .debug_frame   0x0000000000001048       0x50 Builds/embeddedcomputing.a(new.cpp.o)
+ .debug_frame   0x0000000000001098       0x5c Builds/embeddedcomputing.a(wiring.c.o)
+ .debug_frame   0x00000000000010f4       0xa4 Builds/embeddedcomputing.a(wiring_analog.c.o)
+ .debug_frame   0x0000000000001198       0x64 Builds/embeddedcomputing.a(wiring_digital.c.o)
+ .debug_frame   0x00000000000011fc      0x2d0 Builds/embeddedcomputing.a(Print.cpp.o)
+ .debug_frame   0x00000000000014cc       0x58 Builds/embeddedcomputing.a(Reset.cpp.o)
+ .debug_frame   0x0000000000001524      0x140 Builds/embeddedcomputing.a(CDC.cpp.o)
+ .debug_frame   0x0000000000001664      0x1b0 Builds/embeddedcomputing.a(HID.cpp.o)
+ .debug_frame   0x0000000000001814       0x40 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-assert.o)
+ .debug_frame   0x0000000000001854       0x5c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fiprintf.o)
+ .debug_frame   0x00000000000018b0       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
+ .debug_frame   0x00000000000018dc       0x5c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-iprintf.o)
+ .debug_frame   0x0000000000001938       0x30 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-malloc.o)
+ .debug_frame   0x0000000000001968       0x38 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-mallocr.o)
+ .debug_frame   0x00000000000019a0       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memset.o)
+ .debug_frame   0x00000000000019cc       0x30 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-mlock.o)
+ .debug_frame   0x00000000000019fc       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000001a28       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
+ .debug_frame   0x0000000000001a48       0xb8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-vfiprintf.o)
+ .debug_frame   0x0000000000001b00       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-wsetup.o)
+ .debug_frame   0x0000000000001b2c       0x48 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x0000000000001b74       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-abort.o)
+ .debug_frame   0x0000000000001b9c       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
+ .debug_frame   0x0000000000001bbc       0x5c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fflush.o)
+ .debug_frame   0x0000000000001c18      0x110 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-findfp.o)
+ .debug_frame   0x0000000000001d28       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
+ .debug_frame   0x0000000000001d54       0x50 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fputwc.o)
+ .debug_frame   0x0000000000001da4       0x50 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-freer.o)
+ .debug_frame   0x0000000000001df4       0x38 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fvwrite.o)
+ .debug_frame   0x0000000000001e2c       0x54 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fwalk.o)
+ .debug_frame   0x0000000000001e80       0x98 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-locale.o)
+ .debug_frame   0x0000000000001f18       0x30 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-makebuf.o)
+ .debug_frame   0x0000000000001f48       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memchr-stub.o)
+ .debug_frame   0x0000000000001f74       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memmove.o)
+ .debug_frame   0x0000000000001fa0       0x38 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-reallocr.o)
+ .debug_frame   0x0000000000001fd8       0x48 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-reent.o)
+ .debug_frame   0x0000000000002020       0xc0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-signal.o)
+ .debug_frame   0x00000000000020e0       0x3c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-signalr.o)
+ .debug_frame   0x000000000000211c       0x80 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-stdio.o)
+ .debug_frame   0x000000000000219c       0x40 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-wbuf.o)
+ .debug_frame   0x00000000000021dc       0x58 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-wcrtomb.o)
+ .debug_frame   0x0000000000002234       0x44 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-wctomb_r.o)
+ .debug_frame   0x0000000000002278       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-writer.o)
+ .debug_frame   0x00000000000022a4       0x30 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
+ .debug_frame   0x00000000000022d4       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-closer.o)
+ .debug_frame   0x0000000000002300       0x3c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fclose.o)
+ .debug_frame   0x000000000000233c       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fstatr.o)
+ .debug_frame   0x0000000000002368       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-isattyr.o)
+ .debug_frame   0x0000000000002394       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-lseekr.o)
+ .debug_frame   0x00000000000023c0       0x2c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-readr.o)
+ .debug_frame   0x00000000000023ec       0x58 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(bpabi.o)
+ .debug_frame   0x0000000000002444       0x34 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(_divdi3.o)
+ .debug_frame   0x0000000000002478       0x34 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/libgcc.a(_udivdi3.o)
 
 Cross Reference Table
 
@@ -2917,14 +2916,12 @@ Adafruit_NeoPixel::getPixelColor(unsigned short) const Builds/Adafruit_NeoPixel.
                                                   Builds/EMoonDesign.cpp.o
 Adafruit_NeoPixel::getPixels() const              Builds/Adafruit_NeoPixel.cpp.o
 Adafruit_NeoPixel::numPixels() const              Builds/Adafruit_NeoPixel.cpp.o
-                                                  Builds/main.cpp.o
                                                   Builds/LocalLibrary.cpp.o
                                                   Builds/EMoonDesign.cpp.o
 Adafruit_NeoPixel::setBrightness(unsigned char)   Builds/Adafruit_NeoPixel.cpp.o
 Adafruit_NeoPixel::setPin(unsigned char)          Builds/Adafruit_NeoPixel.cpp.o
 Adafruit_NeoPixel::setPixelColor(unsigned short, unsigned char, unsigned char, unsigned char) Builds/Adafruit_NeoPixel.cpp.o
 Adafruit_NeoPixel::setPixelColor(unsigned short, unsigned long) Builds/Adafruit_NeoPixel.cpp.o
-                                                  Builds/main.cpp.o
                                                   Builds/LocalLibrary.cpp.o
                                                   Builds/EMoonDesign.cpp.o
 Adafruit_NeoPixel::show()                         Builds/Adafruit_NeoPixel.cpp.o
@@ -3093,8 +3090,8 @@ RTT_Handler                                       Builds/embeddedcomputing.a(cor
                                                   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(startup_sam3xa.o)
 Reset_Handler                                     /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(startup_sam3xa.o)
 RingBuffer::RingBuffer()                          Builds/embeddedcomputing.a(RingBuffer.cpp.o)
-                                                  Builds/variant.cpp.o
 RingBuffer::RingBuffer()                          Builds/embeddedcomputing.a(RingBuffer.cpp.o)
+                                                  Builds/variant.cpp.o
 RingBuffer::store_char(unsigned char)             Builds/embeddedcomputing.a(RingBuffer.cpp.o)
                                                   Builds/embeddedcomputing.a(USARTClass.cpp.o)
                                                   Builds/embeddedcomputing.a(UARTClass.cpp.o)
@@ -3260,8 +3257,8 @@ USART3_Handler                                    Builds/variant.cpp.o
 USARTClass::IrqHandler()                          Builds/embeddedcomputing.a(USARTClass.cpp.o)
                                                   Builds/variant.cpp.o
 USARTClass::USARTClass(Usart*, IRQn, unsigned long, RingBuffer*) Builds/embeddedcomputing.a(USARTClass.cpp.o)
-USARTClass::USARTClass(Usart*, IRQn, unsigned long, RingBuffer*) Builds/embeddedcomputing.a(USARTClass.cpp.o)
                                                   Builds/variant.cpp.o
+USARTClass::USARTClass(Usart*, IRQn, unsigned long, RingBuffer*) Builds/embeddedcomputing.a(USARTClass.cpp.o)
 USARTClass::available()                           Builds/embeddedcomputing.a(USARTClass.cpp.o)
                                                   Builds/variant.cpp.o
 USARTClass::begin(unsigned long)                  Builds/embeddedcomputing.a(USARTClass.cpp.o)
@@ -3853,6 +3850,7 @@ mardigrasC1()                                     Builds/Lightshows.cpp.o
 mardigrasC2()                                     Builds/Lightshows.cpp.o
 mardigrasC3()                                     Builds/Lightshows.cpp.o
 mardigrasCX()                                     Builds/Lightshows.cpp.o
+masterMix(unsigned long, unsigned long, Adafruit_NeoPixel*) Builds/Lightshows.cpp.o
 memchr                                            /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memchr-stub.o)
                                                   /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fvwrite.o)
                                                   /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-vfiprintf.o)
@@ -3959,6 +3957,7 @@ pmc_switch_udpck_to_upllck                        /Applications/Arduino.app/Cont
 pod1                                              Builds/Lightshows.cpp.o
 pod2                                              Builds/Lightshows.cpp.o
 pod3                                              Builds/Lightshows.cpp.o
+pod4                                              Builds/Lightshows.cpp.o
 rainbowSpread(unsigned long, unsigned long, Adafruit_NeoPixel*) Builds/Lightshows.cpp.o
 rainbowSpreadC0()                                 Builds/Lightshows.cpp.o
 rainbowSpreadC1()                                 Builds/Lightshows.cpp.o
@@ -4010,11 +4009,9 @@ svcHook                                           Builds/embeddedcomputing.a(hoo
 sysTickHook                                       Builds/embeddedcomputing.a(hooks.c.o)
                                                   Builds/embeddedcomputing.a(cortex_handlers.c.o)
 system_init_flash                                 /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/sam/variants/arduino_due_x/libsam_sam3x8e_gcc_rel.a(system_sam3xa.o)
-testmix1(unsigned long, unsigned long, Adafruit_NeoPixel*) Builds/Lightshows.cpp.o
+testmix1(unsigned long, unsigned long, Adafruit_NeoPixel*) Builds/EMoonDesign.cpp.o
 tickReset                                         Builds/embeddedcomputing.a(Reset.cpp.o)
                                                   Builds/embeddedcomputing.a(cortex_handlers.c.o)
-update1(unsigned long, unsigned long, Adafruit_NeoPixel*) Builds/main.cpp.o
-update2(unsigned long, unsigned long, Adafruit_NeoPixel*) Builds/main.cpp.o
 vfiprintf                                         /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-vfiprintf.o)
 vtable for Keyboard_                              Builds/embeddedcomputing.a(HID.cpp.o)
 vtable for Print                                  Builds/embeddedcomputing.a(Print.cpp.o)

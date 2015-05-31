@@ -158,16 +158,7 @@ int parseLightshows(char* lightshowFilename, colour* colourList, lightshow *ligh
     
     int i = 0;
     
-    // ------Lightshow Strip
-    // Strip
-    // Name
-    // Function
-    // Duration
-    // Transition
-    // C1
-    // C2
-    // C3
-    // C4
+   
     lightshowFile >> row;
     while(i < maxLightshows)
     {

@@ -1,0 +1,9 @@
+
+/Users/gordon/GitHub/Electronic-Moon/EMoon-Sketch/EMoon-Sketch/Lightshows.cpp:601:194:
+
+Too many arguments to function 'void fillsq(eMoonFrame, eMoonFrame, Adafruit_NeoPixel*, eMoonSmoothness, colourFunction, colourFunction, colourFunction)'
+
+void	spiral0_0	(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip) {
+
+
+fillsq	(f, duration, strip, 91, &	cobalt0815	, &	redblack100	, &	redblack100	, &	darkmagenta303	, &	crimson1508	);}

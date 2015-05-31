@@ -1,3 +1,13 @@
 Strip,Name,Type,Min Duration (frames),Transition,C1,C2,C3,C4
-pod1,rainbowSpread,spread4,64,4,red,yellow,green,blue
-pod1,redFade,fade2,128,64,black,red,,
+pod1,rainbowSpread,spread4,,1,cyan,magenta,black,white
+pod2,redFade,fade2,,64,black,green,,
+,gordon1,spread4,,1,cyan,magenta,green,red
+,blackFade,fade2,,64,green,black,,
+,gordon2,spread4,,1,blue,yellow,blue,yellow
+,redRed,fade2,,64,red,blue,,
+,gordon3,spread4,,1,red,white,white,blue
+,redGreen,fade2,,64,black,blue,,
+,backGreen,fade2,,64,black,green,,
+,greenBlack,fade2,,64,green,black,,
+,greenBlue,fade2,,64,green,blue,,
+,mardigras,spread4,,1,emerald,orange,purple,lime

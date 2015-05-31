@@ -62,6 +62,14 @@ struct lightshow {
 };
 const int maxLightshows = 256;
 
+class moonChunk {
+    int lCount;
+    lightshow* lsList;
+    int sCount;
+    strip* stripList;
+    
+};
+
 
 void parseColours(char* colourFilename, colour *colourList);
 int parseStrips(char* stripFilename, strip *stripList);

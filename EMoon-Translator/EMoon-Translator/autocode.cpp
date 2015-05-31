@@ -84,8 +84,7 @@ void generateLightshows(lightshow* lightshowList, int lCount, strip* stripList, 
     outSource <<  sourceTop;
  
     
-    primitiveLightshowDefinitions* primitiveDefs = new primitiveLightshowDefinitions(lCount, lightshowList, sCount, stripList);
-    primitiveDefs->setup();
+    primitiveLightshowDefinitions* primitiveDefs = new primitiveLightshowDefinitions(lightshowList, lCount);
     std::cout << primitiveDefs->generate();
     
     //-----Insert the lightshows---------

@@ -1,0 +1,327 @@
+
+void edgewipe0(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    everwipe4(f, duration, strip, 0, &black000, &lemon, &pink, &custard, &peacock); }
+
+void edgewipe1(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    everwipe4(f, duration, strip, 0, &black000, &peacock, &custard, &pink, &lemon); }
+
+void edgewipe2(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    everwipe4(f, duration, strip, 0, &black000, &peacock, &lemon, &pink, &custard); }
+
+
+
+void edgewipe10(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    everwipe4(f, duration, strip, 0, &black000, &red0700, &magenta15015, &orange880, &red1500); }
+
+void edgewipe11(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    fade4(f, duration, strip, 0, &black000, &purple8015, &green0150, &blueblack001, &cyan0077); }
+
+void edgewipe12(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    everwipe4(f, duration, strip, 0, &black000, &magenta15015, &orange880, &red0700, &magenta0707); }
+
+
+void edgewipe20(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    everwipe4(f, duration, strip, 0, &black000, &blue0007, &cyan01515, &blue0007, &cyan01515); }
+
+void edgewipe21(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    everwipe4(f, duration, strip, 0, &black000, &white151515, &blue0007, &white151515, &cyan01515); }
+
+void edgewipe22(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    everwipe4(f, duration, strip, 0, &black000, &cyan01515, &blue0007, &cyan01515, &blue0007); }
+
+
+
+void edgewipe30(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    everwipe4(f, duration, strip, 0, &black000, &white151515, &black000, &white151515, &black000); }
+
+void edgewipe31(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    everwipe4(f, duration, strip, 0, &black000, &cyan0077, &red0700, &purple8015, &blue0015); }
+
+void edgewipe32(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    everwipe4(f, duration, strip, 0, &black000, &green0150, &yellow15150, &green0070, &red0700); }
+
+
+
+------------------------------------------------------------------------
+
+void masterMix(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip, int p) {
+    
+    int interval = duration / 8;
+    int edgeInterval = duration / 4;
+    
+    
+    switch ( f / interval ) {
+        case 0:
+            APL_list->addLightshow(p, interval*3, pod0, &a0);
+            APL_list->addLightshow(-1, interval*3, pod1, &a1);
+            APL_list->addLightshow(-1, interval*3, pod2, &a2);
+            APL_list->addLightshow(-1, interval*3, pod3, &a3);
+            APL_list->addLightshow(-1, interval*3, pod4, &a4);
+            APL_list->addLightshow(-1, interval*3, pod5, &a5);
+            APL_list->addLightshow(-1, interval*3, pod6, &a6);
+            APL_list->addLightshow(-1, interval*3, pod7, &a7);
+            
+            APL_list->addLightshow(-1, interval*3, pod8, &a0);
+            APL_list->addLightshow(-1, interval*3, pod9, &a1);
+            APL_list->addLightshow(-1, interval*3, pod10, &a2);
+            APL_list->addLightshow(-1, interval*3, pod11, &a3);
+            APL_list->addLightshow(-1, interval*3, pod12, &a4);
+            APL_list->addLightshow(-1, interval*3, pod13, &a5);
+            APL_list->addLightshow(-1, interval*3, pod14, &a6);
+            APL_list->addLightshow(-1, interval*3, pod15, &a7);
+            
+            APL_list->addLightshow(p, interval, edge0, &edgewipe0);
+            APL_list->addLightshow(-1, interval, edge1, &edgewipe0);
+            APL_list->addLightshow(-1, interval, edge2, &edgewipe0);
+
+            APL_list->addLightshow(-1, interval, edge3, &edgewipe0);
+            APL_list->addLightshow(-1, interval, edge4, &edgewipe0);
+            APL_list->addLightshow(-1, interval, edge5, &edgewipe0);
+            
+            APL_list->addLightshow(-1, interval, edge6, &edgewipe0);
+            APL_list->addLightshow(-1, interval, edge7, &edgewipe0);
+            APL_list->addLightshow(-1, interval, edge8, &edgewipe0);
+            
+            APL_list->addLightshow(-1, interval, edge9, &edgewipe0);
+            APL_list->addLightshow(-1, interval, edge10, &edgewipe0);
+            APL_list->addLightshow(-1, interval, edge11, &edgewipe0);
+            
+
+            break;
+        case 1:
+
+            
+            APL_list->addLightshow(p, interval, edge0, &edgewipe1);
+            APL_list->addLightshow(-1, interval, edge1, &edgewipe1);
+            APL_list->addLightshow(-1, interval, edge2, &edgewipe2);
+
+            
+            break;
+        case 2:
+            
+            
+            APL_list->addLightshow(p, interval, edge3, &edgewipe1);
+            APL_list->addLightshow(-1, interval, edge4, &edgewipe1);
+            APL_list->addLightshow(-1, interval, edge5, &edgewipe2);
+            
+
+            break;
+        case 3:
+            
+            APL_list->addLightshow(p, interval, edge6, &edgewipe1);
+            APL_list->addLightshow(-1, interval, edge7, &edgewipe1);
+            APL_list->addLightshow(-1, interval, edge8, &edgewipe2);
+            
+            break;
+        case 4:
+            APL_list->addLightshow(p, interval, edge9, &edgewipe1);
+            APL_list->addLightshow(-1, interval, edge10, &edgewipe1);
+            APL_list->addLightshow(-1, interval, edge11, &edgewipe2);
+            break;
+        case 5:
+            APL_list->addLightshow(p, interval*4, pod0, &f0);
+            APL_list->addLightshow(-1, interval*4, pod1, &f1);
+            APL_list->addLightshow(-1, interval*4, pod2, &f2);
+            APL_list->addLightshow(-1, interval*4, pod3, &f3);
+            APL_list->addLightshow(-1, interval*4, pod4, &f4);
+            APL_list->addLightshow(-1, interval*4, pod5, &f5);
+            APL_list->addLightshow(-1, interval*4, pod6, &f6);
+            APL_list->addLightshow(-1, interval*4, pod7, &f7);
+            
+            APL_list->addLightshow(-1, interval*4, pod8, &f0);
+            APL_list->addLightshow(-1, interval*4, pod9, &f1);
+            APL_list->addLightshow(-1, interval*4, pod10, &f2);
+            APL_list->addLightshow(-1, interval*4, pod11, &f3);
+            APL_list->addLightshow(-1, interval*4, pod12, &f4);
+            APL_list->addLightshow(-1, interval*4, pod13, &f5);
+            APL_list->addLightshow(-1, interval*4, pod14, &f6);
+            APL_list->addLightshow(-1, interval*4, pod15, &f7);
+            break;
+        case 6:
+            APL_list->addLightshow(p, interval, pod0, &g0);
+            APL_list->addLightshow(-1, interval, pod1, &g1);
+            APL_list->addLightshow(-1, interval, pod2, &g2);
+            APL_list->addLightshow(-1, interval, pod3, &g3);
+            APL_list->addLightshow(-1, interval, pod4, &g4);
+            APL_list->addLightshow(-1, interval, pod5, &g5);
+            APL_list->addLightshow(-1, interval, pod6, &g6);
+            APL_list->addLightshow(-1, interval, pod7, &g7);
+            
+            APL_list->addLightshow(-1, interval, pod8, &g0);
+            APL_list->addLightshow(-1, interval, pod9, &g1);
+            APL_list->addLightshow(-1, interval, pod10, &g2);
+            APL_list->addLightshow(-1, interval, pod11, &g3);
+            APL_list->addLightshow(-1, interval, pod12, &g4);
+            APL_list->addLightshow(-1, interval, pod13, &g5);
+            APL_list->addLightshow(-1, interval, pod14, &g6);
+            APL_list->addLightshow(-1, interval, pod15, &g7);
+            
+            APL_list->addLightshow(-1, interval, edge0, &g7);
+            APL_list->addLightshow(-1, interval, edge1, &g6);
+            APL_list->addLightshow(-1, interval, edge2, &g1);
+            
+            APL_list->addLightshow(-1, interval, edge3, &g4);
+            APL_list->addLightshow(-1, interval, edge4, &g3);
+            APL_list->addLightshow(-1, interval, edge5, &g3);
+            
+            APL_list->addLightshow(-1, interval, edge6, &g2);
+            APL_list->addLightshow(-1, interval, edge7, &g0);
+            APL_list->addLightshow(-1, interval, edge8, &g7);
+            
+            APL_list->addLightshow(-1, interval, edge9, &g1);
+            APL_list->addLightshow(-1, interval, edge10, &g3);
+            APL_list->addLightshow(-1, interval, edge11, &g7);
+            break;
+        case 7:
+            APL_list->addLightshow(p, interval, pod0, &h0);
+            APL_list->addLightshow(-1, interval, pod1, &h1);
+            APL_list->addLightshow(-1, interval, pod2, &h2);
+            APL_list->addLightshow(-1, interval, pod3, &h3);
+            APL_list->addLightshow(-1, interval, pod4, &h4);
+            APL_list->addLightshow(-1, interval, pod5, &h5);
+            APL_list->addLightshow(-1, interval, pod6, &h6);
+            APL_list->addLightshow(-1, interval, pod7, &h7);
+            
+            APL_list->addLightshow(-1, interval, pod8, &h0);
+            APL_list->addLightshow(-1, interval, pod9, &h1);
+            APL_list->addLightshow(-1, interval, pod10, &h2);
+            APL_list->addLightshow(-1, interval, pod11, &h3);
+            APL_list->addLightshow(-1, interval, pod12, &h4);
+            APL_list->addLightshow(-1, interval, pod13, &h5);
+            APL_list->addLightshow(-1, interval, pod14, &h6);
+            APL_list->addLightshow(-1, interval, pod15, &h7);
+            
+            APL_list->addLightshow(-1, interval, edge0, &edgewipe30);
+            APL_list->addLightshow(-1, interval, edge1, &edgewipe31);
+            APL_list->addLightshow(-1, interval, edge2, &edgewipe31);
+            
+            APL_list->addLightshow(-1, interval, edge3, &edgewipe30);
+            APL_list->addLightshow(-1, interval, edge4, &edgewipe32);
+            APL_list->addLightshow(-1, interval, edge5, &edgewipe30);
+            
+            APL_list->addLightshow(-1, interval, edge6, &edgewipe31);
+            APL_list->addLightshow(-1, interval, edge7, &edgewipe30);
+            APL_list->addLightshow(-1, interval, edge8, &edgewipe31);
+            
+            APL_list->addLightshow(-1, interval, edge9, &edgewipe31);
+            APL_list->addLightshow(-1, interval, edge10, &edgewipe31);
+            APL_list->addLightshow(-1, interval, edge11, &edgewipe32);
+            
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
+
+
+//pure red centre
+
+void a0(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    wipe4(f, duration, strip, 0, &redblack100, &redblack100, &red1500, &red0700, &red1500); }
+
+void a1(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    wipe4(f, duration, strip, 0, &redblack100, &redblack100, &red1500, &red0700, &red1500); }
+
+void a2(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    wipe4(f, duration, strip, 0, &redblack100, &redblack100, &red1500, &red0700, &red1500); }
+
+
+void a3(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    wipe4(f, duration, strip, 0, &redblack100, &redblack100, &red1500, &red0700, &red1500); }
+
+
+void a4(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    wipe4(f, duration, strip, 0, &redblack100, &redblack100, &red1500, &red0700, &red1500); }
+
+
+void a5(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    wipe4(f, duration, strip, 0, &redblack100, &redblack100, &red1500, &red0700, &red1500); }
+
+
+void a6(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    wipe4(f, duration, strip, 0, &redblack100, &redblack100, &red1500, &red0700, &red1500); }
+
+
+void a7(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    wipe4(f, duration, strip, 0, &redblack100, &redblack100, &red1500, &red0700, &red1500); }
+
+//blue and yellow sweep around border ---------------------
+
+//-----------------
+
+void edgewipe0(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    fade4(f, duration, strip, 0, &black000, &black000, &blueblack001, &blue0015, &blue0015); }
+
+void edgewipe1(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    wipe4(f, duration, strip, 0, &blue0015, &yellow15150, &yellow15150, &yellow15150, &yellow15150); }
+
+void edgewipe2(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    wipe4(f, duration, strip, 0, &blue0015, &blue0015, &yellow15150, &yellow15150, &yellow15150); }
+
+
+
+// aussie theme ---------------------------------------------
+
+void f0(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    wash4(f, duration, strip, 0, &green0150, &yellow15150, &lime0370, &green0150, &lime8150); }
+
+void f1(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    wash4(f, duration, strip, 0, &green0150, &yellow15150, &lime0370, &green0150, &lime0370); }
+
+void f2(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    wash4(f, duration, strip, 0, &green0150, &yellow15150, &lime8150, &green0150, &lime8150); }
+
+
+
+void f3(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    wash4(f, duration, strip, 0, &green0150, &yellow15150, &green0150, &green0150, &yellow15150); }
+
+
+void f4(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    wash4(f, duration, strip, 0, &green0150, &yellow15150, &lime0370, &green0150, &lime0370); }
+
+
+void f5(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    wash4(f, duration, strip, 0, &green0150, &lime8150, &lime0370, &green0150, &lime8150); }
+
+
+void f6(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    wash4(f, duration, strip, 0, &green0150, &yellow15150, &lime8150, &green0150, &lime8150); }
+
+
+void f7(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)
+{
+    wash4(f, duration, strip, 0, &green0150, &green0150, &lime0370, &green0150, &yellow15150); }

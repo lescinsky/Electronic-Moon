@@ -8,36 +8,132 @@
 
 #include "codeTemplates.h"
 
+// Code Templates
+//      have bundles and children and lists
+//      bundles allow simple token to data replacement
+//      children allow token to template replacement
+//      lists allow a token to be replaced by a list of templates
+//
+//  Templates will form a tree
+//  Leaf nodes will replace tokens with data from the bundle
+//
+//  For a variety of one-off sub-templates, use children
+//  For indeterminate number of repeated templates, use the list
+//  For a variety of lists, create a child with a list
+//  If both a list and a bundle exist, or a list and children, then bundle and children repeat!!!!
+//
+//  When a codeTemplate is constructed, it still doesn't have its token
+//  A codeTemplate is generally constructed by another template, in that template's constructor
+//
+// All codeTemplate classes should have their own constructors
+// A base class object has no template string so it generates nothing!!!
+//
+//  !!! I should hide templateString and force user to set it with a method
 
- codeTemplate::codeTemplate()
+void codeTemplate::addToBundle(std::string token, std::string text) {
+    
+    this->bundle[token] = text;
+
+    
+}
+
+void codeTemplate::addToBundle(std::string token, int number) {
+    
+    this->addToBundle(token, std::to_string(number));
+    
+}
+
+codeTemplate::codeTemplate() :
+    numChildren(0), numTemplates(0)
 {
 }
 
+//codeTemplate::codeTemplate(dataBundle* bundle) :
+//    numChildren(0), numTemplates(1) {
+//    
+//}
 
-void codeTemplate::addChild(codeTemplate* child, std::string token) {
-    
-    int i = this->numChildren;
-    this->childList[i] = child;
-    child->token = token;
-    child->setup();
-    this->numChildren = i+1;
 
+
+lightshowTemplate::lightshowTemplate(lightshow* ls) :
+codeTemplate::codeTemplate()
+{
+    this->setBundle(ls);
 }
 
-void codeTemplate::replaceChild(int i) {
-    
-    codeTemplate* child = this->childList[i];
-    this->replaceString(child->token, child->generate());
+colourTemplate::colourTemplate(colourType colour, int index) :
+codeTemplate::codeTemplate()
+{
+    this->addToBundle("value", colour);
+    this->addToBundle("i", index);
 }
 
-void codeTemplate::replaceAllChildren() {
-    
-    for (int i=0; i < this->numChildren; i++) {
-        this->replaceChild(i);
+stripTemplate::stripTemplate(strip* strip) :
+    codeTemplate::codeTemplate()
+{
+    this->setBundle(strip);
+}
+
+lightshowListTemplate::lightshowListTemplate(lightshow* lsList, int lCount) :
+    codeTemplate::codeTemplate()
+{
+    this->numTemplates = lCount;
+    for (int i =0; i < lCount; i++) {
+        lightshowTemplate* newTemplate = new lightshowTemplate(&lsList[i]);
+        this->templateList[i] = newTemplate;
     }
-
 }
 
+stripListTemplate::stripListTemplate(strip* sList, int sCount) :
+    codeTemplate::codeTemplate()
+{
+    this->numTemplates = sCount;
+    for (int i =0; i < sCount; i++) {
+        stripTemplate* newTemplate = new stripTemplate(&sList[i]);
+        this->templateList[i] = newTemplate;
+    }
+}
+
+
+colourListTemplate::colourListTemplate(lightshow* ls) :
+lightshowTemplate(ls)
+{
+    this->numTemplates = ls->colourCount;
+    for (int i =0; i < ls->colourCount; i++) {
+        colourTemplate* newTemplate = new colourTemplate(ls->colourArgs[i], i);
+        this->templateList[i] = newTemplate;
+    }
+}
+
+
+// set up data bundle for lightshows
+void lightshowTemplate::setBundle(lightshow* ls) {
+    
+    this->bundle.clear();
+    addToBundle("name", ls->name);
+    addToBundle("transition", ls->transition);
+    addToBundle("CX", ls->CX);
+    addToBundle("colourCount", ls->colourCount);
+    addToBundle("updateFunction", ls->updateFunction);
+//    addChild(new ColourListTemplate(ls->colourArgs, ls->colourCount), "colourArgs");
+    
+}
+
+
+
+
+// set up data bundle for strips
+void stripTemplate::setBundle(strip* strip)
+{
+    //!! rewrite using addToBundle
+    this->bundle.clear();
+    bundle["name"] = strip->name;
+    bundle["pin"] = strip->pin;
+    bundle["count"] = strip->count;
+}
+
+
+// replaces a token in the bundle with the matching data
 void codeTemplate::replaceString(std::string token, std::string value) {
     
     std::string target = "?" + token + "?";
@@ -49,36 +145,129 @@ void codeTemplate::replaceString(std::string token, std::string value) {
     
 }
 
-void codeTemplate::replaceString(std::string token, int value) {
+
+// replaces all tokens in the bundle with matching data
+void codeTemplate::autoReplaceBundle() {
+
+        for (auto  iterator = bundle.begin(); iterator != bundle.end(); iterator++) {
+            std::string token = iterator->first;
+            std::string value = iterator->second;
+            this->replaceString(iterator->first, iterator->second);
+        }
+
+}
+
+
+void codeTemplate::addChild(codeTemplate* child, std::string token) {
     
-    std::string valueString = std::to_string(value);
-    this->replaceString(token, valueString);
+    int i = this->numChildren;
+    child->token = token;
+    this->childList[i] = child;
+    this->numChildren = i+1;
+    
+}
+
+// replaces the child token with the output of the child template
+void codeTemplate::replaceChild(int i) {
+    
+    codeTemplate* child = this->childList[i];
+        this->replaceString(child->token, child->generate());
+}
+
+std::string codeTemplate::generateAllChildren() {
+    std::string outputString = "";
+    for (int i=0; i < this->numChildren; i++) {
+        outputString += this->childList[i]->generate();    }
+    return outputString;
+}
+
+// replaces all child tokens with outputs of child templates
+void codeTemplate::replaceAllChildren() {
+    
+    for (int i=0; i < this->numChildren; i++) {
+        this->replaceChild(i);
+    }
+    
+}
+
+void codeTemplate::addChild(int index, codeTemplate* child, std::string token) {
+    
+    this->templateList[index]->addChild(child, token);
+    
+}
+
+// replaces an instance template's token with the output of one of the instance templates
+void codeTemplate::replaceInstance(int i) {
+    
+    codeTemplate* instance = this->templateList[i];
+        this->replaceString(instance->token, instance->generate());
+}
+    
+    
+std::string codeTemplate::generateAllTemplates() {
+    std::string outputString = "";
+    for (int i=0; i < this->numTemplates; i++) {
+        outputString += this->templateList[i]->generate();    }
+    return outputString;
+}
+
+
+void codeTemplate::setTemplateString(std::string templateString) {
+    this->templateString = templateString;
+    setTemplateStringAllChildren();
+}
+
+void codeTemplate::setTemplateStringAllChildren(std::string templateString) {
+    
+    for (int i=0; i < this->numTemplates; i++) {
+        this->templateList[i]->templateString = templateString;
+    }
+}
+
+void codeTemplate::setTemplateStringAllChildren() {
+    setTemplateStringAllChildren(this->templateString);
+}
+
+std::string codeTemplate::generate() {
+  
+
+    if (this->templateString.length()) {
+            this->workingString = this->templateString;
+        this->autoReplaceBundle();
+        this->replaceAllChildren();
+        for (int i=0; i < this->numTemplates; i++) {
+            this->workingString += this->templateString;
+            this->autoReplaceBundle();
+            this->replaceAllChildren();
+            this->replaceInstance(i);
+        }
+    }
+    else {
+        this->workingString = "";
+        this->workingString += this->generateAllChildren();
+        this->workingString += this->generateAllTemplates();
+    }
+    return this->workingString;
     
 }
 
 
-topLevelTemplate::topLevelTemplate(int lCount, lightshow* lightshowList, int sCount, strip* stripList) :
-lCount(lCount), lightshowList(lightshowList), sCount(sCount), stripList(stripList)
-{
-    
-}
 
 
-
-
-//void topLevelTemplate::addChild(lightshowTemplate* child) {
-//    child->lightshow
+//void listTemplate::addChild(listTemplate* child, std::string token) {
+//    child->parent = this;
+//    this->codeTemplate::addChild(child, token);
 //}
-//void addChild(stripTemplate* child);
 
 
-void lightshowTemplate::addChild(lightshowTemplate* child, std::string token) {
-    
-    child->parent = this;
-    this->codeTemplate::addChild(child, token);
-    
-}
 
+//void lightshowTemplate::addChild(lightshowTemplate* child, std::string token) {
+//    
+//    child->parent = this;
+//    this->codeTemplate::addChild(child, token);
+//    
+//}
+//
 //void stripTemplate::addChild(stripTemplate* child, std::string token) {
 //    
 //    child->parent = this;
@@ -120,123 +309,125 @@ void lightshowTemplate::addChild(lightshowTemplate* child, std::string token) {
 //      Master Setup
 
 
-void sigTemplate::setup() {
+
+sigTemplate::sigTemplate(lightshow* ls) :
+    lightshowTemplate(ls)
+{
     
+//    this->currentLightshow = this->parent->currentLightshow;
+
+    this->templateString =
+    "void ?updateFunction?(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)";
+
 }
 
-std::string sigTemplate::generate() {
-    
-    this->currentLightshow = this->parent->currentLightshow;
-
-    this->workingString =
-    "void ?function?(eMoonFrame f, eMoonFrame duration, Adafruit_NeoPixel* strip)";
-    
-    
-    this->replaceString("function", this->currentLightshow->name);
-    return this->workingString;
-}
-
-void bodyTemplate::setup() {
+bodyTemplate::bodyTemplate(lightshow* ls) :
+    lightshowTemplate(ls)
+{
     
     this->templateString =
-    "{\n    ?basis?(f, duration, strip, ?transition?, ?colourArgList?); }\n";
+    "{\n    ?updateFunction?(f, duration, strip, ?transition?, ?CX??colourArgList?); }\n";
 
-       this->addChild(new colourArgList(), "colourArgList");
+    colourListTemplate* colourArgList = new colourListTemplate(ls);
+    colourArgList->setTemplateString(", &?updateFunction?C?i?");
+    addChild(colourArgList, "colourArgList");
+
     
     
 }
 
-std::string bodyTemplate::generate() {
-    
-    this->currentLightshow = this->parent->currentLightshow;
-    this->workingString = this->templateString;
-    
-    this->replaceString("basis", this->currentLightshow->updateFunction);
-    this->replaceString("transition", this->currentLightshow->transition);
-    this->replaceAllChildren();
+//std::string bodyTemplate::generate() {
+//    
+//    this->currentLightshow = this->parent->currentLightshow;
+//    this->workingString = this->templateString;
+//    
+//    this->replaceString("basis", this->currentLightshow->updateFunction);
+//    this->replaceString("transition", this->currentLightshow->transition);
+//    this->replaceAllChildren();
+//
+//    return this->workingString;
+//}
 
-    return this->workingString;
+
+
+colourFunctionList::colourFunctionList(lightshow* ls) :
+lightshowTemplate(ls)
+{
+    
+    std::string CXline = "uint32_t ?updateFunction?CX() {return(?CX?);}\n?colourFunctionsI?\n";
+    std::string CIline = "uint32_t ?updateFunction?C?i?() {return(?value?);}\n";
+    
+    this->templateString = CXline + "?colourFunctionsI?\n";
+    colourListTemplate* colourFunctionsI = new colourListTemplate(ls);
+    colourFunctionsI->setTemplateString(CIline);
+    this->addChild(colourFunctionsI, "colourFunctionsI");
 }
 
-void colourArgList::setup() {
-    
-    
-}
 
-std::string colourArgList::generate() {
-    
-    this->currentLightshow = this->parent->currentLightshow;
 
-    this->workingString = "&?function?CX";
-    
-   std::string name = this->currentLightshow->name;
-    this->replaceString("function", name);
-    
-    for (int i=0; i < this->currentLightshow->colourCount; i++) {
-        this->workingString += ", &?function?C?i?";
-        this->replaceString("function", name);
-        this->replaceString("i", i);
-    }
-    
-    return this->workingString;
-    
-}
 
-void colourFunctionList::setup() {
+primitiveLightshowDefinitions::primitiveLightshowDefinitions(lightshow* lsList, int lCount) :
+    lightshowListTemplate(lsList, lCount)
+{
     
-}
-
-std::string colourFunctionList::generate() {
-    
-    this->currentLightshow = this->parent->currentLightshow;
-
-    std::string baseTemplate = "uint32_t ?function?C?i?() {return(?value?);}\n";
-    
-    std::string name = this->currentLightshow->name;
-    this->workingString = baseTemplate;
-    this->replaceString("function", name);
-    this->replaceString("i", "X");
-    this->replaceString("value", this->currentLightshow->CX);
-    
-    for (int i=0; i < this->currentLightshow->colourCount; i++) {
-        this->workingString += baseTemplate;
-        this->replaceString("function", name);
-        this->replaceString("i", i);
-        this->replaceString("value", this->currentLightshow->colourArgs[i]);
-
-    }
-    return this->workingString;
-}
-
-void primitiveLightshowDefinitions::setup() {
-    
-    this->templateString =
+    std::string defTemplateString =
 "?colourFunctions?\n\
 ?signature?\n\
 ?body?\n\n";
     
-    colourFunctionList* colourFunctions = new colourFunctionList();
-    sigTemplate* signature = new sigTemplate();
-    bodyTemplate* body = new bodyTemplate();
-    addChild(colourFunctions, "colourFunctions");
-    addChild(signature, "signature");
-    addChild(body, "body");
+    this->setTemplateStringAllChildren(defTemplateString);
     
-}
-
-std::string primitiveLightshowDefinitions::generate() {
-    
-    
-    this->workingString = "";
-  
-
-    for (int i=0; i < this->lCount; i++) {
-        
-        this->workingString += this->templateString;
-        currentLightshow = &this->lightshowList[i];
-        this->replaceAllChildren();
-        
+    for (int i=0; i < lCount; i++) {
+        colourFunctionList* colourFunctions = new colourFunctionList(&lsList[i]);
+        sigTemplate* signature = new sigTemplate(&lsList[i]);
+        bodyTemplate* body = new bodyTemplate(&lsList[i]);
+        addChild(i, colourFunctions, "colourFunctions");
+        addChild(i, signature, "signature");
+        addChild(i, body, "body");
     }
-    return this->workingString;
 }
+//
+//std::string primitiveLightshowDefinitions::generate() {
+//    
+//    
+//    this->workingString = "";
+//  
+//
+//    for (int i=0; i < this->lCount; i++) {
+//        
+//        this->workingString += this->templateString;
+//        currentLightshow = &this->lightshowList[i];
+//        this->replaceAllChildren();
+//        
+//    }
+//    return this->workingString;
+//}
+//
+//void primitiveStripDefinitions::setup() {
+//    this->templateString =
+//"?stripDefs?\n\
+//?stripSetup?\n\n";
+//    
+//    stripDefinitionTemplate* stripDefs = new stripDefinitionTemplate();
+//    stripSetupTemplate* stripSetup = new stripSetupTemplate();
+//    addChild(stripDefs, "stripDefs");
+//    addChild(stripSetup, "stripSetup");
+//}
+//
+//std::string primitiveStripDefinitions::generate() {
+//    
+//    this->currentStrip = this->parent->currentStrip;
+//    
+//    std::string baseTemplate = "Adafruit_NeoPixel* ?strip? = new Adafruit_NeoPixel(?length?, ?pin?, NEO_GRB + NEO_KHZ800);\n";
+//    
+//    for (int i=0; i < this->sCount; i++) {
+//        
+//        this->workingString += this->templateString;
+//        currentLightshow = &this->lightshowList[i];
+//        this->replaceAllChildren();
+//        
+//    }
+//    
+//    return this->workingString;
+//}
 

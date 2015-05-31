@@ -1,0 +1,18 @@
+/Users/gordon/GitHub/Electronic-Moon/EMoon-Sketch/EMoon-Sketch/LocalLibrary.cpp:204:123: Invalid conversion from 'activeSymbolicLightshowList*' to 'eMoonFrame {aka long unsigned int}'
+
+
+    if (f/interval ==	5	) { borderMarch(interval, &tetriswipe, &g5, &c4);}
+    if (f/interval ==	6	) { borderMarch(interval, &c4, &e2, &c2);}
+    if (f/interval ==	7	) { borderMarch(interval, &e2, &b4, &edgewipe0);}
+    if (f/interval ==	8	) { borderMarch(interval, &edgewipe0, &c1, &g5);}
+    if (f/interval ==	9	) { borderMarch(interval, &g5, &f7, &edgewipe30);}
+    if (f/interval ==	10	) { borderMarch(interval, &edgewipe30, &g7, &edgewipe11);}
+    if (f/interval ==	11	) { borderMarch(interval, &edgewipe11, &e2, &e1);}
+    if (f/interval ==	12	) { borderMarch(interval, &e1, &b5, &f0);}
+    if (f/interval ==	13	) { borderMarch(interval, &f0, &h6, &e2);}
+    if (f/interval ==	14	) { borderMarch(interval, &e2, &aus2, &aus1);}
+    if (f/interval ==	15	) { borderMarch(interval, &aus3, &aus6, &aus3);
+
+
+
+    quadsparklefill(f, duration, strip, 0, yellow15150, brown1, , darkyellow, brown1);

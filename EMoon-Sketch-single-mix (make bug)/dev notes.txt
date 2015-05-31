@@ -1,0 +1,3 @@
+/Users/gordon/GitHub/Electronic-Moon/EMoon-Sketch-single-mix/EMoon-Sketch/Lightshow_Setup.cpp:36:61: Invalid conversion from 'int (*)(eMoonFrame, eMoonFrame, Adafruit_NeoPixel*, int) {aka int (*)(long unsigned int, long unsigned int, Adafruit_NeoPixel*, int)}' to 'eMoonSchedulerFunction {aka void (*)(long unsigned int, long unsigned int, Adafruit_NeoPixel*, int)}'
+
+/Users/gordon/GitHub/Electronic-Moon/EMoon-Sketch-single-mix/EMoon-Sketch/LocalLibrary.h:99:10:   initializing argument 4 of 'void activeSymbolicLightshowList::addLightshow(int, eMoonFrame, eMoonStrip, eMoonSchedulerFunction)'

@@ -1,0 +1,25 @@
+
+
+1024 / 8
+
+    if (f ==	0	) { mix_list->addLightshow(-1, interval	,	NULL	, &	spiralMix	); }  too fast
+    if (f ==	1	) { mix_list->addLightshow(-1, interval	,	NULL	, &	windMix	); }  good
+
+    if (f ==	2	) { mix_list->addLightshow(-1, interval	,	NULL	, &	spiral0_Mix	); }   no good
+        if (f ==	3	) { mix_list->addLightshow(-1, interval	,	NULL	, &	windyellowMix	); }
+    if (f ==	4	) { mix_list->addLightshow(-1, interval	,	NULL	, &	spiral1_Mix	); }
+    if (f ==	5	) { mix_list->addLightshow(-1, interval	,	NULL	, &	windwhiteMix	); } good
+
+    if (f ==	6	) { mix_list->addLightshow(-1, interval	,	NULL	, &	spiral2_Mix	); }		too slow
+    if (f ==	7	) { mix_list->addLightshow(-1, interval	,	NULL	, &	flasher_Mix	); }	ok timing but causes crash
+
+
+  int interval = duration / 8;
+
+    
+    if (f ==	0	) { mix_list->addLightshow(-1, interval	,	NULL	, &	riseMix	); }			OK
+    if (f ==	0	) { mix_list->addLightshow(-1, interval*2	,	NULL	, &	aussieMix	); }	OK
+
+    if (f ==	1	) { mix_list->addLightshow(-1, interval	,	NULL	, &	redriseMix	); }  goes behind the aussie
+    if (f ==	2	) { mix_list->addLightshow(-1, interval	,	NULL	, &	sparkriseMix	); }  gets overtaken
+    if (f ==	3	) { mix_list->addLightshow(-1, interval	,	NULL	, &	spiral2_Mix	); }
